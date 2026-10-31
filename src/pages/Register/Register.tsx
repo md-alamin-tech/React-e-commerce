@@ -50,13 +50,10 @@ export default function Register() {
     <div className="bg-[#0B0710] py-16 sm:py-24 px-4 flex items-center justify-center">
       <div className="max-w-md w-full bg-[#140C1F] rounded-3xl p-8 sm:p-10 border border-[#2E2045] shadow-xs text-left">
         <div className="text-center mb-8">
-          <span className="text-[11px] font-bold tracking-[0.25em] uppercase text-[#D4AF37] block mb-2">
-            JOIN US
-          </span>
           <h1 className="font-serif text-3xl font-bold text-[#F5ECD7]">
             Create an Account
           </h1>
-          <p className="text-xs text-[#A99BC4] mt-1">
+          <p className="text-xs text-[#B0A99C] mt-1">
             Enjoy faster checkout, saved addresses, and exclusive member treats.
           </p>
         </div>
@@ -115,7 +112,7 @@ export default function Register() {
           </div>
         </form>
 
-        <p className="text-center text-xs text-[#A99BC4] mt-6">
+        <p className="text-center text-xs text-[#B0A99C] mt-6">
           Already have an account?{' '}
           <Link to="/login" className="font-bold text-[#D4AF37] hover:underline">
             Sign in

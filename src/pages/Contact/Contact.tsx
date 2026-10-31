@@ -47,16 +47,13 @@ export default function Contact() {
 
   return (
     <div className="bg-[#0B0710] py-12 sm:py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
-          <span className="text-[11px] font-bold tracking-[0.25em] uppercase text-[#D4AF37] block mb-2">
-            CONNECT WITH US
-          </span>
           <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#F5ECD7] mb-3">
             Get in Touch
           </h1>
-          <p className="text-xs sm:text-sm text-[#C9BFDD] leading-relaxed">
+          <p className="text-xs sm:text-sm text-[#D0C9BA] leading-relaxed">
             We'd love to hear from you! Ask a question, share a suggestion, or just say hello.
           </p>
         </div>
@@ -74,10 +71,10 @@ export default function Contact() {
                 <h4 className="font-serif text-base font-bold text-[#F5ECD7]">
                   Our Location
                 </h4>
-                <p className="text-xs text-[#C9BFDD] mt-0.5">
+                <p className="text-xs text-[#D0C9BA] mt-0.5">
                   Southington, Connecticut
                 </p>
-                <p className="text-[11px] text-[#A99BC4]">
+                <p className="text-[11px] text-[#B0A99C]">
                   [Full storefront address will be revealed at grand opening]
                 </p>
               </div>
@@ -92,10 +89,10 @@ export default function Contact() {
                 <h4 className="font-serif text-base font-bold text-[#F5ECD7]">
                   Phone
                 </h4>
-                <p className="text-xs text-[#C9BFDD] mt-0.5">
+                <p className="text-xs text-[#D0C9BA] mt-0.5">
                   {APP_CONFIG.phone}
                 </p>
-                <p className="text-[11px] text-[#A99BC4]">
+                <p className="text-[11px] text-[#B0A99C]">
                   Direct line to store manager
                 </p>
               </div>
@@ -116,7 +113,7 @@ export default function Contact() {
                 >
                   {APP_CONFIG.email}
                 </a>
-                <p className="text-[11px] text-[#A99BC4]">
+                <p className="text-[11px] text-[#B0A99C]">
                   Expect a reply within 24 hours
                 </p>
               </div>
@@ -127,13 +124,13 @@ export default function Contact() {
               <h4 className="font-serif text-sm font-bold text-[#F5ECD7] mb-1">
                 Follow Us
               </h4>
-              <p className="text-xs text-[#A99BC4] mb-3">@belkemarket</p>
+              <p className="text-xs text-[#B0A99C] mb-3">@belkemarket</p>
               <div className="flex items-center gap-3">
                 <a
                   href={APP_CONFIG.socials.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-full bg-[#0B0710] hover:bg-[#D4AF37] hover:text-[#0B0710] border border-[#2E2045] flex items-center justify-center transition-colors text-[#F1EAFB]"
+                  className="w-9 h-9 rounded-full bg-[#0B0710] hover:bg-[#D4AF37] hover:text-[#0B0710] border border-[#2E2045] flex items-center justify-center transition-colors text-[#F5ECD7]"
                   aria-label="Instagram"
                 >
                   <Instagram size={16} />
@@ -142,7 +139,7 @@ export default function Contact() {
                   href={APP_CONFIG.socials.facebook}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-full bg-[#0B0710] hover:bg-[#D4AF37] hover:text-[#0B0710] border border-[#2E2045] flex items-center justify-center transition-colors text-[#F1EAFB]"
+                  className="w-9 h-9 rounded-full bg-[#0B0710] hover:bg-[#D4AF37] hover:text-[#0B0710] border border-[#2E2045] flex items-center justify-center transition-colors text-[#F5ECD7]"
                   aria-label="Facebook"
                 >
                   <Facebook size={16} />
@@ -151,7 +148,7 @@ export default function Contact() {
                   href={APP_CONFIG.socials.tiktok}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-full bg-[#0B0710] hover:bg-[#D4AF37] hover:text-[#0B0710] border border-[#2E2045] flex items-center justify-center transition-colors text-[#F1EAFB]"
+                  className="w-9 h-9 rounded-full bg-[#0B0710] hover:bg-[#D4AF37] hover:text-[#0B0710] border border-[#2E2045] flex items-center justify-center transition-colors text-[#F5ECD7]"
                   aria-label="TikTok"
                 >
                   <Music2 size={16} />
@@ -165,7 +162,7 @@ export default function Contact() {
             <h3 className="font-serif text-xl font-bold text-[#F5ECD7] mb-2">
               Send Us a Message
             </h3>
-            <p className="text-xs text-[#A99BC4] mb-6">
+            <p className="text-xs text-[#B0A99C] mb-6">
               Have a special product request or want to partner with Belké Market?
             </p>
 
@@ -200,7 +197,7 @@ export default function Contact() {
                   required
                 />
                 <div>
-                  <label className="block text-xs font-semibold uppercase tracking-wider text-[#D6CDE6] mb-1.5">
+                  <label className="block text-xs font-semibold uppercase tracking-wider text-[#DCD5C6] mb-1.5">
                     Message <span className="text-[#FB923C]">*</span>
                   </label>
                   <textarea
@@ -209,13 +206,13 @@ export default function Contact() {
                     onChange={(e) => setMessage(e.target.value)}
                     placeholder="Tell us what's on your mind..."
                     required
-                    className="w-full bg-[#140C1F] border border-[#34254D] rounded-xl px-3.5 py-2.5 text-sm text-[#F1EAFB] placeholder-[#8D7FA8] focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37]"
+                    className="w-full bg-[#140C1F] border border-[#34254D] rounded-xl px-3.5 py-2.5 text-sm text-[#F5ECD7] placeholder-[#8A847A] focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37]"
                   />
                 </div>
                 <div className="pt-2">
                   <button
                     type="submit"
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-[#D4AF37] hover:bg-[#E8C547] text-[#0B0710] text-xs font-semibold tracking-wider uppercase transition-colors shadow-2xs cursor-pointer"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#D4AF37] hover:bg-[#E8C547] text-[#0B0710] font-semibold tracking-wider uppercase transition-colors shadow-2xs cursor-pointer h-12 px-8 rounded-full text-xs"
                   >
                     <span>SEND MESSAGE</span>
                     <ArrowRight size={14} />
@@ -232,7 +229,7 @@ export default function Contact() {
             <h3 className="font-serif text-lg font-bold text-[#F5ECD7]">
               Our Location
             </h3>
-            <p className="text-xs text-[#A99BC4]">
+            <p className="text-xs text-[#B0A99C]">
               [Map preview will be pinned to our physical storefront in Southington, CT]
             </p>
           </div>

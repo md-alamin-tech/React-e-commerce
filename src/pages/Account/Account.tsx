@@ -71,12 +71,12 @@ export default function Account() {
           <h2 className="font-serif text-2xl font-bold text-[#F5ECD7] mb-2">
             Please Sign In
           </h2>
-          <p className="text-xs text-[#A99BC4] mb-6">
+          <p className="text-xs text-[#B0A99C] mb-6">
             You need to be logged in to view your account details and order history.
           </p>
           <Link
             to="/login"
-            className="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-[#D4AF37] text-[#0B0710] text-xs font-semibold tracking-wider uppercase"
+            className="inline-flex items-center justify-center bg-[#D4AF37] text-[#0B0710] font-semibold tracking-wider uppercase h-12 px-8 rounded-full text-xs"
           >
             Go to Login
           </Link>
@@ -121,13 +121,13 @@ export default function Account() {
 
   return (
     <div className="bg-[#0B0710] py-10 sm:py-14">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 mb-8 border-b border-[#2E2045] gap-4">
           <div>
             <h1 className="font-serif text-3xl font-bold text-[#F5ECD7]">
               My Account
             </h1>
-            <p className="text-xs text-[#A99BC4] mt-0.5">
+            <p className="text-xs text-[#B0A99C] mt-0.5">
               Welcome back, <strong>{user.name}</strong> ({user.email})
             </p>
           </div>
@@ -146,10 +146,10 @@ export default function Account() {
           <div className="lg:col-span-3 space-y-2">
             <button
               onClick={() => setActiveTab('orders')}
-              className={`w-full flex items-center justify-between px-4 py-3 rounded-2xl text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
+              className={`w-full flex items-center justify-between h-12 px-6 rounded-full text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
                 activeTab === 'orders'
                   ? 'bg-[#D4AF37] text-[#0B0710] shadow-xs'
-                  : 'bg-[#140C1F] hover:bg-[#1E1430] text-[#C9BFDD] border border-[#2E2045]'
+                  : 'bg-[#140C1F] hover:bg-[#1E1430] text-[#D0C9BA] border border-[#2E2045]'
               }`}
             >
               <div className="flex items-center gap-2.5">
@@ -161,10 +161,10 @@ export default function Account() {
 
             <button
               onClick={() => setActiveTab('addresses')}
-              className={`w-full flex items-center justify-between px-4 py-3 rounded-2xl text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
+              className={`w-full flex items-center justify-between h-12 px-6 rounded-full text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
                 activeTab === 'addresses'
                   ? 'bg-[#D4AF37] text-[#0B0710] shadow-xs'
-                  : 'bg-[#140C1F] hover:bg-[#1E1430] text-[#C9BFDD] border border-[#2E2045]'
+                  : 'bg-[#140C1F] hover:bg-[#1E1430] text-[#D0C9BA] border border-[#2E2045]'
               }`}
             >
               <div className="flex items-center gap-2.5">
@@ -176,10 +176,10 @@ export default function Account() {
 
             <button
               onClick={() => setActiveTab('profile')}
-              className={`w-full flex items-center justify-between px-4 py-3 rounded-2xl text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
+              className={`w-full flex items-center justify-between h-12 px-6 rounded-full text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
                 activeTab === 'profile'
                   ? 'bg-[#D4AF37] text-[#0B0710] shadow-xs'
-                  : 'bg-[#140C1F] hover:bg-[#1E1430] text-[#C9BFDD] border border-[#2E2045]'
+                  : 'bg-[#140C1F] hover:bg-[#1E1430] text-[#D0C9BA] border border-[#2E2045]'
               }`}
             >
               <div className="flex items-center gap-2.5">
@@ -201,10 +201,10 @@ export default function Account() {
                 {user.orders.length === 0 ? (
                   <div className="text-center py-12">
                     <Package size={36} className="text-[#D4AF37] mx-auto mb-2" />
-                    <p className="text-xs text-[#A99BC4] mb-4">You have not placed any orders yet.</p>
+                    <p className="text-xs text-[#B0A99C] mb-4">You have not placed any orders yet.</p>
                     <Link
                       to="/shop"
-                      className="inline-flex items-center gap-1.5 px-5 py-2 rounded-full bg-[#D4AF37] text-[#0B0710] text-xs font-semibold tracking-wider uppercase"
+                      className="inline-flex items-center gap-1.5 bg-[#D4AF37] text-[#0B0710] font-semibold tracking-wider uppercase h-12 px-8 rounded-full text-xs justify-center"
                     >
                       Start Shopping
                     </Link>
@@ -218,21 +218,21 @@ export default function Account() {
                       >
                         <div className="flex flex-wrap items-center justify-between pb-3 border-b border-[#2E2045] gap-3 text-xs">
                           <div>
-                            <span className="text-[#A99BC4] block text-[11px]">Order #</span>
-                            <strong className="text-[#F1EAFB] text-sm">{ord.id}</strong>
+                            <span className="text-[#B0A99C] block text-[11px]">Order #</span>
+                            <strong className="text-[#F5ECD7] text-sm">{ord.id}</strong>
                           </div>
                           <div>
-                            <span className="text-[#A99BC4] block text-[11px]">Date</span>
-                            <span className="text-[#F1EAFB] font-medium">{formatDate(ord.date)}</span>
+                            <span className="text-[#B0A99C] block text-[11px]">Date</span>
+                            <span className="text-[#F5ECD7] font-medium">{formatDate(ord.date)}</span>
                           </div>
                           <div>
-                            <span className="text-[#A99BC4] block text-[11px]">Total</span>
+                            <span className="text-[#B0A99C] block text-[11px]">Total</span>
                             <strong className="text-[#F5ECD7] font-serif text-sm">
                               {formatCurrency(ord.total)}
                             </strong>
                           </div>
                           <div>
-                            <span className="text-[#A99BC4] block text-[11px]">Status</span>
+                            <span className="text-[#B0A99C] block text-[11px]">Status</span>
                             <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-emerald-950/60 text-emerald-300">
                               {ord.status}
                             </span>
@@ -250,24 +250,24 @@ export default function Account() {
                                   className="w-10 h-10 object-cover rounded-md bg-[#140C1F] shrink-0"
                                 />
                                 <div>
-                                  <p className="font-semibold text-[#F1EAFB]">{item.productName}</p>
-                                  <p className="text-[#A99BC4] text-[11px]">
+                                  <p className="font-semibold text-[#F5ECD7]">{item.productName}</p>
+                                  <p className="text-[#B0A99C] text-[11px]">
                                     Qty: {item.quantity} {item.variantName ? `(${item.variantName})` : ''}
                                   </p>
                                 </div>
                               </div>
-                              <span className="font-semibold text-[#F1EAFB]">
+                              <span className="font-semibold text-[#F5ECD7]">
                                 {formatCurrency(item.price * item.quantity)}
                               </span>
                             </div>
                           ))}
                         </div>
 
-                        <div className="text-[11px] text-[#A99BC4] pt-2 border-t border-[#2E2045] flex justify-between">
+                        <div className="text-[11px] text-[#B0A99C] pt-2 border-t border-[#2E2045] flex justify-between">
                           <span>
                             Delivering to: {ord.shippingAddress.street}, {ord.shippingAddress.city}
                           </span>
-                          <span className="uppercase font-semibold text-[#F1EAFB]">
+                          <span className="uppercase font-semibold text-[#F5ECD7]">
                             {ord.paymentMethod === 'card' ? 'Credit Card' : 'Cash On Delivery'}
                           </span>
                         </div>
@@ -296,7 +296,7 @@ export default function Account() {
                 </div>
 
                 {user.addresses.length === 0 ? (
-                  <p className="text-xs text-[#A99BC4] py-6 text-center">
+                  <p className="text-xs text-[#B0A99C] py-6 text-center">
                     No saved addresses. Add an address for rapid checkout.
                   </p>
                 ) : (
@@ -316,13 +316,13 @@ export default function Account() {
                           </span>
                         )}
                         <h4 className="font-bold text-sm text-[#F5ECD7] mb-1">{addr.name}</h4>
-                        <p className="text-[#C9BFDD]">
+                        <p className="text-[#D0C9BA]">
                           {addr.street} {addr.apartment ? `, ${addr.apartment}` : ''}
                         </p>
-                        <p className="text-[#C9BFDD]">
+                        <p className="text-[#D0C9BA]">
                           {addr.city}, {addr.state} {addr.zipCode}
                         </p>
-                        <p className="text-[#A99BC4] mt-1">{addr.phone}</p>
+                        <p className="text-[#B0A99C] mt-1">{addr.phone}</p>
 
                         <div className="flex items-center gap-3 pt-4 mt-3 border-t border-[#2E2045]">
                           {!addr.isDefault && (
@@ -438,7 +438,7 @@ export default function Account() {
               required
             />
           </div>
-          <label className="flex items-center gap-2 text-xs text-[#C9BFDD] cursor-pointer">
+          <label className="flex items-center gap-2 text-xs text-[#D0C9BA] cursor-pointer">
             <input
               type="checkbox"
               checked={newAddr.isDefault}

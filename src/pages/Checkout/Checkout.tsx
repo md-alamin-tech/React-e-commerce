@@ -126,14 +126,14 @@ export default function Checkout() {
 
   return (
     <div className="bg-[#0B0710] py-10 sm:py-14">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb */}
-        <nav className="flex items-center gap-2 text-xs text-[#A99BC4] mb-8">
+        <nav className="flex items-center gap-2 text-xs text-[#B0A99C] mb-8">
           <Link to="/cart" className="hover:text-[#D4AF37]">
             Cart
           </Link>
           <ChevronRight size={13} />
-          <span className="text-[#F1EAFB] font-semibold">Checkout</span>
+          <span className="text-[#F5ECD7] font-semibold">Checkout</span>
         </nav>
 
         <h1 className="font-serif text-3xl font-bold text-[#F5ECD7] mb-8 text-left">
@@ -150,7 +150,7 @@ export default function Checkout() {
                   <h2 className="font-serif text-xl font-bold text-[#F5ECD7]">
                     1. Shipping Address
                   </h2>
-                  <span className="text-xs text-[#A99BC4]">Standard Delivery</span>
+                  <span className="text-xs text-[#B0A99C]">Standard Delivery</span>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -264,13 +264,13 @@ export default function Checkout() {
                     />
                     <div className="flex-1">
                       <div className="flex items-center justify-between">
-                        <span className="text-sm font-bold text-[#F1EAFB] flex items-center gap-2">
+                        <span className="text-sm font-bold text-[#F5ECD7] flex items-center gap-2">
                           <CreditCard size={17} className="text-[#D4AF37]" />
                           Credit / Debit Card
                         </span>
-                        <span className="text-[11px] text-[#A99BC4]">Visa, MC, Amex</span>
+                        <span className="text-[11px] text-[#B0A99C]">Visa, MC, Amex</span>
                       </div>
-                      <p className="text-xs text-[#A99BC4] mt-1">
+                      <p className="text-xs text-[#B0A99C] mt-1">
                         Pay securely with your credit or debit card.
                       </p>
 
@@ -322,12 +322,12 @@ export default function Checkout() {
                     />
                     <div className="flex-1">
                       <div className="flex items-center justify-between">
-                        <span className="text-sm font-bold text-[#F1EAFB] flex items-center gap-2">
+                        <span className="text-sm font-bold text-[#F5ECD7] flex items-center gap-2">
                           <Banknote size={17} className="text-[#D4AF37]" />
                           Cash on Delivery / In-Store Pickup
                         </span>
                       </div>
-                      <p className="text-xs text-[#A99BC4] mt-1">
+                      <p className="text-xs text-[#B0A99C] mt-1">
                         Pay when your package arrives or when you pick up at our Southington location.
                       </p>
                     </div>
@@ -353,14 +353,14 @@ export default function Checkout() {
                         className="w-12 h-12 object-cover rounded-lg bg-[#0B0710] shrink-0"
                       />
                       <div className="flex-1 min-w-0">
-                        <p className="text-xs font-semibold text-[#F1EAFB] truncate">
+                        <p className="text-xs font-semibold text-[#F5ECD7] truncate">
                           {item.name}
                         </p>
-                        <p className="text-[11px] text-[#A99BC4]">
+                        <p className="text-[11px] text-[#B0A99C]">
                           Qty: {item.quantity} {item.variantName ? `• ${item.variantName}` : ''}
                         </p>
                       </div>
-                      <span className="text-xs font-bold text-[#F1EAFB]">
+                      <span className="text-xs font-bold text-[#F5ECD7]">
                         {formatCurrency(item.price * item.quantity)}
                       </span>
                     </div>
@@ -368,10 +368,10 @@ export default function Checkout() {
                 </div>
 
                 {/* Cost Summary */}
-                <div className="space-y-2.5 text-xs text-[#C9BFDD] py-4 border-y border-[#2E2045] mb-5">
+                <div className="space-y-2.5 text-xs text-[#D0C9BA] py-4 border-y border-[#2E2045] mb-5">
                   <div className="flex justify-between">
                     <span>Subtotal</span>
-                    <span className="font-semibold text-[#F1EAFB]">
+                    <span className="font-semibold text-[#F5ECD7]">
                       {formatCurrency(subtotal)}
                     </span>
                   </div>
@@ -408,13 +408,13 @@ export default function Checkout() {
                   type="submit"
                   variant="primary"
                   isLoading={isSubmitting}
-                  className="w-full py-4 text-sm font-semibold tracking-wider uppercase"
+                  className="w-full"
                 >
                   <span>Place Your Order</span>
                   <ArrowRight size={16} />
                 </Button>
 
-                <p className="text-center text-[11px] text-[#A99BC4] mt-3">
+                <p className="text-center text-[11px] text-[#B0A99C] mt-3">
                   By clicking Place Order, you agree to Belké Market's Terms & Conditions.
                 </p>
               </div>

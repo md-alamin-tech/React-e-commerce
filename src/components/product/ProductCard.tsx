@@ -53,7 +53,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           className={`absolute top-2.5 right-2.5 p-2 rounded-full transition-all shadow-xs cursor-pointer ${
             isWishlisted
               ? 'bg-rose-950/60 text-rose-400'
-              : 'bg-[#140C1F]/90 text-[#DDD5EC] hover:text-[#D4AF37] hover:bg-[#1E1430]'
+              : 'bg-[#140C1F]/90 text-[#E6DFCF] hover:text-[#D4AF37] hover:bg-[#1E1430]'
           }`}
           aria-label={isWishlisted ? 'Remove from wishlist' : 'Add to wishlist'}
         >
@@ -65,7 +65,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           <button
             type="button"
             onClick={() => onQuickView(product)}
-            className="hidden sm:flex absolute bottom-2.5 left-2.5 items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#140C1F]/95 text-[#F1EAFB] text-xs font-medium shadow-xs hover:bg-[#1E1430] opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer"
+            className="hidden sm:flex absolute bottom-2.5 left-2.5 items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#140C1F]/95 text-[#F5ECD7] text-xs font-medium shadow-xs hover:bg-[#1E1430] opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer"
           >
             <Eye size={13} />
             Quick View
@@ -86,33 +86,28 @@ export const ProductCard: React.FC<ProductCardProps> = ({
 
       {/* Content details */}
       <div className="flex-1 flex flex-col p-4 text-center">
-        {showCategory && (
-          <span className="text-[11px] font-semibold tracking-wider uppercase text-[#A99BC4] mb-1">
-            {product.categoryName}
-          </span>
-        )}
 
         <h3 className="font-serif text-base font-semibold text-[#F5ECD7] hover:text-[#D4AF37] transition-colors line-clamp-1">
           <Link to={`/product/${product.slug}`}>{product.name}</Link>
         </h3>
 
         <div className="flex items-center justify-center gap-2 mt-1.5 mb-3">
-          <span className="font-bold text-sm text-[#F1EAFB]">
+          <span className="font-bold text-sm text-[#F5ECD7]">
             {formatCurrency(product.price)}
           </span>
           {product.originalPrice && product.originalPrice > product.price && (
-            <span className="text-xs text-[#A99BC4] line-through">
+            <span className="text-xs text-[#B0A99C] line-through">
               {formatCurrency(product.originalPrice)}
             </span>
           )}
-          <span className="text-[11px] text-[#A99BC4]">/ {product.weight}</span>
+          <span className="text-[11px] text-[#B0A99C]">/ {product.weight}</span>
         </div>
 
         {/* Button: "VIEW PRODUCT ->" matching mockup! */}
         <div className="mt-auto pt-1 flex items-center gap-2">
           <Link
             to={`/product/${product.slug}`}
-            className="flex-1 inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-md bg-[#D4AF37] hover:bg-[#B8962E] text-[#0B0710] text-xs font-semibold tracking-wider uppercase transition-colors"
+            className="flex-1 inline-flex items-center justify-center gap-1.5 bg-[#D4AF37] hover:bg-[#B8962E] text-[#0B0710] font-semibold tracking-wider uppercase transition-colors h-12 px-4 rounded-full text-xs"
           >
             <span>VIEW PRODUCT</span>
             <ArrowRight size={13} />
@@ -121,7 +116,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           <button
             type="button"
             onClick={() => addToCart(product, 1)}
-            className="p-2 rounded-md bg-[#0B0710] hover:bg-[#D4AF37] text-[#F1EAFB] hover:text-[#0B0710] border border-[#2E2045] transition-colors cursor-pointer"
+            className="p-2 rounded-md bg-[#0B0710] hover:bg-[#D4AF37] text-[#F5ECD7] hover:text-[#0B0710] border border-[#2E2045] transition-colors cursor-pointer"
             title="Quick add to cart"
             aria-label="Add to cart"
           >

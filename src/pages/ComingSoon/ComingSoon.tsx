@@ -74,9 +74,6 @@ export default function ComingSoon() {
           />
 
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6 sm:p-10 bg-black/35 z-10">
-            <span className="text-[11px] font-bold tracking-[0.3em] uppercase text-[#D4AF37] block mb-2 drop-shadow">
-              SOUTHINGTON, CONNECTICUT
-            </span>
 
             <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#F5ECD7] tracking-tight mb-4 drop-shadow-md">
               Something Special Is Coming
@@ -103,11 +100,11 @@ export default function ComingSoon() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Your email address"
                   required
-                  className="w-full bg-[#140C1F]/95 backdrop-blur-sm rounded-full px-5 py-3 text-xs sm:text-sm text-[#F1EAFB] placeholder-[#A99BC4] focus:outline-none focus:ring-2 focus:ring-[#D4AF37] shadow-lg"
+                  className="w-full bg-[#140C1F]/95 backdrop-blur-sm rounded-full px-5 py-3 text-xs sm:text-sm text-[#F5ECD7] placeholder-[#B0A99C] focus:outline-none focus:ring-2 focus:ring-[#D4AF37] shadow-lg"
                 />
                 <button
                   type="submit"
-                  className="w-full sm:w-auto shrink-0 inline-flex items-center justify-center gap-1.5 px-6 py-3 rounded-full bg-[#D4AF37] hover:bg-[#E8C547] text-[#0B0710] text-xs font-semibold tracking-wider uppercase transition-colors shadow-lg cursor-pointer"
+                  className="w-full sm:w-auto shrink-0 inline-flex items-center justify-center gap-1.5 bg-[#D4AF37] hover:bg-[#E8C547] text-[#0B0710] font-semibold tracking-wider uppercase transition-colors shadow-lg cursor-pointer h-12 px-8 rounded-full text-xs"
                 >
                   <span>KEEP ME UPDATED</span>
                   <ArrowRight size={13} />
@@ -132,7 +129,7 @@ export default function ComingSoon() {
               <h3 className="font-serif text-sm font-bold uppercase tracking-wider text-[#F5ECD7] mb-2">
                 {p.title}
               </h3>
-              <p className="text-xs text-[#A99BC4] leading-relaxed">
+              <p className="text-xs text-[#B0A99C] leading-relaxed">
                 {p.desc}
               </p>
             </div>

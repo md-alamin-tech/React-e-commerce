@@ -68,12 +68,12 @@ export default function Cart() {
           <h2 className="font-serif text-2xl font-bold text-[#F5ECD7] mb-2">
             Your Basket is Empty
           </h2>
-          <p className="text-xs sm:text-sm text-[#A99BC4] mb-6">
+          <p className="text-xs sm:text-sm text-[#B0A99C] mb-6">
             Looks like you haven't added any Balkan or European delicacies yet. Explore our pantry staples, bakery, and cheeses!
           </p>
           <Link
             to="/shop"
-            className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#D4AF37] hover:bg-[#B8962E] text-[#0B0710] text-xs font-semibold tracking-wider uppercase transition-colors"
+            className="inline-flex items-center justify-center gap-2 bg-[#D4AF37] hover:bg-[#B8962E] text-[#0B0710] font-semibold tracking-wider uppercase transition-colors h-12 px-8 rounded-full text-xs"
           >
             <span>Explore Products</span>
             <ArrowRight size={14} />
@@ -90,19 +90,19 @@ export default function Cart() {
 
   return (
     <div className="bg-[#0B0710] py-10 sm:py-14">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between pb-6 mb-8 border-b border-[#2E2045]">
           <div>
             <h1 className="font-serif text-3xl font-bold text-[#F5ECD7]">
               Your Shopping Cart
             </h1>
-            <p className="text-xs text-[#A99BC4] mt-1">
+            <p className="text-xs text-[#B0A99C] mt-1">
               Review items in your basket ({totalItems} item{totalItems === 1 ? '' : 's'})
             </p>
           </div>
           <button
             onClick={clearCart}
-            className="text-xs text-[#A99BC4] hover:text-[#F87171] underline cursor-pointer"
+            className="text-xs text-[#B0A99C] hover:text-[#F87171] underline cursor-pointer"
           >
             Clear Cart
           </button>
@@ -110,12 +110,12 @@ export default function Cart() {
 
         {/* Free Shipping Progress Indicator */}
         <div className="bg-[#140C1F] rounded-2xl p-4 sm:p-5 border border-[#2E2045] mb-8">
-          <div className="flex items-center justify-between text-xs font-semibold text-[#F1EAFB] mb-2">
+          <div className="flex items-center justify-between text-xs font-semibold text-[#F5ECD7] mb-2">
             <span className="flex items-center gap-1.5">
               <Truck size={15} className="text-[#D4AF37]" />
               {isFreeShipping ? (
                 <span className="text-emerald-300 font-bold">
-                  🎉 Congratulations! You have unlocked FREE shipping.
+                  Congratulations! You have unlocked FREE shipping.
                 </span>
               ) : (
                 <span>
@@ -123,7 +123,7 @@ export default function Cart() {
                 </span>
               )}
             </span>
-            <span className="text-[#A99BC4]">{Math.round(freeShippingProgress)}%</span>
+            <span className="text-[#B0A99C]">{Math.round(freeShippingProgress)}%</span>
           </div>
           <div className="w-full bg-[#1E1430] h-2 rounded-full overflow-hidden">
             <div
@@ -158,11 +158,11 @@ export default function Cart() {
                         {item.name}
                       </Link>
                       {item.variantName && (
-                        <p className="text-xs text-[#A99BC4] mt-0.5">
+                        <p className="text-xs text-[#B0A99C] mt-0.5">
                           Size: {item.variantName}
                         </p>
                       )}
-                      <p className="text-xs font-bold text-[#F1EAFB] mt-1 sm:hidden">
+                      <p className="text-xs font-bold text-[#F5ECD7] mt-1 sm:hidden">
                         {formatCurrency(item.price)} each
                       </p>
                     </div>
@@ -171,7 +171,7 @@ export default function Cart() {
                   {/* Quantity & Actions */}
                   <div className="flex items-center justify-between sm:justify-end gap-6 w-full sm:w-auto">
                     {/* Unit Price (Desktop) */}
-                    <span className="hidden sm:inline text-xs font-bold text-[#F1EAFB]">
+                    <span className="hidden sm:inline text-xs font-bold text-[#F5ECD7]">
                       {formatCurrency(item.price)}
                     </span>
 
@@ -179,17 +179,17 @@ export default function Cart() {
                     <div className="flex items-center border border-[#34254D] rounded-full bg-[#0B0710] px-2 py-1">
                       <button
                         onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                        className="p-1 text-[#C9BFDD] hover:text-[#D4AF37] cursor-pointer"
+                        className="p-1 text-[#D0C9BA] hover:text-[#D4AF37] cursor-pointer"
                         aria-label="Decrease quantity"
                       >
                         <Minus size={13} />
                       </button>
-                      <span className="w-8 text-center text-xs font-bold text-[#F1EAFB]">
+                      <span className="w-8 text-center text-xs font-bold text-[#F5ECD7]">
                         {item.quantity}
                       </span>
                       <button
                         onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                        className="p-1 text-[#C9BFDD] hover:text-[#D4AF37] cursor-pointer"
+                        className="p-1 text-[#D0C9BA] hover:text-[#D4AF37] cursor-pointer"
                         aria-label="Increase quantity"
                       >
                         <Plus size={13} />
@@ -197,14 +197,14 @@ export default function Cart() {
                     </div>
 
                     {/* Line Total */}
-                    <span className="font-bold text-sm text-[#F1EAFB] w-18 text-right">
+                    <span className="font-bold text-sm text-[#F5ECD7] w-18 text-right">
                       {formatCurrency(item.price * item.quantity)}
                     </span>
 
                     {/* Remove Button */}
                     <button
                       onClick={() => removeFromCart(item.id)}
-                      className="p-2 text-[#8D7FA8] hover:text-[#F87171] transition-colors cursor-pointer"
+                      className="p-2 text-[#8A847A] hover:text-[#F87171] transition-colors cursor-pointer"
                       title="Remove item"
                       aria-label="Remove item"
                     >
@@ -218,7 +218,7 @@ export default function Cart() {
             <div className="pt-2 flex items-center justify-between">
               <Link
                 to="/shop"
-                className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#C9BFDD] hover:text-[#D4AF37]"
+                className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#D0C9BA] hover:text-[#D4AF37]"
               >
                 <ArrowLeft size={14} />
                 <span>Continue Shopping</span>
@@ -257,7 +257,7 @@ export default function Cart() {
                       value={inputCoupon}
                       onChange={(e) => setInputCoupon(e.target.value)}
                       placeholder="Coupon code (e.g. WELCOME10)"
-                      className="flex-1 bg-[#0B0710] border border-[#34254D] rounded-xl px-3 py-2 text-xs text-[#F1EAFB] focus:outline-none focus:border-[#D4AF37]"
+                      className="flex-1 bg-[#0B0710] border border-[#34254D] rounded-xl px-3 py-2 text-xs text-[#F5ECD7] focus:outline-none focus:border-[#D4AF37]"
                     />
                     <Button type="submit" variant="dark" size="sm">
                       Apply
@@ -267,10 +267,10 @@ export default function Cart() {
               </div>
 
               {/* Cost Lines */}
-              <div className="space-y-3 text-xs text-[#C9BFDD] pb-5 border-b border-[#2E2045]">
+              <div className="space-y-3 text-xs text-[#D0C9BA] pb-5 border-b border-[#2E2045]">
                 <div className="flex justify-between">
                   <span>Subtotal</span>
-                  <span className="font-semibold text-[#F1EAFB]">{formatCurrency(subtotal)}</span>
+                  <span className="font-semibold text-[#F5ECD7]">{formatCurrency(subtotal)}</span>
                 </div>
 
                 {discount > 0 && (
@@ -315,7 +315,7 @@ export default function Cart() {
                 <ArrowRight size={15} />
               </Button>
 
-              <div className="mt-4 flex items-center justify-center gap-1.5 text-[11px] text-[#A99BC4]">
+              <div className="mt-4 flex items-center justify-center gap-1.5 text-[11px] text-[#B0A99C]">
                 <ShieldCheck size={14} className="text-[#D4AF37]" />
                 <span>Secure SSL checkout • 100% satisfaction guaranteed</span>
               </div>

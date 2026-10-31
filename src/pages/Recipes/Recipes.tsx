@@ -39,12 +39,9 @@ export default function Recipes() {
   return (
     <div className="bg-[#0B0710] pb-16">
       {/* 1. Hero Banner */}
-      <section className="bg-[#1A0F2B] text-[#E9DFF7] py-14 px-4 sm:px-6 lg:px-8 border-b border-[#34254D] text-center relative overflow-hidden">
+      <section className="bg-[#1A0F2B] text-[#EFE7D6] py-14 px-4 sm:px-6 lg:px-8 border-b border-[#34254D] text-center relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(#B88847_1px,transparent_1px)] [background-size:16px_16px] opacity-10 pointer-events-none" />
         <div className="relative z-10 max-w-3xl mx-auto">
-          <span className="text-[11px] font-bold tracking-[0.25em] uppercase text-[#D4AF37] block mb-2">
-            BALKAN CUISINE
-          </span>
           <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#F5ECD7] tracking-tight mb-4">
             Recipes & Inspiration
           </h1>
@@ -55,13 +52,13 @@ export default function Recipes() {
       </section>
 
       {/* 2. Featured Recipes Grid */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
+      <section className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 pt-12">
         <div className="flex items-center justify-between pb-4 mb-8 border-b border-[#2E2045]">
           <div>
             <h2 className="font-serif text-2xl font-bold text-[#F5ECD7]">
               Featured Recipes
             </h2>
-            <p className="text-xs text-[#A99BC4] mt-0.5">
+            <p className="text-xs text-[#B0A99C] mt-0.5">
               Generational dishes crafted with pantry staples found right here at Belké Market.
             </p>
           </div>
@@ -95,13 +92,13 @@ export default function Recipes() {
                   <h3 className="font-serif text-xl font-bold text-[#F5ECD7] mb-2 group-hover:text-[#D4AF37] transition-colors">
                     {recipe.title}
                   </h3>
-                  <p className="text-xs text-[#C9BFDD] line-clamp-2 leading-relaxed mb-4">
+                  <p className="text-xs text-[#D0C9BA] line-clamp-2 leading-relaxed mb-4">
                     {recipe.description}
                   </p>
                 </div>
 
                 <div>
-                  <div className="flex items-center gap-4 text-xs text-[#A99BC4] mb-5 pt-3 border-t border-[#241838]">
+                  <div className="flex items-center gap-4 text-xs text-[#B0A99C] mb-5 pt-3 border-t border-[#241838]">
                     <span className="flex items-center gap-1">
                       <Clock size={13} className="text-[#D4AF37]" />
                       {recipe.prepTime} prep
@@ -115,7 +112,7 @@ export default function Recipes() {
                   {/* Button: "VIEW RECIPE ->" matching mockup! */}
                   <button
                     onClick={() => setActiveRecipe(recipe)}
-                    className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-[#D4AF37] hover:bg-[#B8962E] text-[#0B0710] text-xs font-semibold tracking-wider uppercase transition-colors cursor-pointer"
+                    className="w-full inline-flex items-center justify-center gap-2 bg-[#D4AF37] hover:bg-[#B8962E] text-[#0B0710] font-semibold tracking-wider uppercase transition-colors cursor-pointer h-12 px-8 rounded-full text-xs"
                   >
                     <span>VIEW RECIPE</span>
                     <ArrowRight size={13} />
@@ -144,7 +141,7 @@ export default function Recipes() {
               />
             </div>
 
-            <div className="flex items-center gap-6 text-xs text-[#C9BFDD] pb-3 border-b border-[#2E2045]">
+            <div className="flex items-center gap-6 text-xs text-[#D0C9BA] pb-3 border-b border-[#2E2045]">
               <span className="flex items-center gap-1.5 font-medium">
                 <Clock size={15} className="text-[#D4AF37]" />
                 Prep: {activeRecipe.prepTime} • Cook: {activeRecipe.cookTime}
@@ -155,7 +152,7 @@ export default function Recipes() {
               </span>
             </div>
 
-            <p className="text-sm text-[#DDD5EC] leading-relaxed">
+            <p className="text-sm text-[#E6DFCF] leading-relaxed">
               {activeRecipe.description}
             </p>
 
@@ -177,7 +174,7 @@ export default function Recipes() {
                   </button>
                 )}
               </div>
-              <ul className="space-y-2 text-xs text-[#C9BFDD] bg-[#140C1F] p-4 rounded-2xl border border-[#2E2045]">
+              <ul className="space-y-2 text-xs text-[#D0C9BA] bg-[#140C1F] p-4 rounded-2xl border border-[#2E2045]">
                 {activeRecipe.ingredients.map((ing, i) => (
                   <li key={i} className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37] shrink-0" />
@@ -192,7 +189,7 @@ export default function Recipes() {
               <h4 className="font-serif text-base font-bold text-[#F5ECD7] mb-3">
                 Instructions
               </h4>
-              <ol className="space-y-3 text-xs text-[#C9BFDD]">
+              <ol className="space-y-3 text-xs text-[#D0C9BA]">
                 {activeRecipe.instructions.map((step, idx) => (
                   <li key={idx} className="flex items-start gap-3">
                     <span className="w-5 h-5 rounded-full bg-[#D4AF37] text-[#0B0710] flex items-center justify-center text-[10px] font-bold shrink-0 mt-0.5">

@@ -2,7 +2,7 @@
  * Home
  * Main landing page strictly implementing the Belké Market layout:
  * HeroSection, ValuePillars, CategoryGrid, StorySection, FeaturedProducts, CommunitySection.
- * Sections are stacked: each one is pinned while the next slides over it.
+ * Featured Products is pinned while the next section slides over it.
  *
  * Used in: / route
  */
@@ -36,7 +36,7 @@ export default function Home() {
       <div className="page-section">
         <StorySection />
       </div>
-      <div className="page-section">
+      <div className="page-section" data-stack>
         <FeaturedProducts />
       </div>
       <div className="page-section">

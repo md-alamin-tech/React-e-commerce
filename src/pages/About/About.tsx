@@ -46,7 +46,7 @@ export default function About() {
     <div className="bg-[#0B0710] pb-16">
       {/* 1. Hero: Our Story */}
       <section className="bg-[#0B0710] py-14 lg:py-20 border-b border-[#2E2045]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             {/* Left Narrative Title */}
             <div className="lg:col-span-6 text-left">
@@ -77,7 +77,7 @@ export default function About() {
 
       {/* 2. Section: About Belké Market */}
       <section className="py-16 lg:py-24 border-b border-[#2E2045]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
             {/* Left Shop Photo */}
             <div className="lg:col-span-6">
@@ -95,7 +95,7 @@ export default function About() {
               <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#F5ECD7] mb-6">
                 About Belké Market
               </h2>
-              <div className="space-y-4 text-sm sm:text-base text-[#C9BFDD] leading-relaxed mb-8">
+              <div className="space-y-4 text-sm sm:text-base text-[#D0C9BA] leading-relaxed mb-8">
                 <p>
                   Belké Market was created with a simple mission: to bring authentic European and Balkan foods closer to home. We believe food connects generations, preserves culture, and brings communities together.
                 </p>
@@ -109,7 +109,7 @@ export default function About() {
 
               <button
                 onClick={scrollToValues}
-                className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-[#D4AF37] hover:bg-[#B8962E] text-[#0B0710] text-xs sm:text-sm font-semibold tracking-wider uppercase transition-colors shadow-xs hover:shadow cursor-pointer"
+                className="inline-flex items-center gap-2 bg-[#D4AF37] hover:bg-[#B8962E] text-[#0B0710] font-semibold tracking-wider uppercase transition-colors shadow-xs hover:shadow cursor-pointer h-12 px-8 rounded-full text-xs justify-center"
               >
                 <span>OUR VALUES</span>
                 <ArrowRight size={14} />
@@ -121,7 +121,7 @@ export default function About() {
 
       {/* 3. Four Core Values Grid */}
       <section ref={valuesRef} className="py-16 lg:py-20 border-b border-[#2E2045]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((val, idx) => (
               <div
@@ -134,7 +134,7 @@ export default function About() {
                 <h3 className="font-serif text-sm font-bold tracking-wider uppercase text-[#F5ECD7] mb-2">
                   {val.title}
                 </h3>
-                <p className="text-xs text-[#A99BC4] leading-relaxed">
+                <p className="text-xs text-[#B0A99C] leading-relaxed">
                   {val.desc}
                 </p>
               </div>
@@ -145,7 +145,7 @@ export default function About() {
 
       {/* 4. Bottom Photographic Quote Banner: "Good Food Brings People Together." */}
       <section className="pt-14 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-[1400px] mx-auto">
           <div className="relative rounded-3xl overflow-hidden shadow-xl border border-[#2E2045]">
             <img
               src="/assets/aistudio/EA7AB6BA-A77D-4A0C-868C-F7B2BD7987DF_df31e837.png"
@@ -153,13 +153,10 @@ export default function About() {
               className="w-full h-64 sm:h-80 object-cover object-center filter brightness-[0.65]"
             />
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6 bg-black/25">
-              <span className="text-xs uppercase tracking-[0.3em] font-semibold text-[#D4AF37] mb-2">
-                BELKÉ MARKET
-              </span>
               <h3 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#F5ECD7] tracking-tight drop-shadow-md">
                 Good Food Brings People Together.
               </h3>
-              <p className="text-xs sm:text-sm text-[#E9DFF7] mt-3 font-medium">
+              <p className="text-xs sm:text-sm text-[#EFE7D6] mt-3 font-medium">
                 Visit our store in Southington, CT or order online today.
               </p>
             </div>

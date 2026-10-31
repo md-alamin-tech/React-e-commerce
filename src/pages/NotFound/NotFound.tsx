@@ -20,26 +20,23 @@ export default function NotFound() {
         <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-[#0B0710] flex items-center justify-center text-[#D4AF37]">
           <Compass size={32} />
         </div>
-        <span className="text-xs font-bold uppercase tracking-widest text-[#D4AF37] block mb-1">
-          404 ERROR
-        </span>
         <h1 className="font-serif text-3xl font-bold text-[#F5ECD7] mb-2">
           Page Not Found
         </h1>
-        <p className="text-xs sm:text-sm text-[#A99BC4] mb-6">
+        <p className="text-xs sm:text-sm text-[#B0A99C] mb-6">
           The page you are looking for may have been moved or does not exist. Let's guide you back to our delicious pantry.
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <Link
             to="/"
-            className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-[#D4AF37] text-[#0B0710] text-xs font-semibold tracking-wider uppercase transition-colors"
+            className="inline-flex items-center justify-center gap-2 bg-[#D4AF37] text-[#0B0710] font-semibold tracking-wider uppercase transition-colors h-12 px-8 rounded-full text-xs"
           >
             <span>Return Home</span>
             <ArrowRight size={13} />
           </Link>
           <Link
             to="/shop"
-            className="inline-flex items-center justify-center px-6 py-2.5 rounded-full border border-[#D4AF37] text-[#D4AF37] text-xs font-semibold tracking-wider uppercase hover:bg-[#D4AF37]/5 transition-colors"
+            className="inline-flex items-center justify-center border border-[#D4AF37] text-[#D4AF37] font-semibold tracking-wider uppercase hover:bg-[#D4AF37]/5 transition-colors h-12 px-8 rounded-full text-xs"
           >
             Browse Products
           </Link>

@@ -26,7 +26,7 @@ export const CtaBanner: React.FC<CtaBannerProps> = ({ onExploreAll }) => {
         </h3>
         <button
           onClick={onExploreAll}
-          className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-[#D4AF37] hover:bg-[#E8C547] text-[#0B0710] text-xs sm:text-sm font-semibold tracking-wider uppercase transition-colors shadow-md cursor-pointer"
+          className="inline-flex items-center gap-2 bg-[#D4AF37] hover:bg-[#E8C547] text-[#0B0710] font-semibold tracking-wider uppercase transition-colors shadow-md cursor-pointer h-12 px-8 rounded-full text-xs justify-center"
         >
           <span>EXPLORE ALL PRODUCTS</span>
           <ArrowRight size={14} />

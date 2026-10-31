@@ -1,7 +1,7 @@
 /**
  * useStackedSections
- * Pins every `.page-section` inside the container so the next section slides
- * over it (stacked-cards scroll). Sections taller than the viewport are pinned
+ * Pins every `.page-section[data-stack]` inside the container so the next
+ * section slides over it (stacked-cards scroll). Sections taller than the viewport are pinned
  * by their bottom edge so their full content can still be read.
  *
  * @param ref - container element that holds the `.page-section` children
@@ -26,7 +26,8 @@ export function useStackedSections(ref: RefObject<HTMLElement | null>) {
         section.classList.add('fe-stacked-section');
         section.style.zIndex = String(i + 1);
 
-        if (i < sections.length - 1) {
+        // Only sections marked with data-stack get the overlap effect.
+        if (section.hasAttribute('data-stack') && i < sections.length - 1) {
           ScrollTrigger.create({
             trigger: section,
             start: () => (section.offsetHeight > window.innerHeight ? 'bottom bottom' : 'top top'),

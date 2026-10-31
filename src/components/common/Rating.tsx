@@ -71,7 +71,7 @@ export const Rating: React.FC<RatingProps> = ({
         })}
       </div>
       {typeof count === 'number' && (
-        <span className="text-xs text-[#A99BC4] font-medium">({count})</span>
+        <span className="text-xs text-[#B0A99C] font-medium">({count})</span>
       )}
     </div>
   );

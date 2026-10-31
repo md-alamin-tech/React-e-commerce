@@ -41,15 +41,15 @@ export const ToastContainer: React.FC = () => {
             {icons[toast.type]}
             <div className="flex-1 min-w-0">
               {toast.title && (
-                <p className="text-xs font-bold uppercase tracking-wider text-[#F1EAFB] mb-0.5">
+                <p className="text-xs font-bold uppercase tracking-wider text-[#F5ECD7] mb-0.5">
                   {toast.title}
                 </p>
               )}
-              <p className="text-sm text-[#F1EAFB] leading-snug">{toast.message}</p>
+              <p className="text-sm text-[#F5ECD7] leading-snug">{toast.message}</p>
             </div>
             <button
               onClick={() => removeToast(toast.id)}
-              className="text-[#8D7FA8] hover:text-[#D4AF37] p-1 cursor-pointer"
+              className="text-[#8A847A] hover:text-[#D4AF37] p-1 cursor-pointer"
               aria-label="Close notification"
             >
               <X size={16} />

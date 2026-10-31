@@ -33,13 +33,10 @@ export const HeroSection: React.FC = () => {
       <div className="absolute inset-x-0 top-0 h-40 -z-10 bg-gradient-to-b from-black/50 to-transparent pointer-events-none" />
 
       {/* pt-[81px] offsets the floating header so content never hides under it */}
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-[81px] pb-16 lg:pb-20">
+      <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 pt-[81px] pb-16 lg:pb-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-end">
           {/* Hero Copy */}
           <div className="lg:col-span-7 flex flex-col items-start text-left">
-            <span className="text-[11px] sm:text-xs font-bold tracking-[0.25em] uppercase text-[#F0D77A] mb-3">
-              EUROPEAN GROCERIES • BALKAN FLAVORS • LOCAL COMMUNITY
-            </span>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-[#F5ECD7] tracking-tight leading-[1.15] mb-6">
               A LITTLE TASTE <br />
@@ -57,7 +54,7 @@ export const HeroSection: React.FC = () => {
             <div className="flex flex-wrap items-center gap-4">
               <Link
                 to="/shop"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-[#D4AF37] hover:bg-[#E8C547] text-[#0B0710] text-xs sm:text-sm font-semibold tracking-wider uppercase transition-all shadow-sm hover:shadow active:scale-98"
+                className="inline-flex items-center justify-center gap-2 bg-[#D4AF37] hover:bg-[#E8C547] text-[#0B0710] font-semibold tracking-wider uppercase transition-all shadow-sm hover:shadow active:scale-98 h-12 px-8 rounded-full text-xs"
               >
                 <span>EXPLORE OUR PRODUCTS</span>
                 <ArrowRight size={15} />
@@ -65,7 +62,7 @@ export const HeroSection: React.FC = () => {
 
               <Link
                 to="/about"
-                className="inline-flex items-center justify-center px-6 py-3.5 rounded-full border border-white/80 hover:bg-white/10 text-white text-xs sm:text-sm font-semibold tracking-wider uppercase transition-all active:scale-98"
+                className="inline-flex items-center justify-center border border-white/80 hover:bg-white/10 text-white font-semibold tracking-wider uppercase transition-all active:scale-98 h-12 px-8 rounded-full text-xs"
               >
                 OUR STORY
               </Link>

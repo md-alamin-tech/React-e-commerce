@@ -120,7 +120,7 @@ export default function Shop() {
     <div className="bg-[#0B0710] pb-16">
       <ShopBanner />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 pt-10">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           {/* Desktop Left Sidebar Filters */}
           <div className="hidden lg:block lg:col-span-1">
@@ -154,7 +154,7 @@ export default function Shop() {
                 <h2 className="font-serif text-2xl font-bold text-[#F5ECD7]">
                   {headingTitle}
                 </h2>
-                <p className="text-xs text-[#A99BC4] mt-0.5">
+                <p className="text-xs text-[#B0A99C] mt-0.5">
                   Showing {filteredProducts.length} items
                   {searchParam && (
                     <button
@@ -174,7 +174,7 @@ export default function Shop() {
                 {/* Mobile Filter Button */}
                 <button
                   onClick={() => setMobileFilterOpen(true)}
-                  className="lg:hidden flex items-center gap-2 px-3.5 py-2 rounded-lg border border-[#34254D] bg-[#140C1F] text-xs font-semibold text-[#F1EAFB]"
+                  className="lg:hidden flex items-center gap-2 px-3.5 py-2 rounded-lg border border-[#34254D] bg-[#140C1F] text-xs font-semibold text-[#F5ECD7]"
                 >
                   <SlidersHorizontal size={14} />
                   <span>Filters</span>
@@ -182,11 +182,11 @@ export default function Shop() {
 
                 {/* Sort Selector */}
                 <div className="flex items-center gap-2 text-xs">
-                  <span className="text-[#A99BC4] hidden sm:inline">Sort by:</span>
+                  <span className="text-[#B0A99C] hidden sm:inline">Sort by:</span>
                   <select
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value)}
-                    className="bg-[#140C1F] border border-[#34254D] rounded-lg px-3 py-2 text-xs font-medium text-[#F1EAFB] focus:outline-none focus:border-[#D4AF37] cursor-pointer"
+                    className="bg-[#140C1F] border border-[#34254D] rounded-lg px-3 py-2 text-xs font-medium text-[#F5ECD7] focus:outline-none focus:border-[#D4AF37] cursor-pointer"
                   >
                     <option value="featured">Featured / Best Sellers</option>
                     <option value="price-low">Price: Low to High</option>
@@ -210,7 +210,7 @@ export default function Shop() {
                 <button
                   onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
                   disabled={currentPage === 1}
-                  className="p-2 rounded-lg border border-[#34254D] bg-[#140C1F] text-[#F1EAFB] disabled:opacity-40 disabled:cursor-not-allowed hover:bg-[#1E1430] transition-colors"
+                  className="p-2 rounded-lg border border-[#34254D] bg-[#140C1F] text-[#F5ECD7] disabled:opacity-40 disabled:cursor-not-allowed hover:bg-[#1E1430] transition-colors"
                   aria-label="Previous page"
                 >
                   <ChevronLeft size={16} />
@@ -223,7 +223,7 @@ export default function Shop() {
                     className={`w-9 h-9 rounded-lg text-xs font-semibold transition-colors cursor-pointer ${
                       currentPage === pageNum
                         ? 'bg-[#D4AF37] text-[#0B0710]'
-                        : 'bg-[#140C1F] border border-[#34254D] text-[#C9BFDD] hover:bg-[#1E1430]'
+                        : 'bg-[#140C1F] border border-[#34254D] text-[#D0C9BA] hover:bg-[#1E1430]'
                     }`}
                   >
                     {pageNum}
@@ -233,7 +233,7 @@ export default function Shop() {
                 <button
                   onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
                   disabled={currentPage === totalPages}
-                  className="p-2 rounded-lg border border-[#34254D] bg-[#140C1F] text-[#F1EAFB] disabled:opacity-40 disabled:cursor-not-allowed hover:bg-[#1E1430] transition-colors"
+                  className="p-2 rounded-lg border border-[#34254D] bg-[#140C1F] text-[#F5ECD7] disabled:opacity-40 disabled:cursor-not-allowed hover:bg-[#1E1430] transition-colors"
                   aria-label="Next page"
                 >
                   <ChevronRight size={16} />
@@ -259,7 +259,7 @@ export default function Shop() {
               <h3 className="font-serif text-lg font-bold text-[#F5ECD7]">Filters</h3>
               <button
                 onClick={() => setMobileFilterOpen(false)}
-                className="p-1 rounded-full text-[#A99BC4] hover:text-[#D4AF37]"
+                className="p-1 rounded-full text-[#B0A99C] hover:text-[#D4AF37]"
               >
                 <X size={20} />
               </button>

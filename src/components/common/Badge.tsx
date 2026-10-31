@@ -29,7 +29,7 @@ export const Badge: React.FC<BadgeProps> = ({
   };
 
   const variantClasses = {
-    default: 'bg-[#2A1D3F] text-[#D6CDE6]',
+    default: 'bg-[#2A1D3F] text-[#DCD5C6]',
     success: 'bg-[#0F2A1A] text-[#6EE7A0]',
     warning: 'bg-[#2B220D] text-[#FBBF24]',
     sale: 'bg-[#2E1214] text-[#F87171]',

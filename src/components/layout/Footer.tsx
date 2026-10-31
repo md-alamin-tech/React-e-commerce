@@ -13,14 +13,14 @@ import { APP_CONFIG } from '../../utils/constants';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#07040C] border-t border-[#2E2045] pt-14 pb-8 text-[#DDD5EC]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="bg-[#07040C] border-t border-[#2E2045] pt-14 pb-8 text-[#E6DFCF]">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-[#2E2045]">
           {/* Column 1: Brand & Emblem */}
           <div className="flex flex-col items-start space-y-4">
             <Link to="/" className="flex flex-col items-start group">
               <svg
-                className="w-10 h-5 text-[#F1EAFB]"
+                className="w-10 h-5 text-[#F5ECD7]"
                 viewBox="0 0 100 40"
                 fill="currentColor"
               >
@@ -31,11 +31,11 @@ export const Footer: React.FC = () => {
               <span className="font-serif text-2xl font-bold tracking-widest text-[#F5ECD7] uppercase mt-1">
                 BELKÉ
               </span>
-              <span className="text-[10px] tracking-[0.35em] text-[#A99BC4] uppercase font-semibold">
+              <span className="text-[10px] tracking-[0.35em] text-[#B0A99C] uppercase font-semibold">
                 MARKET
               </span>
             </Link>
-            <p className="text-xs text-[#A99BC4] leading-relaxed max-w-xs">
+            <p className="text-xs text-[#B0A99C] leading-relaxed max-w-xs">
               Specialty grocery store bringing the warmest flavors and traditions of Albania and Europe to our local community.
             </p>
           </div>
@@ -45,7 +45,7 @@ export const Footer: React.FC = () => {
             <h4 className="text-xs font-bold uppercase tracking-widest text-[#F5ECD7] mb-4">
               Quick Links
             </h4>
-            <ul className="space-y-2.5 text-xs text-[#C9BFDD]">
+            <ul className="space-y-2.5 text-xs text-[#D0C9BA]">
               <li>
                 <Link to="/" className="hover:text-[#D4AF37] transition-colors">
                   Home
@@ -84,7 +84,7 @@ export const Footer: React.FC = () => {
             <h4 className="text-xs font-bold uppercase tracking-widest text-[#F5ECD7] mb-4">
               Contact
             </h4>
-            <ul className="space-y-3 text-xs text-[#C9BFDD]">
+            <ul className="space-y-3 text-xs text-[#D0C9BA]">
               <li className="flex items-start gap-2">
                 <MapPin size={15} className="text-[#D4AF37] shrink-0 mt-0.5" />
                 <span>{APP_CONFIG.address}</span>
@@ -100,7 +100,7 @@ export const Footer: React.FC = () => {
               </li>
             </ul>
 
-            <div className="flex items-center gap-3.5 mt-4 text-[#F1EAFB]">
+            <div className="flex items-center gap-3.5 mt-4 text-[#F5ECD7]">
               <a
                 href={APP_CONFIG.socials.instagram}
                 target="_blank"
@@ -145,7 +145,7 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom copyright line */}
-        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#A99BC4] gap-3">
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#B0A99C] gap-3">
           <p>© 2026 Belké Market. All rights reserved.</p>
           <div className="flex items-center gap-4">
             <Link to="/about" className="hover:text-[#D4AF37] transition-colors">

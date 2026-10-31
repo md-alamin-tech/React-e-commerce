@@ -39,7 +39,7 @@ export const Loader: React.FC<LoaderProps> = ({
           <span className="w-2 h-2 rounded-full bg-[#D4AF37]" />
         </div>
       </div>
-      {text && <p className="text-sm font-medium text-[#A99BC4]">{text}</p>}
+      {text && <p className="text-sm font-medium text-[#B0A99C]">{text}</p>}
     </div>
   );
 };

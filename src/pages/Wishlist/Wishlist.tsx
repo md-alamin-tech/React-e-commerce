@@ -35,12 +35,12 @@ export default function Wishlist() {
           <h2 className="font-serif text-2xl font-bold text-[#F5ECD7] mb-2">
             Your Wishlist is Empty
           </h2>
-          <p className="text-xs sm:text-sm text-[#A99BC4] mb-6">
+          <p className="text-xs sm:text-sm text-[#B0A99C] mb-6">
             Tap the heart icon on any product in our store to save it to your personal wishlist!
           </p>
           <Link
             to="/shop"
-            className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#D4AF37] text-[#0B0710] text-xs font-semibold tracking-wider uppercase transition-colors"
+            className="inline-flex items-center justify-center gap-2 bg-[#D4AF37] text-[#0B0710] font-semibold tracking-wider uppercase transition-colors h-12 px-8 rounded-full text-xs"
           >
             <span>Discover Products</span>
             <ArrowRight size={14} />
@@ -52,13 +52,13 @@ export default function Wishlist() {
 
   return (
     <div className="bg-[#0B0710] py-10 sm:py-14">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 mb-8 border-b border-[#2E2045] gap-4">
           <div>
             <h1 className="font-serif text-3xl font-bold text-[#F5ECD7]">
               My Wishlist
             </h1>
-            <p className="text-xs text-[#A99BC4] mt-0.5">
+            <p className="text-xs text-[#B0A99C] mt-0.5">
               {wishlist.length} saved item{wishlist.length === 1 ? '' : 's'}
             </p>
           </div>
@@ -69,7 +69,7 @@ export default function Wishlist() {
             </Button>
             <button
               onClick={clearWishlist}
-              className="inline-flex items-center gap-1 text-xs text-[#A99BC4] hover:text-[#F87171] underline cursor-pointer"
+              className="inline-flex items-center gap-1 text-xs text-[#B0A99C] hover:text-[#F87171] underline cursor-pointer"
             >
               <Trash2 size={13} />
               <span>Clear Wishlist</span>

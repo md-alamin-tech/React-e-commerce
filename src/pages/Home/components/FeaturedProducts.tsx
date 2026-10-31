@@ -20,21 +20,21 @@ export const FeaturedProducts: React.FC = () => {
 
   return (
     <section className="bg-[#0B0710] py-16 lg:py-20 border-b border-[#2E2045]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row items-center justify-between mb-10 gap-4">
           <div className="text-center sm:text-left">
             <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#F5ECD7] uppercase tracking-wide">
               FEATURED PRODUCTS
             </h2>
-            <p className="text-xs text-[#A99BC4] mt-1">
+            <p className="text-xs text-[#B0A99C] mt-1">
               Hand-picked favorites loved by our patrons and families.
             </p>
           </div>
 
           <Link
             to="/shop"
-            className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#D4AF37] hover:text-[#B8962E] transition-colors"
+            className="inline-flex items-center justify-center gap-2 h-12 px-8 rounded-full border border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#0B0710] text-xs font-semibold tracking-wider uppercase transition-colors"
           >
             <span>View All Products</span>
             <ArrowRight size={14} />
