@@ -7,7 +7,7 @@
  */
 
 import React, { useState, useRef, useEffect } from 'react';
-import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { Link, NavLink, useNavigate, useLocation } from 'react-router-dom';
 import { Search, ShoppingBag, Heart, User as UserIcon, Menu, X, ArrowRight } from 'lucide-react';
 import { useCart } from '../../context/CartContext';
 import { useWishlist } from '../../context/WishlistContext';
@@ -28,6 +28,25 @@ export const Navbar: React.FC = () => {
   const debouncedSearch = useDebounce(searchQuery, 250);
   const [suggestions, setSuggestions] = useState<Product[]>([]);
   const searchInputRef = useRef<HTMLInputElement>(null);
+
+  // On the home page the header floats over the hero image (transparent),
+  // then turns solid once the user scrolls.
+  const { pathname } = useLocation();
+  const isHome = pathname === '/';
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  const transparent = isHome && !scrolled && !mobileMenuOpen;
+
+  const iconBtn = transparent
+    ? 'text-white hover:text-[#E3C28D] hover:bg-white/15'
+    : 'text-[#3E3B36] hover:text-[#B88847] hover:bg-[#F2ECE1]';
 
   // Live search filtering
   useEffect(() => {
@@ -71,7 +90,15 @@ export const Navbar: React.FC = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-40 bg-[#FAF7F2]/95 backdrop-blur-md border-b border-[#E8DAC5] transition-all">
+    <header
+      className={`sticky top-0 z-40 border-b transition-all duration-300 ${
+        isHome ? '-mb-[81px]' : ''
+      } ${
+        transparent
+          ? 'bg-transparent border-transparent'
+          : 'bg-[#FAF7F2]/95 backdrop-blur-md border-[#E8DAC5]'
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Brand Logo with Olive Branches */}
@@ -79,7 +106,9 @@ export const Navbar: React.FC = () => {
             <div className="flex flex-col items-center">
               {/* Olive leaf decorative SVG emblem */}
               <svg
-                className="w-8 h-4 text-[#263620] group-hover:text-[#B88847] transition-colors"
+                className={`w-8 h-4 group-hover:text-[#B88847] transition-colors ${
+                  transparent ? 'text-white' : 'text-[#263620]'
+                }`}
                 viewBox="0 0 100 40"
                 fill="currentColor"
               >
@@ -89,10 +118,18 @@ export const Navbar: React.FC = () => {
                 <path d="M46 22 Q50 15 54 22" stroke="#263620" strokeWidth="2" fill="none" />
               </svg>
               <div className="flex flex-col items-center leading-none">
-                <span className="font-serif text-xl sm:text-2xl font-bold tracking-widest text-[#263620] uppercase">
+                <span
+                  className={`font-serif text-xl sm:text-2xl font-bold tracking-widest uppercase transition-colors ${
+                    transparent ? 'text-white' : 'text-[#263620]'
+                  }`}
+                >
                   BELKÉ
                 </span>
-                <span className="text-[9px] tracking-[0.35em] text-[#7C776E] uppercase font-semibold mt-0.5">
+                <span
+                  className={`text-[9px] tracking-[0.35em] uppercase font-semibold mt-0.5 transition-colors ${
+                    transparent ? 'text-white/80' : 'text-[#7C776E]'
+                  }`}
+                >
                   MARKET
                 </span>
               </div>
@@ -108,8 +145,12 @@ export const Navbar: React.FC = () => {
                 className={({ isActive }) =>
                   `text-sm font-medium tracking-wide transition-colors relative py-1 ${
                     isActive
-                      ? 'text-[#B88847] font-semibold after:content-[""] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-[#B88847]'
-                      : 'text-[#3E3B36] hover:text-[#B88847]'
+                      ? transparent
+                        ? 'text-[#E3C28D] font-semibold after:content-[""] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-[#E3C28D]'
+                        : 'text-[#B88847] font-semibold after:content-[""] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-[#B88847]'
+                      : transparent
+                        ? 'text-white/90 hover:text-[#E3C28D]'
+                        : 'text-[#3E3B36] hover:text-[#B88847]'
                   }`
                 }
               >
@@ -127,7 +168,7 @@ export const Navbar: React.FC = () => {
                   setSearchOpen(!searchOpen);
                   setTimeout(() => searchInputRef.current?.focus(), 100);
                 }}
-                className="p-2 text-[#3E3B36] hover:text-[#B88847] hover:bg-[#F2ECE1] rounded-full transition-colors cursor-pointer"
+                className={`p-2 rounded-full transition-colors cursor-pointer ${iconBtn}`}
                 title="Search products"
                 aria-label="Search"
               >
@@ -204,7 +245,7 @@ export const Navbar: React.FC = () => {
             {/* Wishlist Link */}
             <Link
               to="/wishlist"
-              className="relative p-2 text-[#3E3B36] hover:text-[#B88847] hover:bg-[#F2ECE1] rounded-full transition-colors"
+              className={`relative p-2 rounded-full transition-colors ${iconBtn}`}
               title="Wishlist"
               aria-label="Wishlist"
             >
@@ -219,7 +260,7 @@ export const Navbar: React.FC = () => {
             {/* Cart Link */}
             <Link
               to="/cart"
-              className="relative p-2 text-[#3E3B36] hover:text-[#B88847] hover:bg-[#F2ECE1] rounded-full transition-colors"
+              className={`relative p-2 rounded-full transition-colors ${iconBtn}`}
               title="Shopping Cart"
               aria-label="Cart"
             >
@@ -234,7 +275,7 @@ export const Navbar: React.FC = () => {
             {/* Account / Login */}
             <Link
               to={isAuthenticated ? '/account' : '/login'}
-              className="hidden sm:flex items-center gap-1.5 p-2 text-[#3E3B36] hover:text-[#B88847] hover:bg-[#F2ECE1] rounded-full transition-colors text-xs font-medium"
+              className={`hidden sm:flex items-center gap-1.5 p-2 rounded-full transition-colors text-xs font-medium ${iconBtn}`}
               title={isAuthenticated ? `Account: ${user?.name}` : 'Sign In'}
             >
               <UserIcon size={19} />
@@ -256,7 +297,11 @@ export const Navbar: React.FC = () => {
             {/* Mobile Hamburger Menu Toggle */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 text-[#263620] hover:bg-[#F2ECE1] rounded-lg transition-colors cursor-pointer"
+              className={`lg:hidden p-2 rounded-lg transition-colors cursor-pointer ${
+                transparent
+                  ? 'text-white hover:bg-white/15'
+                  : 'text-[#263620] hover:bg-[#F2ECE1]'
+              }`}
               aria-label="Toggle Navigation Menu"
             >
               {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
@@ -267,7 +312,7 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Menu Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-[#E8DAC5] bg-[#FAF7F2] px-6 py-5 shadow-lg">
+        <div className="lg:hidden absolute top-full left-0 right-0 border-t border-[#E8DAC5] bg-[#FAF7F2] px-6 py-5 shadow-lg">
           <nav className="flex flex-col space-y-3.5">
             {navLinks.map((link) => (
               <NavLink

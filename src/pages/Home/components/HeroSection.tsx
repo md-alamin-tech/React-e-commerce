@@ -1,7 +1,8 @@
 /**
  * HeroSection
- * Landing hero banner featuring brand tagline, cursive script typography,
- * dual call-to-actions, hero feast photography, and core value floating badges.
+ * Full-bleed landing hero. The feast photography is the section background and
+ * sits behind the (transparent) site header. Brand tagline, cursive script
+ * typography, dual call-to-actions and core value badges are layered on top.
  *
  * Used in: Home page
  */
@@ -10,28 +11,44 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Sparkles, HeartHandshake, Award, ShieldCheck } from 'lucide-react';
 
+const VALUE_BADGES = [
+  { icon: Award, label: 'QUALITY' },
+  { icon: ShieldCheck, label: 'TRADITION' },
+  { icon: HeartHandshake, label: 'COMMUNITY' },
+  { icon: Sparkles, label: 'AUTHENTIC FLAVORS' },
+];
+
 export const HeroSection: React.FC = () => {
   return (
-    <section className="relative overflow-hidden bg-[#FAF7F2] py-12 lg:py-16 border-b border-[#E8DAC5]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          {/* Left Hero Copy */}
-          <div className="lg:col-span-6 flex flex-col items-start text-left z-10">
-            {/* Tagline */}
-            <span className="text-[11px] sm:text-xs font-bold tracking-[0.25em] uppercase text-[#B88847] mb-3">
+    <section className="relative overflow-hidden isolate min-h-[620px] lg:min-h-[720px] flex items-center">
+      {/* Background image (sits behind the header) */}
+      <img
+        src="/assets/aistudio/418DF6A8-A9E9-410B-B7B8-20AFB3597616_6d2f0595.png"
+        alt="European and Balkan culinary feast overlooking the historic river bridge"
+        className="absolute inset-0 -z-20 w-full h-full object-cover object-center"
+      />
+      {/* Readability overlays: left-to-right for the copy, top-down for the header */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#10180D]/85 via-[#10180D]/55 to-[#10180D]/15 pointer-events-none" />
+      <div className="absolute inset-x-0 top-0 h-40 -z-10 bg-gradient-to-b from-black/50 to-transparent pointer-events-none" />
+
+      {/* pt-[81px] offsets the floating header so content never hides under it */}
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-[81px] pb-16 lg:pb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-end">
+          {/* Hero Copy */}
+          <div className="lg:col-span-7 flex flex-col items-start text-left">
+            <span className="text-[11px] sm:text-xs font-bold tracking-[0.25em] uppercase text-[#E3C28D] mb-3">
               EUROPEAN GROCERIES • BALKAN FLAVORS • LOCAL COMMUNITY
             </span>
 
-            {/* Headline with serif and cursive script */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-[#263620] tracking-tight leading-[1.15] mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-white tracking-tight leading-[1.15] mb-6">
               A LITTLE TASTE <br />
               OF HOME, <br />
-              <span className="font-script font-normal text-5xl sm:text-6xl lg:text-7xl text-[#B88847] block -mt-2">
+              <span className="font-script font-normal text-5xl sm:text-6xl lg:text-7xl text-[#E3C28D] block -mt-2">
                 close to home.
               </span>
             </h1>
 
-            <p className="text-sm sm:text-base text-[#5C5850] max-w-md leading-relaxed mb-8">
+            <p className="text-sm sm:text-base text-white/85 max-w-md leading-relaxed mb-8">
               Discover artisan cheeses, slow-simmered ajvar, crispy spiral burek, hand-stretched phyllo pastries, and beloved European pantry staples delivered fresh to your table.
             </p>
 
@@ -39,7 +56,7 @@ export const HeroSection: React.FC = () => {
             <div className="flex flex-wrap items-center gap-4">
               <Link
                 to="/shop"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-[#263620] hover:bg-[#1C2916] text-white text-xs sm:text-sm font-semibold tracking-wider uppercase transition-all shadow-sm hover:shadow active:scale-98"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-[#B88847] hover:bg-[#A37538] text-white text-xs sm:text-sm font-semibold tracking-wider uppercase transition-all shadow-sm hover:shadow active:scale-98"
               >
                 <span>EXPLORE OUR PRODUCTS</span>
                 <ArrowRight size={15} />
@@ -47,42 +64,38 @@ export const HeroSection: React.FC = () => {
 
               <Link
                 to="/about"
-                className="inline-flex items-center justify-center px-6 py-3.5 rounded-full border border-[#263620] hover:bg-[#263620]/5 text-[#263620] text-xs sm:text-sm font-semibold tracking-wider uppercase transition-all active:scale-98"
+                className="inline-flex items-center justify-center px-6 py-3.5 rounded-full border border-white/80 hover:bg-white/10 text-white text-xs sm:text-sm font-semibold tracking-wider uppercase transition-all active:scale-98"
               >
                 OUR STORY
               </Link>
             </div>
+
+            {/* Compact value badges for screens without the side card */}
+            <div className="flex lg:hidden flex-wrap gap-2 mt-8">
+              {VALUE_BADGES.map(({ icon: Icon, label }) => (
+                <span
+                  key={label}
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[10px] font-bold tracking-wider uppercase text-white"
+                >
+                  <Icon size={13} className="text-[#E3C28D]" />
+                  {label}
+                </span>
+              ))}
+            </div>
           </div>
 
-          {/* Right Hero Image with Floating Badges */}
-          <div className="lg:col-span-6 relative">
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-[#FFFFFF]">
-              <img
-                src="/assets/aistudio/418DF6A8-A9E9-410B-B7B8-20AFB3597616_6d2f0595.png"
-                alt="European and Balkan culinary feast overlooking the historic river bridge"
-                className="w-full h-[360px] sm:h-[440px] lg:h-[480px] object-cover object-center"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none" />
-            </div>
-
-            {/* Floating Value Badges (Matching mockup right side pill card!) */}
-            <div className="hidden sm:flex absolute -bottom-6 -left-6 lg:-left-8 bg-[#FFFFFF]/95 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-[#E8DAC5] flex-col gap-3">
-              <div className="flex items-center gap-2.5 text-xs font-bold tracking-wider uppercase text-[#263620]">
-                <Award size={16} className="text-[#B88847]" />
-                <span>QUALITY</span>
-              </div>
-              <div className="flex items-center gap-2.5 text-xs font-bold tracking-wider uppercase text-[#263620]">
-                <ShieldCheck size={16} className="text-[#B88847]" />
-                <span>TRADITION</span>
-              </div>
-              <div className="flex items-center gap-2.5 text-xs font-bold tracking-wider uppercase text-[#263620]">
-                <HeartHandshake size={16} className="text-[#B88847]" />
-                <span>COMMUNITY</span>
-              </div>
-              <div className="flex items-center gap-2.5 text-xs font-bold tracking-wider uppercase text-[#263620]">
-                <Sparkles size={16} className="text-[#B88847]" />
-                <span>AUTHENTIC FLAVORS</span>
-              </div>
+          {/* Floating Value Badges card (desktop) */}
+          <div className="hidden lg:flex lg:col-span-5 justify-end">
+            <div className="bg-white/10 backdrop-blur-md p-5 rounded-2xl shadow-xl border border-white/20 flex flex-col gap-3.5">
+              {VALUE_BADGES.map(({ icon: Icon, label }) => (
+                <div
+                  key={label}
+                  className="flex items-center gap-2.5 text-xs font-bold tracking-wider uppercase text-white"
+                >
+                  <Icon size={16} className="text-[#E3C28D]" />
+                  <span>{label}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
