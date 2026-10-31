@@ -131,7 +131,7 @@ export default function About() {
       {/* 4. Bottom Photographic Quote Banner: "Good Food Brings People Together." */}
       <section className="pt-14 px-4 sm:px-6 lg:px-8">
         <div className="max-w-[1536px] mx-auto">
-          <div className="relative rounded-[10px] overflow-hidden shadow-xl border border-[#2E2045]">
+          <div className="relative rounded-[14px] overflow-hidden shadow-xl border border-[#2E2045]">
             <img
               src="/assets/aistudio/EA7AB6BA-A77D-4A0C-868C-F7B2BD7987DF_df31e837.png"
               alt="Mediterranean spread with olive branches"

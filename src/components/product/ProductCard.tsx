@@ -116,7 +116,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           <button
             type="button"
             onClick={() => addToCart(product, 1)}
-            className="p-2 rounded-md bg-[#0B0710] hover:bg-[#D4AF37] text-[#F5ECD7] hover:text-[#0B0710] border border-[#2E2045] transition-colors cursor-pointer"
+            className="p-2 rounded-full bg-[#0B0710] hover:bg-[#D4AF37] text-[#F5ECD7] hover:text-[#0B0710] border border-[#2E2045] transition-colors cursor-pointer"
             title="Quick add to cart"
             aria-label="Add to cart"
           >

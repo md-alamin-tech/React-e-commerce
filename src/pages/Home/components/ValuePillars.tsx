@@ -34,7 +34,7 @@ export const ValuePillars: React.FC = () => {
 
   return (
     <section className="p-5 bg-[#0B0710]">
-      <div className="rounded-[10px] bg-[#120A1D] py-10 max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="rounded-[14px] bg-[#120A1D] py-10 max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {pillars.map((item, idx) => (
             <div key={idx} className="flex flex-col items-center text-center p-3">

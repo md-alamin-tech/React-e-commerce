@@ -247,7 +247,7 @@ export default function Account() {
                                 <img
                                   src={item.image}
                                   alt={item.productName}
-                                  className="w-10 h-10 object-cover rounded-md bg-[#140C1F] shrink-0"
+                                  className="w-10 h-10 object-cover rounded-[10px] bg-[#140C1F] shrink-0"
                                 />
                                 <div>
                                   <p className="font-semibold text-[#F5ECD7]">{item.productName}</p>

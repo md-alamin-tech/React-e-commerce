@@ -21,7 +21,7 @@ const VALUE_BADGES = [
 export const HeroSection: React.FC = () => {
   return (
     <section className="p-5 bg-[#0B0710]">
-    <div className="relative overflow-hidden isolate rounded-[10px] min-h-[620px] lg:min-h-[720px] flex items-center">
+    <div className="relative overflow-hidden isolate rounded-[14px] min-h-[620px] lg:min-h-[720px] flex items-center">
       {/* Background image (sits behind the header) */}
       <img
         src="/assets/aistudio/418DF6A8-A9E9-410B-B7B8-20AFB3597616_6d2f0595.png"

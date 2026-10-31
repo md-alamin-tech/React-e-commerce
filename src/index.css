@@ -73,23 +73,19 @@ html.lenis body {
 }
 
 /* Image hover: zoom + light sweep overlay for content images (not full-section backgrounds: .absolute / .no-fx) */
-div:has(> img:not(.absolute):not(.no-fx)):not(.absolute):not(.fixed):not(.sticky),
-figure:has(> img:not(.absolute):not(.no-fx)):not(.absolute):not(.fixed):not(.sticky) {
+:is(div, figure, a, button):has(> img:not(.absolute):not(.no-fx)):not(.absolute):not(.fixed):not(.sticky) {
   position: relative;
 }
 
-div:has(> img:not(.absolute):not(.no-fx)),
-figure:has(> img:not(.absolute):not(.no-fx)) {
+:is(div, figure, a, button):has(> img:not(.absolute):not(.no-fx)) {
   overflow: hidden;
 }
 
-div:has(> img:not(.absolute):not(.no-fx)) > img:not(.absolute):not(.no-fx),
-figure:has(> img:not(.absolute):not(.no-fx)) > img:not(.absolute):not(.no-fx) {
+:is(div, figure, a, button):has(> img:not(.absolute):not(.no-fx)) > img:not(.absolute):not(.no-fx) {
   transition: transform 0.5s ease-in-out;
 }
 
-div:has(> img:not(.absolute):not(.no-fx))::after,
-figure:has(> img:not(.absolute):not(.no-fx))::after {
+:is(div, figure, a, button):has(> img:not(.absolute):not(.no-fx))::after {
   content: "";
   position: absolute;
   top: 0;
@@ -102,13 +98,11 @@ figure:has(> img:not(.absolute):not(.no-fx))::after {
   pointer-events: none;
 }
 
-div:has(> img:not(.absolute):not(.no-fx)):hover > img:not(.absolute):not(.no-fx),
-figure:has(> img:not(.absolute):not(.no-fx)):hover > img:not(.absolute):not(.no-fx) {
+:is(div, figure, a, button):has(> img:not(.absolute):not(.no-fx)):hover > img:not(.absolute):not(.no-fx) {
   transform: scale(1.04);
 }
 
-div:has(> img:not(.absolute):not(.no-fx)):hover::after,
-figure:has(> img:not(.absolute):not(.no-fx)):hover::after {
+:is(div, figure, a, button):has(> img:not(.absolute):not(.no-fx)):hover::after {
   animation: imageOverlaySweep 0.8s ease-in-out forwards;
 }
 

@@ -221,7 +221,7 @@ export const Navbar: React.FC = () => {
                           <img
                             src={prod.images[0]}
                             alt={prod.name}
-                            className="w-10 h-10 object-cover rounded-md"
+                            className="w-10 h-10 object-cover rounded-[10px]"
                           />
                           <div className="flex-1 min-w-0 text-left">
                             <p className="text-xs font-semibold text-[#F5ECD7] truncate">
