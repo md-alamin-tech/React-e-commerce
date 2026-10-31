@@ -125,7 +125,7 @@ export const Navbar: React.FC = () => {
               </svg>
               <div className="flex flex-col items-center leading-none">
                 <span
-                  className="font-serif text-xl sm:text-2xl font-bold tracking-widest uppercase text-[#B57BFF]"
+                  className="font-serif text-xl sm:text-2xl font-bold tracking-widest uppercase text-[#F5ECD7]"
                 >
                   BELKÉ
                 </span>

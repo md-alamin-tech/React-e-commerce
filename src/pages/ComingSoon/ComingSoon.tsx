@@ -78,7 +78,7 @@ export default function ComingSoon() {
               SOUTHINGTON, CONNECTICUT
             </span>
 
-            <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#B57BFF] tracking-tight mb-4 drop-shadow-md">
+            <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#F5ECD7] tracking-tight mb-4 drop-shadow-md">
               Something Special Is Coming
             </h1>
 
@@ -129,7 +129,7 @@ export default function ComingSoon() {
               <div className="w-12 h-12 rounded-full bg-[#0B0710] border border-[#2E2045] flex items-center justify-center mb-4">
                 {p.icon}
               </div>
-              <h3 className="font-serif text-sm font-bold uppercase tracking-wider text-[#B57BFF] mb-2">
+              <h3 className="font-serif text-sm font-bold uppercase tracking-wider text-[#F5ECD7] mb-2">
                 {p.title}
               </h3>
               <p className="text-xs text-[#A99BC4] leading-relaxed">
@@ -149,7 +149,7 @@ export default function ComingSoon() {
             className="w-full h-52 sm:h-60 object-cover object-center filter brightness-[0.6]"
           />
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6 bg-black/20">
-            <h3 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-[#B57BFF] tracking-tight drop-shadow-md">
+            <h3 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-[#F5ECD7] tracking-tight drop-shadow-md">
               Authentic Flavors. A Stronger Community.
             </h3>
             <p className="text-xs sm:text-sm text-[#241838] mt-2">

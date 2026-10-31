@@ -34,7 +34,7 @@ export default function OrderSuccess() {
           ORDER CONFIRMATION
         </span>
 
-        <h1 className="font-serif text-3xl sm:text-4xl font-bold text-[#B57BFF] mb-3">
+        <h1 className="font-serif text-3xl sm:text-4xl font-bold text-[#F5ECD7] mb-3">
           Faleminderit! Thank You for Your Order.
         </h1>
 

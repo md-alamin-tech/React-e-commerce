@@ -41,7 +41,7 @@ export const HeroSection: React.FC = () => {
               EUROPEAN GROCERIES • BALKAN FLAVORS • LOCAL COMMUNITY
             </span>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-[#B57BFF] tracking-tight leading-[1.15] mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-[#F5ECD7] tracking-tight leading-[1.15] mb-6">
               A LITTLE TASTE <br />
               OF HOME, <br />
               <span className="font-script font-normal text-5xl sm:text-6xl lg:text-7xl text-[#F0D77A] block -mt-2">

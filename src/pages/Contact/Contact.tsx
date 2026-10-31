@@ -53,7 +53,7 @@ export default function Contact() {
           <span className="text-[11px] font-bold tracking-[0.25em] uppercase text-[#D4AF37] block mb-2">
             CONNECT WITH US
           </span>
-          <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#B57BFF] mb-3">
+          <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#F5ECD7] mb-3">
             Get in Touch
           </h1>
           <p className="text-xs sm:text-sm text-[#C9BFDD] leading-relaxed">
@@ -71,7 +71,7 @@ export default function Contact() {
                 <MapPin size={18} />
               </div>
               <div>
-                <h4 className="font-serif text-base font-bold text-[#B57BFF]">
+                <h4 className="font-serif text-base font-bold text-[#F5ECD7]">
                   Our Location
                 </h4>
                 <p className="text-xs text-[#C9BFDD] mt-0.5">
@@ -89,7 +89,7 @@ export default function Contact() {
                 <Phone size={18} />
               </div>
               <div>
-                <h4 className="font-serif text-base font-bold text-[#B57BFF]">
+                <h4 className="font-serif text-base font-bold text-[#F5ECD7]">
                   Phone
                 </h4>
                 <p className="text-xs text-[#C9BFDD] mt-0.5">
@@ -107,7 +107,7 @@ export default function Contact() {
                 <Mail size={18} />
               </div>
               <div>
-                <h4 className="font-serif text-base font-bold text-[#B57BFF]">
+                <h4 className="font-serif text-base font-bold text-[#F5ECD7]">
                   Email
                 </h4>
                 <a
@@ -124,7 +124,7 @@ export default function Contact() {
 
             {/* Follow Us */}
             <div className="pt-4 border-t border-[#2E2045]">
-              <h4 className="font-serif text-sm font-bold text-[#B57BFF] mb-1">
+              <h4 className="font-serif text-sm font-bold text-[#F5ECD7] mb-1">
                 Follow Us
               </h4>
               <p className="text-xs text-[#A99BC4] mb-3">@belkemarket</p>
@@ -162,7 +162,7 @@ export default function Contact() {
 
           {/* Right Column: Contact Form */}
           <div className="lg:col-span-7 bg-[#140C1F] p-8 sm:p-10 rounded-3xl border border-[#2E2045] shadow-xs text-left">
-            <h3 className="font-serif text-xl font-bold text-[#B57BFF] mb-2">
+            <h3 className="font-serif text-xl font-bold text-[#F5ECD7] mb-2">
               Send Us a Message
             </h3>
             <p className="text-xs text-[#A99BC4] mb-6">
@@ -229,7 +229,7 @@ export default function Contact() {
         {/* Bottom Map Section (Matching mockup Section 6!) */}
         <div className="bg-[#140C1F] rounded-3xl p-6 sm:p-8 border border-[#2E2045] shadow-xs text-left">
           <div className="mb-4">
-            <h3 className="font-serif text-lg font-bold text-[#B57BFF]">
+            <h3 className="font-serif text-lg font-bold text-[#F5ECD7]">
               Our Location
             </h3>
             <p className="text-xs text-[#A99BC4]">

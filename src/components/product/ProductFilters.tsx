@@ -45,7 +45,7 @@ export const ProductFilters: React.FC<ProductFiltersProps> = ({
     <aside className="space-y-7">
       {/* Product Categories (Matching mockup sidebar!) */}
       <div>
-        <h3 className="font-serif text-base font-bold text-[#B57BFF] pb-2 border-b border-[#2E2045] mb-3">
+        <h3 className="font-serif text-base font-bold text-[#F5ECD7] pb-2 border-b border-[#2E2045] mb-3">
           Product Categories
         </h3>
         <ul className="space-y-1 text-xs">
@@ -81,7 +81,7 @@ export const ProductFilters: React.FC<ProductFiltersProps> = ({
 
       {/* Price Range Filter */}
       <div>
-        <h3 className="font-serif text-base font-bold text-[#B57BFF] pb-2 border-b border-[#2E2045] mb-3">
+        <h3 className="font-serif text-base font-bold text-[#F5ECD7] pb-2 border-b border-[#2E2045] mb-3">
           Price Range
         </h3>
         <div className="space-y-2 text-xs">
@@ -110,7 +110,7 @@ export const ProductFilters: React.FC<ProductFiltersProps> = ({
 
       {/* Customer Rating Filter */}
       <div>
-        <h3 className="font-serif text-base font-bold text-[#B57BFF] pb-2 border-b border-[#2E2045] mb-3">
+        <h3 className="font-serif text-base font-bold text-[#F5ECD7] pb-2 border-b border-[#2E2045] mb-3">
           Customer Rating
         </h3>
         <div className="space-y-2 text-xs">
@@ -141,7 +141,7 @@ export const ProductFilters: React.FC<ProductFiltersProps> = ({
 
       {/* Availability Toggle */}
       <div>
-        <h3 className="font-serif text-base font-bold text-[#B57BFF] pb-2 border-b border-[#2E2045] mb-3">
+        <h3 className="font-serif text-base font-bold text-[#F5ECD7] pb-2 border-b border-[#2E2045] mb-3">
           Availability
         </h3>
         <label className="flex items-center gap-2.5 text-xs text-[#C9BFDD] cursor-pointer hover:text-[#D4AF37]">

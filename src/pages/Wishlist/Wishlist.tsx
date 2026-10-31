@@ -32,7 +32,7 @@ export default function Wishlist() {
           <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-[#0B0710] flex items-center justify-center text-[#D4AF37]">
             <Heart size={28} />
           </div>
-          <h2 className="font-serif text-2xl font-bold text-[#B57BFF] mb-2">
+          <h2 className="font-serif text-2xl font-bold text-[#F5ECD7] mb-2">
             Your Wishlist is Empty
           </h2>
           <p className="text-xs sm:text-sm text-[#A99BC4] mb-6">
@@ -55,7 +55,7 @@ export default function Wishlist() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 mb-8 border-b border-[#2E2045] gap-4">
           <div>
-            <h1 className="font-serif text-3xl font-bold text-[#B57BFF]">
+            <h1 className="font-serif text-3xl font-bold text-[#F5ECD7]">
               My Wishlist
             </h1>
             <p className="text-xs text-[#A99BC4] mt-0.5">

@@ -30,7 +30,7 @@ export const ProductGrid: React.FC<ProductGridProps> = ({
         <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-[#0B0710] flex items-center justify-center text-[#D4AF37]">
           🔍
         </div>
-        <h4 className="font-serif text-lg font-bold text-[#B57BFF] mb-1">
+        <h4 className="font-serif text-lg font-bold text-[#F5ECD7] mb-1">
           No Products Found
         </h4>
         <p className="text-xs text-[#A99BC4] max-w-sm mx-auto">

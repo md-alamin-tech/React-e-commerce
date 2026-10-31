@@ -34,7 +34,7 @@ export const StorySection: React.FC = () => {
               OUR STORY
             </span>
 
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#B57BFF] tracking-tight mb-2">
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#F5ECD7] tracking-tight mb-2">
               MORE THAN GROCERIES...
             </h2>
 

@@ -151,7 +151,7 @@ export default function Shop() {
             {/* Header with Title, Count, Sort, and Mobile Filter Toggle */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 mb-6 border-b border-[#2E2045] gap-4">
               <div>
-                <h2 className="font-serif text-2xl font-bold text-[#B57BFF]">
+                <h2 className="font-serif text-2xl font-bold text-[#F5ECD7]">
                   {headingTitle}
                 </h2>
                 <p className="text-xs text-[#A99BC4] mt-0.5">
@@ -256,7 +256,7 @@ export default function Shop() {
           />
           <div className="relative ml-auto w-full max-w-xs bg-[#0B0710] h-full p-6 shadow-2xl overflow-y-auto flex flex-col z-10">
             <div className="flex items-center justify-between pb-4 border-b border-[#2E2045] mb-4">
-              <h3 className="font-serif text-lg font-bold text-[#B57BFF]">Filters</h3>
+              <h3 className="font-serif text-lg font-bold text-[#F5ECD7]">Filters</h3>
               <button
                 onClick={() => setMobileFilterOpen(false)}
                 className="p-1 rounded-full text-[#A99BC4] hover:text-[#D4AF37]"

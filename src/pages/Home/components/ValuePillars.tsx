@@ -41,7 +41,7 @@ export const ValuePillars: React.FC = () => {
               <div className="w-12 h-12 rounded-full bg-[#1E1430] flex items-center justify-center mb-3">
                 {item.icon}
               </div>
-              <h4 className="text-xs sm:text-sm font-bold tracking-wider uppercase text-[#B57BFF] mb-1">
+              <h4 className="text-xs sm:text-sm font-bold tracking-wider uppercase text-[#F5ECD7] mb-1">
                 {item.title}
               </h4>
               <p className="text-[11px] sm:text-xs text-[#A99BC4] max-w-[200px]">

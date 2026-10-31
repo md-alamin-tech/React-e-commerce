@@ -136,7 +136,7 @@ export default function Checkout() {
           <span className="text-[#F1EAFB] font-semibold">Checkout</span>
         </nav>
 
-        <h1 className="font-serif text-3xl font-bold text-[#B57BFF] mb-8 text-left">
+        <h1 className="font-serif text-3xl font-bold text-[#F5ECD7] mb-8 text-left">
           Checkout & Delivery
         </h1>
 
@@ -147,7 +147,7 @@ export default function Checkout() {
               {/* Shipping Address Card */}
               <div className="bg-[#140C1F] p-6 sm:p-8 rounded-3xl border border-[#2E2045] shadow-xs">
                 <div className="flex items-center justify-between pb-4 border-b border-[#2E2045] mb-6">
-                  <h2 className="font-serif text-xl font-bold text-[#B57BFF]">
+                  <h2 className="font-serif text-xl font-bold text-[#F5ECD7]">
                     1. Shipping Address
                   </h2>
                   <span className="text-xs text-[#A99BC4]">Standard Delivery</span>
@@ -237,7 +237,7 @@ export default function Checkout() {
               {/* Payment Method Card */}
               <div className="bg-[#140C1F] p-6 sm:p-8 rounded-3xl border border-[#2E2045] shadow-xs">
                 <div className="flex items-center justify-between pb-4 border-b border-[#2E2045] mb-6">
-                  <h2 className="font-serif text-xl font-bold text-[#B57BFF]">
+                  <h2 className="font-serif text-xl font-bold text-[#F5ECD7]">
                     2. Payment Method
                   </h2>
                   <div className="flex items-center gap-1 text-xs text-emerald-300 font-semibold">
@@ -339,7 +339,7 @@ export default function Checkout() {
             {/* Right Column: Order Summary */}
             <div className="lg:col-span-5">
               <div className="bg-[#140C1F] p-6 sm:p-7 rounded-3xl border border-[#2E2045] shadow-xs sticky top-28 text-left">
-                <h3 className="font-serif text-lg font-bold text-[#B57BFF] pb-3 border-b border-[#2E2045] mb-4">
+                <h3 className="font-serif text-lg font-bold text-[#F5ECD7] pb-3 border-b border-[#2E2045] mb-4">
                   Order Review ({items.length} items)
                 </h3>
 
@@ -398,8 +398,8 @@ export default function Checkout() {
                 </div>
 
                 <div className="flex justify-between items-baseline mb-6">
-                  <span className="font-serif text-base font-bold text-[#B57BFF]">Total</span>
-                  <span className="font-serif text-2xl font-bold text-[#B57BFF]">
+                  <span className="font-serif text-base font-bold text-[#F5ECD7]">Total</span>
+                  <span className="font-serif text-2xl font-bold text-[#F5ECD7]">
                     {formatCurrency(total)}
                   </span>
                 </div>

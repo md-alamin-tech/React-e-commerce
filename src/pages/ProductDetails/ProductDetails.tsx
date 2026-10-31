@@ -118,7 +118,7 @@ export default function ProductDetails() {
               </div>
             </div>
 
-            <h1 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-[#B57BFF] leading-tight mb-3">
+            <h1 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-[#F5ECD7] leading-tight mb-3">
               {product.name}
             </h1>
 
@@ -240,7 +240,7 @@ export default function ProductDetails() {
         {/* Ingredients & Origin Section */}
         {product.ingredients && product.ingredients.length > 0 && (
           <div className="bg-[#140C1F] rounded-3xl p-8 border border-[#2E2045] mb-16 text-left">
-            <h3 className="font-serif text-xl font-bold text-[#B57BFF] mb-4">
+            <h3 className="font-serif text-xl font-bold text-[#F5ECD7] mb-4">
               Ingredients & Authenticity
             </h3>
             <div className="flex flex-wrap gap-2">
@@ -264,7 +264,7 @@ export default function ProductDetails() {
         {/* Related Products Recommendation */}
         {relatedProducts.length > 0 && (
           <div>
-            <h3 className="font-serif text-2xl font-bold text-[#B57BFF] mb-6 text-left">
+            <h3 className="font-serif text-2xl font-bold text-[#F5ECD7] mb-6 text-left">
               You May Also Enjoy
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">

@@ -55,7 +55,7 @@ export default function Login() {
           <span className="text-[11px] font-bold tracking-[0.25em] uppercase text-[#D4AF37] block mb-2">
             WELCOME BACK
           </span>
-          <h1 className="font-serif text-3xl font-bold text-[#B57BFF]">
+          <h1 className="font-serif text-3xl font-bold text-[#F5ECD7]">
             Sign in to Belké Market
           </h1>
           <p className="text-xs text-[#A99BC4] mt-1">

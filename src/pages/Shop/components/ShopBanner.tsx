@@ -17,7 +17,7 @@ export const ShopBanner: React.FC = () => {
         <span className="text-[11px] font-bold tracking-[0.25em] uppercase text-[#D4AF37] block mb-2">
           OUR PRODUCTS
         </span>
-        <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#B57BFF] tracking-tight mb-4">
+        <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#F5ECD7] tracking-tight mb-4">
           Authentic Flavors from Near and Far
         </h1>
         <p className="text-xs sm:text-sm text-[#3A2A55] leading-relaxed max-w-xl mx-auto">

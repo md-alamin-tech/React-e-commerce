@@ -65,7 +65,7 @@ export default function Cart() {
           <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-[#0B0710] flex items-center justify-center text-[#D4AF37]">
             <ShoppingBag size={28} />
           </div>
-          <h2 className="font-serif text-2xl font-bold text-[#B57BFF] mb-2">
+          <h2 className="font-serif text-2xl font-bold text-[#F5ECD7] mb-2">
             Your Basket is Empty
           </h2>
           <p className="text-xs sm:text-sm text-[#A99BC4] mb-6">
@@ -93,7 +93,7 @@ export default function Cart() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between pb-6 mb-8 border-b border-[#2E2045]">
           <div>
-            <h1 className="font-serif text-3xl font-bold text-[#B57BFF]">
+            <h1 className="font-serif text-3xl font-bold text-[#F5ECD7]">
               Your Shopping Cart
             </h1>
             <p className="text-xs text-[#A99BC4] mt-1">
@@ -153,7 +153,7 @@ export default function Cart() {
                     <div className="text-left min-w-0">
                       <Link
                         to={`/product/${item.slug}`}
-                        className="font-serif text-sm sm:text-base font-semibold text-[#B57BFF] hover:text-[#D4AF37] transition-colors block line-clamp-1"
+                        className="font-serif text-sm sm:text-base font-semibold text-[#F5ECD7] hover:text-[#D4AF37] transition-colors block line-clamp-1"
                       >
                         {item.name}
                       </Link>
@@ -229,7 +229,7 @@ export default function Cart() {
           {/* Cart Summary & Coupon */}
           <div className="lg:col-span-4">
             <div className="bg-[#140C1F] rounded-3xl p-6 sm:p-7 border border-[#2E2045] shadow-xs sticky top-28 text-left">
-              <h3 className="font-serif text-lg font-bold text-[#B57BFF] pb-3 border-b border-[#2E2045] mb-5">
+              <h3 className="font-serif text-lg font-bold text-[#F5ECD7] pb-3 border-b border-[#2E2045] mb-5">
                 Order Summary
               </h3>
 
@@ -299,8 +299,8 @@ export default function Cart() {
 
               {/* Total */}
               <div className="flex justify-between items-baseline pt-4 mb-6">
-                <span className="font-serif text-base font-bold text-[#B57BFF]">Total</span>
-                <span className="font-serif text-2xl font-bold text-[#B57BFF]">
+                <span className="font-serif text-base font-bold text-[#F5ECD7]">Total</span>
+                <span className="font-serif text-2xl font-bold text-[#F5ECD7]">
                   {formatCurrency(total)}
                 </span>
               </div>

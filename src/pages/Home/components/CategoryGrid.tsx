@@ -18,7 +18,7 @@ export const CategoryGrid: React.FC = () => {
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-2 mb-2">
             <span className="h-[1px] w-8 bg-[#D4AF37]/40" />
-            <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-[#B57BFF] tracking-wide uppercase">
+            <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-[#F5ECD7] tracking-wide uppercase">
               SHOP BY CATEGORY
             </h2>
             <span className="text-lg">🌿</span>
@@ -45,7 +45,7 @@ export const CategoryGrid: React.FC = () => {
                 />
               </Link>
               <div className="p-4 flex flex-col items-center text-center">
-                <h3 className="font-serif text-sm sm:text-base font-bold text-[#B57BFF] mb-3 group-hover:text-[#D4AF37] transition-colors">
+                <h3 className="font-serif text-sm sm:text-base font-bold text-[#F5ECD7] mb-3 group-hover:text-[#D4AF37] transition-colors">
                   {cat.name}
                 </h3>
                 <Link

@@ -92,7 +92,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           </span>
         )}
 
-        <h3 className="font-serif text-base font-semibold text-[#B57BFF] hover:text-[#D4AF37] transition-colors line-clamp-1">
+        <h3 className="font-serif text-base font-semibold text-[#F5ECD7] hover:text-[#D4AF37] transition-colors line-clamp-1">
           <Link to={`/product/${product.slug}`}>{product.name}</Link>
         </h3>
 

@@ -28,7 +28,7 @@ export const Footer: React.FC = () => {
                 <path d="M50 35 C60 25, 80 28, 95 20 C78 15, 62 18, 50 35 Z" opacity="0.9" />
                 <circle cx="50" cy="18" r="4" fill="#D4AF37" />
               </svg>
-              <span className="font-serif text-2xl font-bold tracking-widest text-[#B57BFF] uppercase mt-1">
+              <span className="font-serif text-2xl font-bold tracking-widest text-[#F5ECD7] uppercase mt-1">
                 BELKÉ
               </span>
               <span className="text-[10px] tracking-[0.35em] text-[#A99BC4] uppercase font-semibold">
@@ -42,7 +42,7 @@ export const Footer: React.FC = () => {
 
           {/* Column 2: Quick Links */}
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-widest text-[#B57BFF] mb-4">
+            <h4 className="text-xs font-bold uppercase tracking-widest text-[#F5ECD7] mb-4">
               Quick Links
             </h4>
             <ul className="space-y-2.5 text-xs text-[#C9BFDD]">
@@ -81,7 +81,7 @@ export const Footer: React.FC = () => {
 
           {/* Column 3: Contact */}
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-widest text-[#B57BFF] mb-4">
+            <h4 className="text-xs font-bold uppercase tracking-widest text-[#F5ECD7] mb-4">
               Contact
             </h4>
             <ul className="space-y-3 text-xs text-[#C9BFDD]">
@@ -134,7 +134,7 @@ export const Footer: React.FC = () => {
           {/* Column 4: Script Slogan */}
           <div className="flex flex-col justify-center items-start md:items-end">
             <div className="text-left md:text-right">
-              <span className="font-serif text-lg text-[#B57BFF] block">
+              <span className="font-serif text-lg text-[#F5ECD7] block">
                 A little taste of home,
               </span>
               <span className="font-script text-3xl sm:text-4xl text-[#D4AF37] block mt-1">

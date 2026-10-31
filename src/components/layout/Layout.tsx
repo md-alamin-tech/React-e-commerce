@@ -13,7 +13,7 @@ import { TopBanner } from './TopBanner';
 import { Navbar } from './Navbar';
 import { Footer } from './Footer';
 import { ToastContainer } from '../common/ToastContainer';
-import { ScrollParticles } from '../effects/ScrollParticles';
+import { SmoothScroll } from '../effects/SmoothScroll';
 import { ScrollProgress } from '../effects/ScrollProgress';
 
 interface LayoutProps {
@@ -24,7 +24,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className="min-h-screen flex flex-col bg-[#0B0710] text-[#F1EAFB]">
       <ScrollProgress />
-      <ScrollParticles />
+      <SmoothScroll />
       <TopBanner />
       <Navbar />
       <main className="flex-1">{children}</main>

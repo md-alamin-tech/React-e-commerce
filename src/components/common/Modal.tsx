@@ -69,7 +69,7 @@ export const Modal: React.FC<ModalProps> = ({
       >
         <div className="flex items-center justify-between px-6 py-4 border-b border-[#2E2045] bg-[#1B1229]">
           {title ? (
-            <h3 className="text-lg font-serif font-bold text-[#B57BFF]">{title}</h3>
+            <h3 className="text-lg font-serif font-bold text-[#F5ECD7]">{title}</h3>
           ) : (
             <div />
           )}

@@ -45,7 +45,7 @@ export default function Recipes() {
           <span className="text-[11px] font-bold tracking-[0.25em] uppercase text-[#D4AF37] block mb-2">
             BALKAN CUISINE
           </span>
-          <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#B57BFF] tracking-tight mb-4">
+          <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#F5ECD7] tracking-tight mb-4">
             Recipes & Inspiration
           </h1>
           <p className="text-xs sm:text-sm text-[#3A2A55] leading-relaxed max-w-xl mx-auto">
@@ -58,7 +58,7 @@ export default function Recipes() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
         <div className="flex items-center justify-between pb-4 mb-8 border-b border-[#2E2045]">
           <div>
-            <h2 className="font-serif text-2xl font-bold text-[#B57BFF]">
+            <h2 className="font-serif text-2xl font-bold text-[#F5ECD7]">
               Featured Recipes
             </h2>
             <p className="text-xs text-[#A99BC4] mt-0.5">
@@ -92,7 +92,7 @@ export default function Recipes() {
               {/* Body */}
               <div className="p-6 flex-1 flex flex-col justify-between">
                 <div>
-                  <h3 className="font-serif text-xl font-bold text-[#B57BFF] mb-2 group-hover:text-[#D4AF37] transition-colors">
+                  <h3 className="font-serif text-xl font-bold text-[#F5ECD7] mb-2 group-hover:text-[#D4AF37] transition-colors">
                     {recipe.title}
                   </h3>
                   <p className="text-xs text-[#C9BFDD] line-clamp-2 leading-relaxed mb-4">
@@ -162,7 +162,7 @@ export default function Recipes() {
             {/* Ingredients */}
             <div>
               <div className="flex items-center justify-between mb-3">
-                <h4 className="font-serif text-base font-bold text-[#B57BFF]">
+                <h4 className="font-serif text-base font-bold text-[#F5ECD7]">
                   Ingredients
                 </h4>
                 {activeRecipe.associatedProductIds.length > 0 && (
@@ -189,7 +189,7 @@ export default function Recipes() {
 
             {/* Step-by-Step Instructions */}
             <div>
-              <h4 className="font-serif text-base font-bold text-[#B57BFF] mb-3">
+              <h4 className="font-serif text-base font-bold text-[#F5ECD7] mb-3">
                 Instructions
               </h4>
               <ol className="space-y-3 text-xs text-[#C9BFDD]">

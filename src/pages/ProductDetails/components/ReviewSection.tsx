@@ -56,7 +56,7 @@ export const ReviewSection: React.FC<ReviewSectionProps> = ({ reviews, onAddRevi
     <div className="pt-10 border-t border-[#2E2045]">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
         <div>
-          <h3 className="font-serif text-2xl font-bold text-[#B57BFF]">
+          <h3 className="font-serif text-2xl font-bold text-[#F5ECD7]">
             Customer Reviews ({reviews.length})
           </h3>
           <p className="text-xs text-[#A99BC4] mt-0.5">
@@ -83,7 +83,7 @@ export const ReviewSection: React.FC<ReviewSectionProps> = ({ reviews, onAddRevi
           onSubmit={handleSubmit}
           className="bg-[#140C1F] p-6 rounded-2xl border border-[#2E2045] mb-8 shadow-xs"
         >
-          <h4 className="font-serif text-base font-bold text-[#B57BFF] mb-4">
+          <h4 className="font-serif text-base font-bold text-[#F5ECD7] mb-4">
             Share Your Experience
           </h4>
           <div className="space-y-4">

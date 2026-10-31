@@ -53,7 +53,7 @@ export default function Register() {
           <span className="text-[11px] font-bold tracking-[0.25em] uppercase text-[#D4AF37] block mb-2">
             JOIN US
           </span>
-          <h1 className="font-serif text-3xl font-bold text-[#B57BFF]">
+          <h1 className="font-serif text-3xl font-bold text-[#F5ECD7]">
             Create an Account
           </h1>
           <p className="text-xs text-[#A99BC4] mt-1">

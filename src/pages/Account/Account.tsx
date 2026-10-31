@@ -68,7 +68,7 @@ export default function Account() {
       <div className="bg-[#0B0710] py-20 px-4 text-center">
         <div className="max-w-md mx-auto bg-[#140C1F] p-8 rounded-3xl border border-[#2E2045]">
           <ShieldAlert size={36} className="text-[#D4AF37] mx-auto mb-3" />
-          <h2 className="font-serif text-2xl font-bold text-[#B57BFF] mb-2">
+          <h2 className="font-serif text-2xl font-bold text-[#F5ECD7] mb-2">
             Please Sign In
           </h2>
           <p className="text-xs text-[#A99BC4] mb-6">
@@ -124,7 +124,7 @@ export default function Account() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 mb-8 border-b border-[#2E2045] gap-4">
           <div>
-            <h1 className="font-serif text-3xl font-bold text-[#B57BFF]">
+            <h1 className="font-serif text-3xl font-bold text-[#F5ECD7]">
               My Account
             </h1>
             <p className="text-xs text-[#A99BC4] mt-0.5">
@@ -194,7 +194,7 @@ export default function Account() {
             {/* ORDERS TAB */}
             {activeTab === 'orders' && (
               <div className="bg-[#140C1F] p-6 sm:p-8 rounded-3xl border border-[#2E2045] shadow-xs">
-                <h2 className="font-serif text-xl font-bold text-[#B57BFF] mb-6 pb-3 border-b border-[#2E2045]">
+                <h2 className="font-serif text-xl font-bold text-[#F5ECD7] mb-6 pb-3 border-b border-[#2E2045]">
                   Your Orders ({user.orders.length})
                 </h2>
 
@@ -227,7 +227,7 @@ export default function Account() {
                           </div>
                           <div>
                             <span className="text-[#A99BC4] block text-[11px]">Total</span>
-                            <strong className="text-[#B57BFF] font-serif text-sm">
+                            <strong className="text-[#F5ECD7] font-serif text-sm">
                               {formatCurrency(ord.total)}
                             </strong>
                           </div>
@@ -282,7 +282,7 @@ export default function Account() {
             {activeTab === 'addresses' && (
               <div className="bg-[#140C1F] p-6 sm:p-8 rounded-3xl border border-[#2E2045] shadow-xs">
                 <div className="flex items-center justify-between mb-6 pb-3 border-b border-[#2E2045]">
-                  <h2 className="font-serif text-xl font-bold text-[#B57BFF]">
+                  <h2 className="font-serif text-xl font-bold text-[#F5ECD7]">
                     Saved Delivery Addresses
                   </h2>
                   <Button
@@ -315,7 +315,7 @@ export default function Account() {
                             <CheckCircle2 size={11} /> Default Address
                           </span>
                         )}
-                        <h4 className="font-bold text-sm text-[#B57BFF] mb-1">{addr.name}</h4>
+                        <h4 className="font-bold text-sm text-[#F5ECD7] mb-1">{addr.name}</h4>
                         <p className="text-[#C9BFDD]">
                           {addr.street} {addr.apartment ? `, ${addr.apartment}` : ''}
                         </p>
@@ -351,7 +351,7 @@ export default function Account() {
             {/* PROFILE TAB */}
             {activeTab === 'profile' && (
               <div className="bg-[#140C1F] p-6 sm:p-8 rounded-3xl border border-[#2E2045] shadow-xs">
-                <h2 className="font-serif text-xl font-bold text-[#B57BFF] mb-6 pb-3 border-b border-[#2E2045]">
+                <h2 className="font-serif text-xl font-bold text-[#F5ECD7] mb-6 pb-3 border-b border-[#2E2045]">
                   Personal Profile
                 </h2>
                 <form onSubmit={handleUpdateProfile} className="space-y-4 max-w-lg">

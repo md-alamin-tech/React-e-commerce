@@ -59,7 +59,7 @@ export const QuickViewModal: React.FC<QuickViewModalProps> = ({ product, onClose
             {product.categoryName} • {product.origin}
           </span>
 
-          <h2 className="font-serif text-xl font-bold text-[#B57BFF] mb-2 leading-tight">
+          <h2 className="font-serif text-xl font-bold text-[#F5ECD7] mb-2 leading-tight">
             {product.name}
           </h2>
 

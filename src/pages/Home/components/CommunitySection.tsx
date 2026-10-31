@@ -37,7 +37,7 @@ export const CommunitySection: React.FC = () => {
           </div>
 
           <div className="relative z-10 max-w-2xl mx-auto text-center">
-            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#B57BFF] mb-3">
+            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#F5ECD7] mb-3">
               Join Our Community
             </h2>
             <p className="text-xs sm:text-sm text-[#C9BFDD] mb-8 leading-relaxed">

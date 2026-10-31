@@ -23,7 +23,7 @@ export default function NotFound() {
         <span className="text-xs font-bold uppercase tracking-widest text-[#D4AF37] block mb-1">
           404 ERROR
         </span>
-        <h1 className="font-serif text-3xl font-bold text-[#B57BFF] mb-2">
+        <h1 className="font-serif text-3xl font-bold text-[#F5ECD7] mb-2">
           Page Not Found
         </h1>
         <p className="text-xs sm:text-sm text-[#A99BC4] mb-6">

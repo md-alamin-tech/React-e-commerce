@@ -2,23 +2,25 @@
 
 @layer base {
   :root {
-    --font-serif: 'Playfair Display', Georgia, serif;
-    --font-script: 'Alex Brush', cursive;
-    --font-cormorant: 'Cormorant Garamond', Georgia, serif;
-    --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --font-serif: 'Raleway', system-ui, sans-serif;
+    --font-script: 'Raleway', system-ui, sans-serif;
+    --font-cormorant: 'Raleway', system-ui, sans-serif;
+    --font-sans: 'Poppins', system-ui, sans-serif;
   }
 
   body {
     font-family: var(--font-sans);
   }
 
-  h1, h2, h3, .font-serif-heading {
+  h1, h2, h3, h4, h5, h6, .font-serif-heading {
     font-family: var(--font-serif);
   }
 }
 
 .font-script {
   font-family: var(--font-script);
+  font-style: italic;
+  font-weight: 500;
 }
 
 .font-cormorant {
@@ -54,4 +56,19 @@
   [class*="hover:bg-[#D4AF37]"]:hover svg.lucide {
     color: currentColor;
   }
+}
+
+/* Lenis smooth scroll + stacked sections */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.fe-stacked-section {
+  position: relative;
 }

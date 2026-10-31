@@ -21,7 +21,7 @@ export const CtaBanner: React.FC<CtaBannerProps> = ({ onExploreAll }) => {
         className="w-full h-56 sm:h-64 object-cover object-center filter brightness-[0.7]"
       />
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6 bg-black/30">
-        <h3 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-[#B57BFF] mb-4 tracking-tight drop-shadow-md">
+        <h3 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-[#F5ECD7] mb-4 tracking-tight drop-shadow-md">
           Traditional Ingredients, Extraordinary Meals.
         </h3>
         <button

@@ -24,7 +24,7 @@ export const FeaturedProducts: React.FC = () => {
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row items-center justify-between mb-10 gap-4">
           <div className="text-center sm:text-left">
-            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#B57BFF] uppercase tracking-wide">
+            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#F5ECD7] uppercase tracking-wide">
               FEATURED PRODUCTS
             </h2>
             <p className="text-xs text-[#A99BC4] mt-1">

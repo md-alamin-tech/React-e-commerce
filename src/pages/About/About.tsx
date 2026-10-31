@@ -50,7 +50,7 @@ export default function About() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             {/* Left Narrative Title */}
             <div className="lg:col-span-6 text-left">
-              <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-[#B57BFF] mb-4">
+              <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-[#F5ECD7] mb-4">
                 Our Story
               </h1>
               <p className="font-script text-3xl sm:text-4xl lg:text-5xl text-[#D4AF37] leading-snug">
@@ -92,7 +92,7 @@ export default function About() {
 
             {/* Right Story Description */}
             <div className="lg:col-span-6 text-left">
-              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#B57BFF] mb-6">
+              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#F5ECD7] mb-6">
                 About Belké Market
               </h2>
               <div className="space-y-4 text-sm sm:text-base text-[#C9BFDD] leading-relaxed mb-8">
@@ -131,7 +131,7 @@ export default function About() {
                 <div className="w-14 h-14 rounded-full bg-[#0B0710] border border-[#2E2045] flex items-center justify-center mb-4">
                   {val.icon}
                 </div>
-                <h3 className="font-serif text-sm font-bold tracking-wider uppercase text-[#B57BFF] mb-2">
+                <h3 className="font-serif text-sm font-bold tracking-wider uppercase text-[#F5ECD7] mb-2">
                   {val.title}
                 </h3>
                 <p className="text-xs text-[#A99BC4] leading-relaxed">
@@ -156,7 +156,7 @@ export default function About() {
               <span className="text-xs uppercase tracking-[0.3em] font-semibold text-[#D4AF37] mb-2">
                 BELKÉ MARKET
               </span>
-              <h3 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#B57BFF] tracking-tight drop-shadow-md">
+              <h3 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#F5ECD7] tracking-tight drop-shadow-md">
                 Good Food Brings People Together.
               </h3>
               <p className="text-xs sm:text-sm text-[#E9DFF7] mt-3 font-medium">
