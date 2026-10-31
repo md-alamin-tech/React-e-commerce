@@ -22,7 +22,7 @@ export const StorySection: React.FC = () => {
         />
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#0B0710]/85 via-[#0B0710]/55 to-[#0B0710]/15 pointer-events-none" />
 
-        <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+        <div className="w-full max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
           <div className="max-w-xl flex flex-col items-start text-left">
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#F5ECD7] tracking-tight mb-2">
               MORE THAN GROCERIES...

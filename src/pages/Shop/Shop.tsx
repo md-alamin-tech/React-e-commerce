@@ -120,7 +120,7 @@ export default function Shop() {
     <div className="bg-[#0B0710] pb-16">
       <ShopBanner />
 
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 pt-10">
+      <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 pt-10">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           {/* Desktop Left Sidebar Filters */}
           <div className="hidden lg:block lg:col-span-1">
@@ -149,7 +149,7 @@ export default function Shop() {
           {/* Right Product Grid Column */}
           <div className="lg:col-span-3">
             {/* Header with Title, Count, Sort, and Mobile Filter Toggle */}
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 mb-6 border-b border-[#2E2045] gap-4">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 mb-6 gap-4">
               <div>
                 <h2 className="font-serif text-2xl font-bold text-[#F5ECD7]">
                   {headingTitle}

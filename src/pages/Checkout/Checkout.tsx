@@ -126,7 +126,7 @@ export default function Checkout() {
 
   return (
     <div className="bg-[#0B0710] py-10 sm:py-14">
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb */}
         <nav className="flex items-center gap-2 text-xs text-[#B0A99C] mb-8">
           <Link to="/cart" className="hover:text-[#D4AF37]">

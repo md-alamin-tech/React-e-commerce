@@ -27,7 +27,7 @@ export const CommunitySection: React.FC = () => {
 
   return (
     <section className="bg-[#0B0710] py-14 lg:py-18">
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative bg-[#2A1D3F] rounded-3xl p-8 sm:p-12 border border-[#2E2045] overflow-hidden">
           {/* Decorative olive leaf background watermark */}
           <div className="absolute right-0 bottom-0 translate-x-8 translate-y-8 opacity-10 pointer-events-none">

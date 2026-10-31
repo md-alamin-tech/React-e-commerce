@@ -7,6 +7,7 @@
  */
 
 import React, { useState } from 'react';
+import { PageBanner } from '../../components/layout/PageBanner';
 import { useDocumentTitle } from '../../hooks/useDocumentTitle';
 import { useToast } from '../../context/ToastContext';
 import { Input } from '../../components/common/Input';
@@ -46,17 +47,14 @@ export default function Contact() {
   };
 
   return (
-    <div className="bg-[#0B0710] py-12 sm:py-16">
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
-          <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#F5ECD7] mb-3">
-            Get in Touch
-          </h1>
-          <p className="text-xs sm:text-sm text-[#D0C9BA] leading-relaxed">
-            We'd love to hear from you! Ask a question, share a suggestion, or just say hello.
-          </p>
-        </div>
+    <div className="bg-[#0B0710] pb-12 sm:pb-16">
+      <PageBanner
+        title="Get in Touch"
+        subtitle="We'd love to hear from you! Ask a question, share a suggestion, or just say hello."
+        image="/assets/aistudio/F2D2C2FE-6DDF-4915-ACF2-5627FCCF53C8_fd4723d5.png"
+        align="center"
+      />
+      <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16">
 
         {/* 2-Column Info & Contact Form */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 mb-16 items-start">

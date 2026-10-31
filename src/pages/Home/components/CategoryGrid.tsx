@@ -12,16 +12,14 @@ import { CATEGORIES } from '../../../data/categories';
 
 export const CategoryGrid: React.FC = () => {
   return (
-    <section className="bg-[#0B0710] py-14 lg:py-20 border-b border-[#2E2045]">
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="bg-[#0B0710] py-14 lg:py-20">
+      <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading with decorative leaf icon */}
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-2 mb-2">
-            <span className="h-[1px] w-8 bg-[#D4AF37]/40" />
             <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-[#F5ECD7] tracking-wide uppercase">
               SHOP BY CATEGORY
             </h2>
-            <span className="h-[1px] w-8 bg-[#D4AF37]/40" />
           </div>
           <p className="text-xs sm:text-sm text-[#B0A99C] max-w-md mx-auto">
             From creamy brined feta and aged sheep cheeses to golden baklava and hearth-baked burek.

@@ -19,8 +19,8 @@ export const FeaturedProducts: React.FC = () => {
   const featured = PRODUCTS.filter((p) => p.featured).slice(0, 6);
 
   return (
-    <section className="bg-[#0B0710] py-16 lg:py-20 border-b border-[#2E2045]">
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="bg-[#0B0710] py-16 lg:py-20">
+      <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row items-center justify-between mb-10 gap-4">
           <div className="text-center sm:text-left">

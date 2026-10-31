@@ -29,10 +29,10 @@ export const Navbar: React.FC = () => {
   const [suggestions, setSuggestions] = useState<Product[]>([]);
   const searchInputRef = useRef<HTMLInputElement>(null);
 
-  // On the home page the header floats over the hero image (transparent),
+  // On pages with a banner the header floats over the banner image (transparent),
   // then turns solid once the user scrolls.
   const { pathname } = useLocation();
-  const isHome = pathname === '/';
+  const isHome = ['/', '/shop', '/recipes', '/about', '/contact', '/coming-soon'].includes(pathname);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -101,7 +101,7 @@ export const Navbar: React.FC = () => {
             : 'top-0 bg-transparent border-transparent'
       }`}
     >
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 h-24 flex items-center">
+      <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 h-24 flex items-center">
         <div
           className={`w-full flex items-center justify-between transition-all duration-300 ${
             transparent

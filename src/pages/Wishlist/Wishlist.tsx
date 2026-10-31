@@ -52,8 +52,8 @@ export default function Wishlist() {
 
   return (
     <div className="bg-[#0B0710] py-10 sm:py-14">
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 mb-8 border-b border-[#2E2045] gap-4">
+      <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 mb-8 gap-4">
           <div>
             <h1 className="font-serif text-3xl font-bold text-[#F5ECD7]">
               My Wishlist

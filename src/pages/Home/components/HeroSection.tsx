@@ -33,7 +33,7 @@ export const HeroSection: React.FC = () => {
       <div className="absolute inset-x-0 top-0 h-40 -z-10 bg-gradient-to-b from-black/50 to-transparent pointer-events-none" />
 
       {/* pt-[97px] offsets the floating header so content never hides under it */}
-      <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 pt-[97px] pb-16 lg:pb-20">
+      <div className="w-full max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 pt-[97px] pb-16 lg:pb-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-end">
           {/* Hero Copy */}
           <div className="lg:col-span-7 flex flex-col items-start text-left">

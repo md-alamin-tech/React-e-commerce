@@ -7,6 +7,7 @@
  */
 
 import React, { useState } from 'react';
+import { PageBanner } from '../../components/layout/PageBanner';
 import { RECIPES, Recipe } from '../../data/recipes';
 import { Modal } from '../../components/common/Modal';
 import { Button } from '../../components/common/Button';
@@ -39,21 +40,16 @@ export default function Recipes() {
   return (
     <div className="bg-[#0B0710] pb-16">
       {/* 1. Hero Banner */}
-      <section className="bg-[#1A0F2B] text-[#EFE7D6] py-14 px-4 sm:px-6 lg:px-8 border-b border-[#34254D] text-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(#B88847_1px,transparent_1px)] [background-size:16px_16px] opacity-10 pointer-events-none" />
-        <div className="relative z-10 max-w-3xl mx-auto">
-          <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#F5ECD7] tracking-tight mb-4">
-            Recipes & Inspiration
-          </h1>
-          <p className="text-xs sm:text-sm text-[#3A2A55] leading-relaxed max-w-xl mx-auto">
-            Explore traditional recipes, cooking tips, and food inspiration from our European and Balkan heritage.
-          </p>
-        </div>
-      </section>
+      <PageBanner
+        title="Recipes & Inspiration"
+        subtitle="Explore traditional recipes, cooking tips, and food inspiration from our European and Balkan heritage."
+        image="/assets/aistudio/EA7AB6BA-A77D-4A0C-868C-F7B2BD7987DF_df31e837.png"
+        align="center"
+      />
 
       {/* 2. Featured Recipes Grid */}
-      <section className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 pt-12">
-        <div className="flex items-center justify-between pb-4 mb-8 border-b border-[#2E2045]">
+      <section className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 pt-12">
+        <div className="flex items-center justify-between pb-4 mb-8">
           <div>
             <h2 className="font-serif text-2xl font-bold text-[#F5ECD7]">
               Featured Recipes

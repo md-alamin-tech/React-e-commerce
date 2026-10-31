@@ -13,9 +13,9 @@ import { APP_CONFIG } from '../../utils/constants';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#07040C] border-t border-[#2E2045] pt-14 pb-8 text-[#E6DFCF]">
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-[#2E2045]">
+    <footer className="bg-[#07040C] pt-14 pb-8 text-[#E6DFCF]">
+      <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12">
           {/* Column 1: Brand & Emblem */}
           <div className="flex flex-col items-start space-y-4">
             <Link to="/" className="flex flex-col items-start group">

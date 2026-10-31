@@ -8,6 +8,7 @@
  */
 
 import React, { useRef } from 'react';
+import { PageBanner } from '../../components/layout/PageBanner';
 import { useDocumentTitle } from '../../hooks/useDocumentTitle';
 import { ArrowRight, Sparkles, HeartHandshake, Users, Award } from 'lucide-react';
 
@@ -45,39 +46,23 @@ export default function About() {
   return (
     <div className="bg-[#0B0710] pb-16">
       {/* 1. Hero: Our Story */}
-      <section className="bg-[#0B0710] py-14 lg:py-20 border-b border-[#2E2045]">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            {/* Left Narrative Title */}
-            <div className="lg:col-span-6 text-left">
-              <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-[#F5ECD7] mb-4">
-                Our Story
-              </h1>
-              <p className="font-script text-3xl sm:text-4xl lg:text-5xl text-[#D4AF37] leading-snug">
-                More than groceries... <br />
-                It's our culture, <br />
-                our traditions, <br />
-                our memories.
-              </p>
-            </div>
-
-            {/* Right Scenic Image */}
-            <div className="lg:col-span-6">
-              <div className="rounded-3xl overflow-hidden shadow-xl border-4 border-[#2E2045] aspect-16/10">
-                <img
-                  src="/assets/aistudio/418DF6A8-A9E9-410B-B7B8-20AFB3597616_6d2f0595.png"
-                  alt="Historic European mountain town and bridge"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageBanner
+        title="Our Story"
+        image="/assets/aistudio/418DF6A8-A9E9-410B-B7B8-20AFB3597616_6d2f0595.png"
+        imageAlt="Historic European mountain town and bridge"
+        align="left"
+      >
+        <p className="font-script text-3xl sm:text-4xl lg:text-5xl text-[#D4AF37] leading-snug">
+          More than groceries... <br />
+          It's our culture, <br />
+          our traditions, <br />
+          our memories.
+        </p>
+      </PageBanner>
 
       {/* 2. Section: About Belké Market */}
-      <section className="py-16 lg:py-24 border-b border-[#2E2045]">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 lg:py-24">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
             {/* Left Shop Photo */}
             <div className="lg:col-span-6">
@@ -120,8 +105,8 @@ export default function About() {
       </section>
 
       {/* 3. Four Core Values Grid */}
-      <section ref={valuesRef} className="py-16 lg:py-20 border-b border-[#2E2045]">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+      <section ref={valuesRef} className="py-16 lg:py-20">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((val, idx) => (
               <div
@@ -145,7 +130,7 @@ export default function About() {
 
       {/* 4. Bottom Photographic Quote Banner: "Good Food Brings People Together." */}
       <section className="pt-14 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-[1400px] mx-auto">
+        <div className="max-w-[1536px] mx-auto">
           <div className="relative rounded-3xl overflow-hidden shadow-xl border border-[#2E2045]">
             <img
               src="/assets/aistudio/EA7AB6BA-A77D-4A0C-868C-F7B2BD7987DF_df31e837.png"

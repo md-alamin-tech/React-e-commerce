@@ -63,7 +63,7 @@ export const Rating: React.FC<RatingProps> = ({
                 className={
                   filled
                     ? 'fill-[#D4AF37] text-[#D4AF37]'
-                    : 'text-[#34254D] fill-transparent'
+                    : 'text-[#4A3A66] fill-transparent'
                 }
               />
             </button>
