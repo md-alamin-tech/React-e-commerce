@@ -135,7 +135,7 @@ export default function About() {
             <img
               src="/assets/aistudio/EA7AB6BA-A77D-4A0C-868C-F7B2BD7987DF_df31e837.png"
               alt="Mediterranean spread with olive branches"
-              className="w-full h-64 sm:h-80 object-cover object-center filter brightness-[0.65]"
+              className="no-fx w-full h-64 sm:h-80 object-cover object-center filter brightness-[0.65]"
             />
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6 bg-black/25">
               <h3 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#F5ECD7] tracking-tight drop-shadow-md">
