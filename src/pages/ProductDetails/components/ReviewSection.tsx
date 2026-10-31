@@ -81,7 +81,7 @@ export const ReviewSection: React.FC<ReviewSectionProps> = ({ reviews, onAddRevi
       {formOpen && (
         <form
           onSubmit={handleSubmit}
-          className="bg-[#140C1F] p-6 rounded-2xl border border-[#2E2045] mb-8 shadow-xs"
+          className="bg-[#140C1F] p-6 rounded-[10px] border border-[#2E2045] mb-8 shadow-xs"
         >
           <h4 className="font-serif text-base font-bold text-[#F5ECD7] mb-4">
             Share Your Experience
@@ -104,7 +104,7 @@ export const ReviewSection: React.FC<ReviewSectionProps> = ({ reviews, onAddRevi
                 onChange={(e) => setAuthor(e.target.value)}
                 placeholder="e.g. Besnik M."
                 required
-                className="w-full bg-[#0B0710] border border-[#34254D] rounded-lg px-3.5 py-2 text-sm text-[#F5ECD7] focus:outline-none focus:border-[#D4AF37]"
+                className="w-full bg-[#0B0710] border border-[#34254D] rounded-[10px] px-3.5 py-2 text-sm text-[#F5ECD7] focus:outline-none focus:border-[#D4AF37]"
               />
             </div>
 
@@ -118,7 +118,7 @@ export const ReviewSection: React.FC<ReviewSectionProps> = ({ reviews, onAddRevi
                 rows={3}
                 placeholder="What did you think of the flavor, texture, and authenticity?"
                 required
-                className="w-full bg-[#0B0710] border border-[#34254D] rounded-lg px-3.5 py-2 text-sm text-[#F5ECD7] focus:outline-none focus:border-[#D4AF37]"
+                className="w-full bg-[#0B0710] border border-[#34254D] rounded-[10px] px-3.5 py-2 text-sm text-[#F5ECD7] focus:outline-none focus:border-[#D4AF37]"
               />
             </div>
 
@@ -149,7 +149,7 @@ export const ReviewSection: React.FC<ReviewSectionProps> = ({ reviews, onAddRevi
           {reviews.map((rev) => (
             <div
               key={rev.id}
-              className="bg-[#140C1F] p-5 rounded-2xl border border-[#2A1D3F] text-left"
+              className="bg-[#140C1F] p-5 rounded-[10px] border border-[#2A1D3F] text-left"
             >
               <div className="flex items-center justify-between mb-2">
                 <div className="flex items-center gap-2">

@@ -21,7 +21,7 @@ const VALUE_BADGES = [
 export const HeroSection: React.FC = () => {
   return (
     <section className="p-5 bg-[#0B0710]">
-    <div className="relative overflow-hidden isolate rounded-3xl min-h-[620px] lg:min-h-[720px] flex items-center">
+    <div className="relative overflow-hidden isolate rounded-[10px] min-h-[620px] lg:min-h-[720px] flex items-center">
       {/* Background image (sits behind the header) */}
       <img
         src="/assets/aistudio/418DF6A8-A9E9-410B-B7B8-20AFB3597616_6d2f0595.png"
@@ -84,7 +84,7 @@ export const HeroSection: React.FC = () => {
 
           {/* Floating Value Badges card (desktop) */}
           <div className="hidden lg:flex lg:col-span-5 justify-end">
-            <div className="bg-white/10 backdrop-blur-md p-5 rounded-2xl shadow-xl border border-white/20 flex flex-col gap-3.5">
+            <div className="bg-white/10 backdrop-blur-md p-5 rounded-[10px] shadow-xl border border-white/20 flex flex-col gap-3.5">
               {VALUE_BADGES.map(({ icon: Icon, label }) => (
                 <div
                   key={label}

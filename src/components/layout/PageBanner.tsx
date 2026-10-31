@@ -35,7 +35,7 @@ export const PageBanner: React.FC<PageBannerProps> = ({
 
   return (
     <section className="p-5 bg-[#0B0710]">
-      <div className="relative overflow-hidden isolate rounded-3xl min-h-[420px] lg:min-h-[480px] flex items-center">
+      <div className="relative overflow-hidden isolate rounded-[10px] min-h-[420px] lg:min-h-[480px] flex items-center">
         <img
           src={image}
           alt={imageAlt}

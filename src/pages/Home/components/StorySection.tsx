@@ -13,7 +13,7 @@ import { ArrowRight } from 'lucide-react';
 export const StorySection: React.FC = () => {
   return (
     <section className="p-5 bg-[#0B0710]">
-      <div className="relative overflow-hidden isolate rounded-3xl min-h-[560px] lg:min-h-[640px] flex items-center">
+      <div className="relative overflow-hidden isolate rounded-[10px] min-h-[560px] lg:min-h-[640px] flex items-center">
         <img
           src="/assets/aistudio/F2D2C2FE-6DDF-4915-ACF2-5627FCCF53C8_fd4723d5.png"
           alt="European market shop with regional flags and scenic river bridge"

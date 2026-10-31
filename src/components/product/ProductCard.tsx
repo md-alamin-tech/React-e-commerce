@@ -34,14 +34,14 @@ export const ProductCard: React.FC<ProductCardProps> = ({
   const isWishlisted = isInWishlist(product.id);
 
   return (
-    <div className="group flex flex-col bg-[#140C1F] rounded-2xl border border-[#2A1D3F] overflow-hidden shadow-xs hover:shadow-md transition-all duration-300">
+    <div className="group flex flex-col bg-[#140C1F] rounded-[10px] border border-[#2A1D3F] overflow-hidden shadow-xs hover:shadow-md transition-all duration-300">
       {/* Image Container with Badges & Hover Actions */}
       <div className="relative aspect-4/3 w-full bg-[#1B1229] overflow-hidden">
         <Link to={`/product/${product.slug}`} className="block w-full h-full">
           <img
             src={product.images[0]}
             alt={product.name}
-            className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+            className="w-full h-full object-cover object-center"
             loading="lazy"
           />
         </Link>

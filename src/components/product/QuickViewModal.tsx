@@ -45,7 +45,7 @@ export const QuickViewModal: React.FC<QuickViewModalProps> = ({ product, onClose
     <Modal isOpen={!!product} onClose={onClose} maxWidth="2xl">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Product Image */}
-        <div className="rounded-xl overflow-hidden bg-[#1B1229] aspect-square">
+        <div className="rounded-[10px] overflow-hidden bg-[#1B1229] aspect-square">
           <img
             src={product.images[0]}
             alt={product.name}
@@ -86,7 +86,7 @@ export const QuickViewModal: React.FC<QuickViewModalProps> = ({ product, onClose
                   <button
                     key={v.id}
                     onClick={() => setSelectedVariantId(v.id)}
-                    className={`text-xs px-3 py-1.5 rounded-lg border transition-all cursor-pointer ${
+                    className={`text-xs px-3 py-1.5 rounded-[10px] border transition-all cursor-pointer ${
                       selectedVariantId === v.id
                         ? 'border-[#D4AF37] bg-[#170F25] text-[#F5ECD7] font-semibold'
                         : 'border-[#34254D] hover:border-[#D4AF37] text-[#D0C9BA]'
@@ -104,7 +104,7 @@ export const QuickViewModal: React.FC<QuickViewModalProps> = ({ product, onClose
             <span className="text-xs font-semibold text-[#F5ECD7] uppercase tracking-wider">
               Quantity:
             </span>
-            <div className="flex items-center border border-[#34254D] rounded-lg bg-[#140C1F]">
+            <div className="flex items-center border border-[#34254D] rounded-[10px] bg-[#140C1F]">
               <button
                 onClick={() => setQuantity((q) => Math.max(1, q - 1))}
                 className="p-2 text-[#D0C9BA] hover:text-[#D4AF37] cursor-pointer"

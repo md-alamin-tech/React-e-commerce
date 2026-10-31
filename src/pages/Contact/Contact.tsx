@@ -59,7 +59,7 @@ export default function Contact() {
         {/* 2-Column Info & Contact Form */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 mb-16 items-start">
           {/* Left Column: Store Details */}
-          <div className="lg:col-span-5 bg-[#140C1F] p-8 rounded-3xl border border-[#2E2045] shadow-xs text-left space-y-7">
+          <div className="lg:col-span-5 bg-[#140C1F] p-8 rounded-[10px] border border-[#2E2045] shadow-xs text-left space-y-7">
             {/* Our Location */}
             <div className="flex items-start gap-4">
               <div className="w-10 h-10 rounded-full bg-[#0B0710] border border-[#2E2045] flex items-center justify-center shrink-0 text-[#D4AF37]">
@@ -156,7 +156,7 @@ export default function Contact() {
           </div>
 
           {/* Right Column: Contact Form */}
-          <div className="lg:col-span-7 bg-[#140C1F] p-8 sm:p-10 rounded-3xl border border-[#2E2045] shadow-xs text-left">
+          <div className="lg:col-span-7 bg-[#140C1F] p-8 sm:p-10 rounded-[10px] border border-[#2E2045] shadow-xs text-left">
             <h3 className="font-serif text-xl font-bold text-[#F5ECD7] mb-2">
               Send Us a Message
             </h3>
@@ -165,7 +165,7 @@ export default function Contact() {
             </p>
 
             {submitted ? (
-              <div className="p-8 bg-emerald-950/60 rounded-2xl border border-emerald-800 text-center">
+              <div className="p-8 bg-emerald-950/60 rounded-[10px] border border-emerald-800 text-center">
                 <CheckCircle2 size={36} className="text-[#D4AF37] mx-auto mb-2" />
                 <h4 className="font-bold text-sm text-emerald-300 mb-1">
                   Message Sent Successfully!
@@ -204,7 +204,7 @@ export default function Contact() {
                     onChange={(e) => setMessage(e.target.value)}
                     placeholder="Tell us what's on your mind..."
                     required
-                    className="w-full bg-[#140C1F] border border-[#34254D] rounded-xl px-3.5 py-2.5 text-sm text-[#F5ECD7] placeholder-[#8A847A] focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37]"
+                    className="w-full bg-[#140C1F] border border-[#34254D] rounded-[10px] px-3.5 py-2.5 text-sm text-[#F5ECD7] placeholder-[#8A847A] focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37]"
                   />
                 </div>
                 <div className="pt-2">
@@ -222,7 +222,7 @@ export default function Contact() {
         </div>
 
         {/* Bottom Map Section (Matching mockup Section 6!) */}
-        <div className="bg-[#140C1F] rounded-3xl p-6 sm:p-8 border border-[#2E2045] shadow-xs text-left">
+        <div className="bg-[#140C1F] rounded-[10px] p-6 sm:p-8 border border-[#2E2045] shadow-xs text-left">
           <div className="mb-4">
             <h3 className="font-serif text-lg font-bold text-[#F5ECD7]">
               Our Location
@@ -233,7 +233,7 @@ export default function Contact() {
           </div>
 
           {/* Styled Map Graphic Canvas */}
-          <div className="relative w-full h-64 sm:h-80 rounded-2xl overflow-hidden bg-[#2A1D3F] border border-[#34254D] flex items-center justify-center">
+          <div className="relative w-full h-64 sm:h-80 rounded-[10px] overflow-hidden bg-[#2A1D3F] border border-[#34254D] flex items-center justify-center">
             {/* Soft map grid lines */}
             <div className="absolute inset-0 bg-[radial-gradient(#C8BDAB_1px,transparent_1px)] [background-size:24px_24px] opacity-40 pointer-events-none" />
 

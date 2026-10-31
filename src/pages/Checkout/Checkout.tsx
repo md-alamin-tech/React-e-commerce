@@ -145,7 +145,7 @@ export default function Checkout() {
             {/* Left Column: Delivery & Payment Details */}
             <div className="lg:col-span-7 space-y-8 text-left">
               {/* Shipping Address Card */}
-              <div className="bg-[#140C1F] p-6 sm:p-8 rounded-3xl border border-[#2E2045] shadow-xs">
+              <div className="bg-[#140C1F] p-6 sm:p-8 rounded-[10px] border border-[#2E2045] shadow-xs">
                 <div className="flex items-center justify-between pb-4 border-b border-[#2E2045] mb-6">
                   <h2 className="font-serif text-xl font-bold text-[#F5ECD7]">
                     1. Shipping Address
@@ -235,7 +235,7 @@ export default function Checkout() {
               </div>
 
               {/* Payment Method Card */}
-              <div className="bg-[#140C1F] p-6 sm:p-8 rounded-3xl border border-[#2E2045] shadow-xs">
+              <div className="bg-[#140C1F] p-6 sm:p-8 rounded-[10px] border border-[#2E2045] shadow-xs">
                 <div className="flex items-center justify-between pb-4 border-b border-[#2E2045] mb-6">
                   <h2 className="font-serif text-xl font-bold text-[#F5ECD7]">
                     2. Payment Method
@@ -249,7 +249,7 @@ export default function Checkout() {
                 <div className="space-y-4 mb-6">
                   {/* Credit Card Option */}
                   <label
-                    className={`flex items-start gap-3.5 p-4 rounded-2xl border transition-all cursor-pointer ${
+                    className={`flex items-start gap-3.5 p-4 rounded-[10px] border transition-all cursor-pointer ${
                       paymentMethod === 'card'
                         ? 'border-[#D4AF37] bg-[#170F25]'
                         : 'border-[#34254D] hover:border-[#D4AF37]'
@@ -307,7 +307,7 @@ export default function Checkout() {
 
                   {/* Cash On Delivery Option */}
                   <label
-                    className={`flex items-start gap-3.5 p-4 rounded-2xl border transition-all cursor-pointer ${
+                    className={`flex items-start gap-3.5 p-4 rounded-[10px] border transition-all cursor-pointer ${
                       paymentMethod === 'cod'
                         ? 'border-[#D4AF37] bg-[#170F25]'
                         : 'border-[#34254D] hover:border-[#D4AF37]'
@@ -338,7 +338,7 @@ export default function Checkout() {
 
             {/* Right Column: Order Summary */}
             <div className="lg:col-span-5">
-              <div className="bg-[#140C1F] p-6 sm:p-7 rounded-3xl border border-[#2E2045] shadow-xs sticky top-28 text-left">
+              <div className="bg-[#140C1F] p-6 sm:p-7 rounded-[10px] border border-[#2E2045] shadow-xs sticky top-28 text-left">
                 <h3 className="font-serif text-lg font-bold text-[#F5ECD7] pb-3 border-b border-[#2E2045] mb-4">
                   Order Review ({items.length} items)
                 </h3>
@@ -350,7 +350,7 @@ export default function Checkout() {
                       <img
                         src={item.image}
                         alt={item.name}
-                        className="w-12 h-12 object-cover rounded-lg bg-[#0B0710] shrink-0"
+                        className="w-12 h-12 object-cover rounded-[10px] bg-[#0B0710] shrink-0"
                       />
                       <div className="flex-1 min-w-0">
                         <p className="text-xs font-semibold text-[#F5ECD7] truncate">

@@ -52,7 +52,7 @@ export const ProductFilters: React.FC<ProductFiltersProps> = ({
           <li>
             <button
               onClick={() => onSelectCategory('all')}
-              className={`w-full text-left py-2 px-3 rounded-lg transition-colors flex items-center justify-between cursor-pointer ${
+              className={`w-full text-left py-2 px-3 rounded-[10px] transition-colors flex items-center justify-between cursor-pointer ${
                 selectedCategory === 'all'
                   ? 'bg-[#2A1D3F] text-[#F5ECD7] font-bold'
                   : 'text-[#D0C9BA] hover:bg-[#1E1430] hover:text-[#D4AF37]'
@@ -65,7 +65,7 @@ export const ProductFilters: React.FC<ProductFiltersProps> = ({
             <li key={cat.id}>
               <button
                 onClick={() => onSelectCategory(cat.slug)}
-                className={`w-full text-left py-2 px-3 rounded-lg transition-colors flex items-center justify-between cursor-pointer ${
+                className={`w-full text-left py-2 px-3 rounded-[10px] transition-colors flex items-center justify-between cursor-pointer ${
                   selectedCategory === cat.slug
                     ? 'bg-[#2A1D3F] text-[#F5ECD7] font-bold'
                     : 'text-[#D0C9BA] hover:bg-[#1E1430] hover:text-[#D4AF37]'
@@ -158,7 +158,7 @@ export const ProductFilters: React.FC<ProductFiltersProps> = ({
       {/* Reset Action */}
       <button
         onClick={onReset}
-        className="w-full flex items-center justify-center gap-2 py-2 px-3 rounded-lg border border-[#34254D] hover:bg-[#2A1D3F] text-xs font-semibold text-[#D0C9BA] hover:text-[#D4AF37] transition-colors cursor-pointer"
+        className="w-full flex items-center justify-center gap-2 py-2 px-3 rounded-[10px] border border-[#34254D] hover:bg-[#2A1D3F] text-xs font-semibold text-[#D0C9BA] hover:text-[#D4AF37] transition-colors cursor-pointer"
       >
         <RotateCcw size={13} />
         <span>Reset Filters</span>

@@ -28,7 +28,7 @@ export default function Wishlist() {
   if (wishlist.length === 0) {
     return (
       <div className="bg-[#0B0710] py-20 px-4 text-center">
-        <div className="max-w-md mx-auto bg-[#140C1F] p-10 rounded-3xl border border-[#2E2045] shadow-xs">
+        <div className="max-w-md mx-auto bg-[#140C1F] p-10 rounded-[10px] border border-[#2E2045] shadow-xs">
           <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-[#0B0710] flex items-center justify-center text-[#D4AF37]">
             <Heart size={28} />
           </div>

@@ -108,7 +108,7 @@ export default function ComingSoon() {
           {perks.map((p, i) => (
             <div
               key={i}
-              className="bg-[#140C1F] p-6 rounded-3xl border border-[#2E2045] flex flex-col items-center text-center shadow-2xs hover:shadow-sm transition-all"
+              className="bg-[#140C1F] p-6 rounded-[10px] border border-[#2E2045] flex flex-col items-center text-center shadow-2xs hover:shadow-sm transition-all"
             >
               <div className="w-12 h-12 rounded-full bg-[#0B0710] border border-[#2E2045] flex items-center justify-center mb-4">
                 {p.icon}
@@ -126,7 +126,7 @@ export default function ComingSoon() {
 
       {/* 3. Bottom Banner: Authentic Flavors. A Stronger Community. */}
       <section className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative rounded-3xl overflow-hidden shadow-xl border border-[#2E2045]">
+        <div className="relative rounded-[10px] overflow-hidden shadow-xl border border-[#2E2045]">
           <img
             src="/assets/aistudio/EA7AB6BA-A77D-4A0C-868C-F7B2BD7987DF_df31e837.png"
             alt="Culinary feast banner"

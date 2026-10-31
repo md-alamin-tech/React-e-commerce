@@ -66,7 +66,7 @@ export default function About() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
             {/* Left Shop Photo */}
             <div className="lg:col-span-6">
-              <div className="rounded-3xl overflow-hidden shadow-xl border-4 border-[#2E2045] aspect-4/3 sm:aspect-16/11">
+              <div className="rounded-[10px] overflow-hidden shadow-xl border-4 border-[#2E2045] aspect-4/3 sm:aspect-16/11">
                 <img
                   src="/assets/aistudio/64702B2B-DAFA-4039-A870-C1923AC2C266_3aa407e6.png"
                   alt="Belké Market warm artisan grocery shop interior"
@@ -111,7 +111,7 @@ export default function About() {
             {values.map((val, idx) => (
               <div
                 key={idx}
-                className="bg-[#140C1F] p-7 rounded-3xl border border-[#2A1D3F] flex flex-col items-center text-center shadow-2xs hover:shadow-sm transition-all"
+                className="bg-[#140C1F] p-7 rounded-[10px] border border-[#2A1D3F] flex flex-col items-center text-center shadow-2xs hover:shadow-sm transition-all"
               >
                 <div className="w-14 h-14 rounded-full bg-[#0B0710] border border-[#2E2045] flex items-center justify-center mb-4">
                   {val.icon}
@@ -131,7 +131,7 @@ export default function About() {
       {/* 4. Bottom Photographic Quote Banner: "Good Food Brings People Together." */}
       <section className="pt-14 px-4 sm:px-6 lg:px-8">
         <div className="max-w-[1536px] mx-auto">
-          <div className="relative rounded-3xl overflow-hidden shadow-xl border border-[#2E2045]">
+          <div className="relative rounded-[10px] overflow-hidden shadow-xl border border-[#2E2045]">
             <img
               src="/assets/aistudio/EA7AB6BA-A77D-4A0C-868C-F7B2BD7987DF_df31e837.png"
               alt="Mediterranean spread with olive branches"

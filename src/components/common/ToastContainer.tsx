@@ -34,7 +34,7 @@ export const ToastContainer: React.FC = () => {
         return (
           <div
             key={toast.id}
-            className={`pointer-events-auto flex items-start gap-3 p-4 rounded-xl border shadow-lg transition-all transform animate-in fade-in slide-in-from-bottom-2 ${
+            className={`pointer-events-auto flex items-start gap-3 p-4 rounded-[10px] border shadow-lg transition-all transform animate-in fade-in slide-in-from-bottom-2 ${
               borders[toast.type]
             }`}
           >

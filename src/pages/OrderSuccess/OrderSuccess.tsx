@@ -24,7 +24,7 @@ export default function OrderSuccess() {
 
   return (
     <div className="bg-[#0B0710] py-14 sm:py-20 px-4">
-      <div className="max-w-2xl mx-auto bg-[#140C1F] rounded-3xl p-8 sm:p-12 border border-[#2E2045] shadow-xs text-center">
+      <div className="max-w-2xl mx-auto bg-[#140C1F] rounded-[10px] p-8 sm:p-12 border border-[#2E2045] shadow-xs text-center">
         {/* Animated Check Emblem */}
         <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-emerald-950/60 text-emerald-300 flex items-center justify-center border-4 border-emerald-800">
           <CheckCircle2 size={42} />
@@ -40,7 +40,7 @@ export default function OrderSuccess() {
         </p>
 
         {/* Order Details Card */}
-        <div className="bg-[#0B0710] rounded-2xl p-6 border border-[#2E2045] text-left mb-8 space-y-4">
+        <div className="bg-[#0B0710] rounded-[10px] p-6 border border-[#2E2045] text-left mb-8 space-y-4">
           <div className="flex flex-wrap justify-between items-center pb-4 border-b border-[#2E2045] gap-2 text-xs">
             <div>
               <span className="text-[#B0A99C] block">Order Number</span>

@@ -50,7 +50,7 @@ export default function Login() {
 
   return (
     <div className="bg-[#0B0710] py-16 sm:py-24 px-4 flex items-center justify-center">
-      <div className="max-w-md w-full bg-[#140C1F] rounded-3xl p-8 sm:p-10 border border-[#2E2045] shadow-xs text-left">
+      <div className="max-w-md w-full bg-[#140C1F] rounded-[10px] p-8 sm:p-10 border border-[#2E2045] shadow-xs text-left">
         <div className="text-center mb-8">
           <h1 className="font-serif text-3xl font-bold text-[#F5ECD7]">
             Sign in to Belké Market
@@ -61,7 +61,7 @@ export default function Login() {
         </div>
 
         {/* Demo Fast Login Banner */}
-        <div className="bg-[#1B1229] border border-[#2E2045] rounded-2xl p-4 mb-6 text-center">
+        <div className="bg-[#1B1229] border border-[#2E2045] rounded-[10px] p-4 mb-6 text-center">
           <p className="text-xs text-[#F5ECD7] font-semibold mb-2">
             Testing the app?
           </p>

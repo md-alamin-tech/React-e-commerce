@@ -174,7 +174,7 @@ export default function Shop() {
                 {/* Mobile Filter Button */}
                 <button
                   onClick={() => setMobileFilterOpen(true)}
-                  className="lg:hidden flex items-center gap-2 px-3.5 py-2 rounded-lg border border-[#34254D] bg-[#140C1F] text-xs font-semibold text-[#F5ECD7]"
+                  className="lg:hidden flex items-center gap-2 px-3.5 py-2 rounded-[10px] border border-[#34254D] bg-[#140C1F] text-xs font-semibold text-[#F5ECD7]"
                 >
                   <SlidersHorizontal size={14} />
                   <span>Filters</span>
@@ -186,7 +186,7 @@ export default function Shop() {
                   <select
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value)}
-                    className="bg-[#140C1F] border border-[#34254D] rounded-lg px-3 py-2 text-xs font-medium text-[#F5ECD7] focus:outline-none focus:border-[#D4AF37] cursor-pointer"
+                    className="bg-[#140C1F] border border-[#34254D] rounded-[10px] px-3 py-2 text-xs font-medium text-[#F5ECD7] focus:outline-none focus:border-[#D4AF37] cursor-pointer"
                   >
                     <option value="featured">Featured / Best Sellers</option>
                     <option value="price-low">Price: Low to High</option>
@@ -210,7 +210,7 @@ export default function Shop() {
                 <button
                   onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
                   disabled={currentPage === 1}
-                  className="p-2 rounded-lg border border-[#34254D] bg-[#140C1F] text-[#F5ECD7] disabled:opacity-40 disabled:cursor-not-allowed hover:bg-[#1E1430] transition-colors"
+                  className="p-2 rounded-[10px] border border-[#34254D] bg-[#140C1F] text-[#F5ECD7] disabled:opacity-40 disabled:cursor-not-allowed hover:bg-[#1E1430] transition-colors"
                   aria-label="Previous page"
                 >
                   <ChevronLeft size={16} />
@@ -220,7 +220,7 @@ export default function Shop() {
                   <button
                     key={pageNum}
                     onClick={() => setCurrentPage(pageNum)}
-                    className={`w-9 h-9 rounded-lg text-xs font-semibold transition-colors cursor-pointer ${
+                    className={`w-9 h-9 rounded-[10px] text-xs font-semibold transition-colors cursor-pointer ${
                       currentPage === pageNum
                         ? 'bg-[#D4AF37] text-[#0B0710]'
                         : 'bg-[#140C1F] border border-[#34254D] text-[#D0C9BA] hover:bg-[#1E1430]'
@@ -233,7 +233,7 @@ export default function Shop() {
                 <button
                   onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
                   disabled={currentPage === totalPages}
-                  className="p-2 rounded-lg border border-[#34254D] bg-[#140C1F] text-[#F5ECD7] disabled:opacity-40 disabled:cursor-not-allowed hover:bg-[#1E1430] transition-colors"
+                  className="p-2 rounded-[10px] border border-[#34254D] bg-[#140C1F] text-[#F5ECD7] disabled:opacity-40 disabled:cursor-not-allowed hover:bg-[#1E1430] transition-colors"
                   aria-label="Next page"
                 >
                   <ChevronRight size={16} />

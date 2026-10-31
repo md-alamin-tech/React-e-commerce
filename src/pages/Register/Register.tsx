@@ -48,7 +48,7 @@ export default function Register() {
 
   return (
     <div className="bg-[#0B0710] py-16 sm:py-24 px-4 flex items-center justify-center">
-      <div className="max-w-md w-full bg-[#140C1F] rounded-3xl p-8 sm:p-10 border border-[#2E2045] shadow-xs text-left">
+      <div className="max-w-md w-full bg-[#140C1F] rounded-[10px] p-8 sm:p-10 border border-[#2E2045] shadow-xs text-left">
         <div className="text-center mb-8">
           <h1 className="font-serif text-3xl font-bold text-[#F5ECD7]">
             Create an Account

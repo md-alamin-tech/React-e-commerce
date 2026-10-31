@@ -65,7 +65,7 @@ export const Modal: React.FC<ModalProps> = ({
 
       {/* Modal Card */}
       <div
-        className={`relative w-full ${maxWidthClasses[maxWidth]} bg-[#0B0710] rounded-2xl shadow-2xl border border-[#2E2045] z-10 overflow-hidden transform transition-all my-8`}
+        className={`relative w-full ${maxWidthClasses[maxWidth]} bg-[#0B0710] rounded-[10px] shadow-2xl border border-[#2E2045] z-10 overflow-hidden transform transition-all my-8`}
       >
         <div className="flex items-center justify-between px-6 py-4 border-b border-[#2E2045] bg-[#1B1229]">
           {title ? (

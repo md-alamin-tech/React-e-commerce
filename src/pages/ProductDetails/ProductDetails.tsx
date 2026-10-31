@@ -159,7 +159,7 @@ export default function ProductDetails() {
                       key={v.id}
                       type="button"
                       onClick={() => setSelectedVariantId(v.id)}
-                      className={`text-xs px-4 py-2 rounded-xl border transition-all cursor-pointer ${
+                      className={`text-xs px-4 py-2 rounded-[10px] border transition-all cursor-pointer ${
                         selectedVariantId === v.id
                           ? 'border-[#D4AF37] bg-[#1B1229] text-[#F5ECD7] font-bold shadow-xs'
                           : 'border-[#34254D] hover:border-[#D4AF37] bg-[#140C1F] text-[#D0C9BA]'
@@ -236,7 +236,7 @@ export default function ProductDetails() {
 
         {/* Ingredients & Origin Section */}
         {product.ingredients && product.ingredients.length > 0 && (
-          <div className="bg-[#140C1F] rounded-3xl p-8 border border-[#2E2045] mb-16 text-left">
+          <div className="bg-[#140C1F] rounded-[10px] p-8 border border-[#2E2045] mb-16 text-left">
             <h3 className="font-serif text-xl font-bold text-[#F5ECD7] mb-4">
               Ingredients & Authenticity
             </h3>

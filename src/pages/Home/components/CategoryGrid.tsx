@@ -31,13 +31,13 @@ export const CategoryGrid: React.FC = () => {
           {CATEGORIES.map((cat) => (
             <div
               key={cat.id}
-              className="group flex flex-col bg-[#140C1F] rounded-2xl border border-[#2A1D3F] overflow-hidden shadow-2xs hover:shadow-md transition-all duration-300"
+              className="group flex flex-col bg-[#140C1F] rounded-[10px] border border-[#2A1D3F] overflow-hidden shadow-2xs hover:shadow-md transition-all duration-300"
             >
               <Link to={`/shop?category=${cat.slug}`} className="block relative aspect-4/3 overflow-hidden bg-[#1B1229]">
                 <img
                   src={cat.image}
                   alt={cat.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover"
                   loading="lazy"
                 />
               </Link>

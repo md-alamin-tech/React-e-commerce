@@ -68,14 +68,14 @@ export default function Recipes() {
           {RECIPES.map((recipe) => (
             <div
               key={recipe.id}
-              className="group flex flex-col bg-[#140C1F] rounded-3xl border border-[#2A1D3F] overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 text-left"
+              className="group flex flex-col bg-[#140C1F] rounded-[10px] border border-[#2A1D3F] overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 text-left"
             >
               {/* Image */}
               <div className="relative aspect-16/10 overflow-hidden bg-[#1B1229]">
                 <img
                   src={recipe.image}
                   alt={recipe.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover"
                 />
                 <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-[#D4AF37]/90 text-[#0B0710] text-[10px] font-bold uppercase tracking-wider backdrop-blur-xs">
                   {recipe.category}
@@ -129,7 +129,7 @@ export default function Recipes() {
           maxWidth="2xl"
         >
           <div className="space-y-6 text-left">
-            <div className="rounded-2xl overflow-hidden aspect-16/9 bg-[#1B1229]">
+            <div className="rounded-[10px] overflow-hidden aspect-16/9 bg-[#1B1229]">
               <img
                 src={activeRecipe.image}
                 alt={activeRecipe.title}
@@ -170,7 +170,7 @@ export default function Recipes() {
                   </button>
                 )}
               </div>
-              <ul className="space-y-2 text-xs text-[#D0C9BA] bg-[#140C1F] p-4 rounded-2xl border border-[#2E2045]">
+              <ul className="space-y-2 text-xs text-[#D0C9BA] bg-[#140C1F] p-4 rounded-[10px] border border-[#2E2045]">
                 {activeRecipe.ingredients.map((ing, i) => (
                   <li key={i} className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37] shrink-0" />

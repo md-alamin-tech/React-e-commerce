@@ -26,7 +26,7 @@ export const ProductGrid: React.FC<ProductGridProps> = ({
 }) => {
   if (products.length === 0) {
     return (
-      <div className="py-16 text-center bg-[#140C1F] rounded-2xl border border-[#2E2045] p-8">
+      <div className="py-16 text-center bg-[#140C1F] rounded-[10px] border border-[#2E2045] p-8">
         <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-[#0B0710] flex items-center justify-center text-[#D4AF37]">
         </div>
         <h4 className="font-serif text-lg font-bold text-[#F5ECD7] mb-1">

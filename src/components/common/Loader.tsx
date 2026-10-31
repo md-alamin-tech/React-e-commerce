@@ -24,7 +24,7 @@ export const Loader: React.FC<LoaderProps> = ({
   if (type === 'skeleton') {
     return (
       <div className={`animate-pulse space-y-4 ${className}`}>
-        <div className="h-48 bg-[#241838] rounded-xl w-full" />
+        <div className="h-48 bg-[#241838] rounded-[10px] w-full" />
         <div className="h-4 bg-[#241838] rounded w-3/4" />
         <div className="h-4 bg-[#241838] rounded w-1/2" />
       </div>

@@ -66,7 +66,7 @@ export default function Account() {
   if (!isAuthenticated || !user) {
     return (
       <div className="bg-[#0B0710] py-20 px-4 text-center">
-        <div className="max-w-md mx-auto bg-[#140C1F] p-8 rounded-3xl border border-[#2E2045]">
+        <div className="max-w-md mx-auto bg-[#140C1F] p-8 rounded-[10px] border border-[#2E2045]">
           <ShieldAlert size={36} className="text-[#D4AF37] mx-auto mb-3" />
           <h2 className="font-serif text-2xl font-bold text-[#F5ECD7] mb-2">
             Please Sign In
@@ -193,7 +193,7 @@ export default function Account() {
           <div className="lg:col-span-9 text-left">
             {/* ORDERS TAB */}
             {activeTab === 'orders' && (
-              <div className="bg-[#140C1F] p-6 sm:p-8 rounded-3xl border border-[#2E2045] shadow-xs">
+              <div className="bg-[#140C1F] p-6 sm:p-8 rounded-[10px] border border-[#2E2045] shadow-xs">
                 <h2 className="font-serif text-xl font-bold text-[#F5ECD7] mb-6 pb-3 border-b border-[#2E2045]">
                   Your Orders ({user.orders.length})
                 </h2>
@@ -214,7 +214,7 @@ export default function Account() {
                     {user.orders.map((ord) => (
                       <div
                         key={ord.id}
-                        className="p-5 rounded-2xl border border-[#2A1D3F] bg-[#0B0710] space-y-4"
+                        className="p-5 rounded-[10px] border border-[#2A1D3F] bg-[#0B0710] space-y-4"
                       >
                         <div className="flex flex-wrap items-center justify-between pb-3 border-b border-[#2E2045] gap-3 text-xs">
                           <div>
@@ -280,7 +280,7 @@ export default function Account() {
 
             {/* SAVED ADDRESSES TAB */}
             {activeTab === 'addresses' && (
-              <div className="bg-[#140C1F] p-6 sm:p-8 rounded-3xl border border-[#2E2045] shadow-xs">
+              <div className="bg-[#140C1F] p-6 sm:p-8 rounded-[10px] border border-[#2E2045] shadow-xs">
                 <div className="flex items-center justify-between mb-6 pb-3 border-b border-[#2E2045]">
                   <h2 className="font-serif text-xl font-bold text-[#F5ECD7]">
                     Saved Delivery Addresses
@@ -304,7 +304,7 @@ export default function Account() {
                     {user.addresses.map((addr) => (
                       <div
                         key={addr.id}
-                        className={`p-5 rounded-2xl border transition-all text-xs relative ${
+                        className={`p-5 rounded-[10px] border transition-all text-xs relative ${
                           addr.isDefault
                             ? 'border-[#D4AF37] bg-[#0B0710]'
                             : 'border-[#34254D] bg-[#140C1F]'
@@ -350,7 +350,7 @@ export default function Account() {
 
             {/* PROFILE TAB */}
             {activeTab === 'profile' && (
-              <div className="bg-[#140C1F] p-6 sm:p-8 rounded-3xl border border-[#2E2045] shadow-xs">
+              <div className="bg-[#140C1F] p-6 sm:p-8 rounded-[10px] border border-[#2E2045] shadow-xs">
                 <h2 className="font-serif text-xl font-bold text-[#F5ECD7] mb-6 pb-3 border-b border-[#2E2045]">
                   Personal Profile
                 </h2>

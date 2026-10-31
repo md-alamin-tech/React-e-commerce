@@ -71,3 +71,61 @@ html.lenis body {
 .fe-stacked-section {
   position: relative;
 }
+
+/* Image hover: zoom + light sweep overlay (applies to every image wrapper) */
+div:has(> img):not(.absolute):not(.fixed):not(.sticky),
+figure:has(> img):not(.absolute):not(.fixed):not(.sticky) {
+  position: relative;
+}
+
+div:has(> img),
+figure:has(> img) {
+  overflow: hidden;
+}
+
+div:has(> img) > img,
+figure:has(> img) > img {
+  transition: transform 0.5s ease-in-out;
+}
+
+div:has(> img)::after,
+figure:has(> img)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+div:has(> img):hover > img,
+figure:has(> img):hover > img {
+  transform: scale(1.04);
+}
+
+div:has(> img):hover::after,
+figure:has(> img):hover::after {
+  animation: imageOverlaySweep 0.8s ease-in-out forwards;
+}
+
+@keyframes imageOverlaySweep {
+  0% {
+    left: 50%;
+    width: 0;
+    opacity: 1;
+  }
+  62.5% {
+    left: 0;
+    width: 100%;
+    opacity: 1;
+  }
+  100% {
+    left: 0;
+    width: 100%;
+    opacity: 0;
+  }
+}

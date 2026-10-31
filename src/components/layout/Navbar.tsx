@@ -181,7 +181,7 @@ export const Navbar: React.FC = () => {
 
               {/* Live Search Modal Popover */}
               {searchOpen && (
-                <div className="absolute right-0 top-12 w-80 sm:w-96 bg-[#140C1F] rounded-2xl shadow-xl border border-[#2E2045] p-3 z-50 animate-in fade-in slide-in-from-top-2">
+                <div className="absolute right-0 top-12 w-80 sm:w-96 bg-[#140C1F] rounded-[10px] shadow-xl border border-[#2E2045] p-3 z-50 animate-in fade-in slide-in-from-top-2">
                   <form onSubmit={handleSearchSubmit} className="relative">
                     <input
                       ref={searchInputRef}
@@ -189,7 +189,7 @@ export const Navbar: React.FC = () => {
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
                       placeholder="Search ajvar, feta, burek, coffee..."
-                      className="w-full bg-[#0B0710] border border-[#34254D] rounded-xl pl-9 pr-8 py-2 text-sm text-[#F5ECD7] focus:outline-none focus:border-[#D4AF37]"
+                      className="w-full bg-[#0B0710] border border-[#34254D] rounded-[10px] pl-9 pr-8 py-2 text-sm text-[#F5ECD7] focus:outline-none focus:border-[#D4AF37]"
                     />
                     <Search
                       size={16}
@@ -216,7 +216,7 @@ export const Navbar: React.FC = () => {
                         <div
                           key={prod.id}
                           onClick={() => handleSelectProduct(prod)}
-                          className="flex items-center gap-3 p-2 hover:bg-[#0B0710] rounded-lg cursor-pointer transition-colors"
+                          className="flex items-center gap-3 p-2 hover:bg-[#0B0710] rounded-[10px] cursor-pointer transition-colors"
                         >
                           <img
                             src={prod.images[0]}
@@ -301,7 +301,7 @@ export const Navbar: React.FC = () => {
             {/* Mobile Hamburger Menu Toggle */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className={`lg:hidden p-2 rounded-lg transition-colors cursor-pointer ${
+              className={`lg:hidden p-2 rounded-[10px] transition-colors cursor-pointer ${
                 transparent
                   ? 'text-[#D4AF37] hover:bg-white/15'
                   : 'text-[#D4AF37] hover:bg-[#1E1430]'
@@ -316,7 +316,7 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Menu Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden absolute top-full left-4 right-4 mt-1 rounded-3xl border border-[#2E2045] bg-[#0B0710] px-6 py-5 shadow-lg">
+        <div className="lg:hidden absolute top-full left-4 right-4 mt-1 rounded-[10px] border border-[#2E2045] bg-[#0B0710] px-6 py-5 shadow-lg">
           <nav className="flex flex-col space-y-3.5">
             {navLinks.map((link) => (
               <NavLink

@@ -61,7 +61,7 @@ export default function Cart() {
   if (items.length === 0) {
     return (
       <div className="bg-[#0B0710] py-20 px-4">
-        <div className="max-w-md mx-auto text-center bg-[#140C1F] p-10 rounded-3xl border border-[#2E2045] shadow-xs">
+        <div className="max-w-md mx-auto text-center bg-[#140C1F] p-10 rounded-[10px] border border-[#2E2045] shadow-xs">
           <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-[#0B0710] flex items-center justify-center text-[#D4AF37]">
             <ShoppingBag size={28} />
           </div>
@@ -109,7 +109,7 @@ export default function Cart() {
         </div>
 
         {/* Free Shipping Progress Indicator */}
-        <div className="bg-[#140C1F] rounded-2xl p-4 sm:p-5 border border-[#2E2045] mb-8">
+        <div className="bg-[#140C1F] rounded-[10px] p-4 sm:p-5 border border-[#2E2045] mb-8">
           <div className="flex items-center justify-between text-xs font-semibold text-[#F5ECD7] mb-2">
             <span className="flex items-center gap-1.5">
               <Truck size={15} className="text-[#D4AF37]" />
@@ -137,7 +137,7 @@ export default function Cart() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
           {/* Items List */}
           <div className="lg:col-span-8 space-y-4">
-            <div className="bg-[#140C1F] rounded-3xl border border-[#2E2045] divide-y divide-[#241838] overflow-hidden">
+            <div className="bg-[#140C1F] rounded-[10px] border border-[#2E2045] divide-y divide-[#241838] overflow-hidden">
               {items.map((item) => (
                 <div
                   key={item.id}
@@ -148,7 +148,7 @@ export default function Cart() {
                     <img
                       src={item.image}
                       alt={item.name}
-                      className="w-16 h-16 sm:w-20 sm:h-20 object-cover rounded-xl bg-[#0B0710] shrink-0"
+                      className="w-16 h-16 sm:w-20 sm:h-20 object-cover rounded-[10px] bg-[#0B0710] shrink-0"
                     />
                     <div className="text-left min-w-0">
                       <Link
@@ -228,7 +228,7 @@ export default function Cart() {
 
           {/* Cart Summary & Coupon */}
           <div className="lg:col-span-4">
-            <div className="bg-[#140C1F] rounded-3xl p-6 sm:p-7 border border-[#2E2045] shadow-xs sticky top-28 text-left">
+            <div className="bg-[#140C1F] rounded-[10px] p-6 sm:p-7 border border-[#2E2045] shadow-xs sticky top-28 text-left">
               <h3 className="font-serif text-lg font-bold text-[#F5ECD7] pb-3 border-b border-[#2E2045] mb-5">
                 Order Summary
               </h3>
@@ -236,7 +236,7 @@ export default function Cart() {
               {/* Coupon Form */}
               <div className="mb-6">
                 {couponCode ? (
-                  <div className="flex items-center justify-between p-3 rounded-xl bg-emerald-950/60 border border-emerald-800">
+                  <div className="flex items-center justify-between p-3 rounded-[10px] bg-emerald-950/60 border border-emerald-800">
                     <div className="flex items-center gap-2 text-xs text-emerald-300">
                       <Tag size={14} className="text-[#D4AF37]" />
                       <span>
@@ -257,7 +257,7 @@ export default function Cart() {
                       value={inputCoupon}
                       onChange={(e) => setInputCoupon(e.target.value)}
                       placeholder="Coupon code (e.g. WELCOME10)"
-                      className="flex-1 bg-[#0B0710] border border-[#34254D] rounded-xl px-3 py-2 text-xs text-[#F5ECD7] focus:outline-none focus:border-[#D4AF37]"
+                      className="flex-1 bg-[#0B0710] border border-[#34254D] rounded-[10px] px-3 py-2 text-xs text-[#F5ECD7] focus:outline-none focus:border-[#D4AF37]"
                     />
                     <Button type="submit" variant="dark" size="sm">
                       Apply

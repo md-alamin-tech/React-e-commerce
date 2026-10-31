@@ -14,7 +14,7 @@ interface CtaBannerProps {
 
 export const CtaBanner: React.FC<CtaBannerProps> = ({ onExploreAll }) => {
   return (
-    <div className="relative rounded-3xl overflow-hidden my-12 border border-[#2E2045] shadow-lg">
+    <div className="relative rounded-[10px] overflow-hidden my-12 border border-[#2E2045] shadow-lg">
       <img
         src="/assets/aistudio/EA7AB6BA-A77D-4A0C-868C-F7B2BD7987DF_df31e837.png"
         alt="Traditional culinary feast"
