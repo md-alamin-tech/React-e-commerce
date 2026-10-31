@@ -92,21 +92,21 @@ export const Navbar: React.FC = () => {
   return (
     <header
       className={`sticky z-40 border-b transition-all duration-300 ${
-        isHome ? '-mb-[81px]' : ''
+        isHome ? '-mb-[97px]' : ''
       } ${
         scrolled
           ? 'top-3 bg-transparent border-transparent'
           : transparent
             ? 'top-0 bg-transparent border-transparent translate-y-5'
-            : 'top-0 bg-[#0B0710]/95 backdrop-blur-md border-[#2E2045]'
+            : 'top-0 bg-transparent border-transparent'
       }`}
     >
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 h-24 flex items-center">
         <div
           className={`w-full flex items-center justify-between transition-all duration-300 ${
-            scrolled
-              ? 'h-16 px-5 sm:px-6 rounded-2xl bg-[#0B0710]/95 backdrop-blur-md border border-[#2E2045] shadow-[0_12px_32px_rgba(123,44,191,0.28)]'
-              : 'h-20'
+            transparent
+              ? 'h-20 px-0 rounded-full'
+              : 'h-20 px-6 sm:px-8 rounded-full bg-[#0B0710]/95 backdrop-blur-md border border-[#2E2045] shadow-[0_12px_32px_rgba(123,44,191,0.28)]'
           }`}
         >
           {/* Brand Logo with Olive Branches */}
@@ -316,7 +316,7 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Menu Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden absolute top-full left-4 right-4 mt-1 rounded-2xl border border-[#2E2045] bg-[#0B0710] px-6 py-5 shadow-lg">
+        <div className="lg:hidden absolute top-full left-4 right-4 mt-1 rounded-3xl border border-[#2E2045] bg-[#0B0710] px-6 py-5 shadow-lg">
           <nav className="flex flex-col space-y-3.5">
             {navLinks.map((link) => (
               <NavLink
