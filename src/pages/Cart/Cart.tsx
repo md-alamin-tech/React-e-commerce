@@ -60,20 +60,20 @@ export default function Cart() {
 
   if (items.length === 0) {
     return (
-      <div className="bg-[#FAF7F2] py-20 px-4">
-        <div className="max-w-md mx-auto text-center bg-white p-10 rounded-3xl border border-[#E8DAC5] shadow-xs">
-          <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-[#FAF7F2] flex items-center justify-center text-[#B88847]">
+      <div className="bg-[#0B0710] py-20 px-4">
+        <div className="max-w-md mx-auto text-center bg-[#140C1F] p-10 rounded-3xl border border-[#2E2045] shadow-xs">
+          <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-[#0B0710] flex items-center justify-center text-[#D4AF37]">
             <ShoppingBag size={28} />
           </div>
-          <h2 className="font-serif text-2xl font-bold text-[#263620] mb-2">
+          <h2 className="font-serif text-2xl font-bold text-[#B57BFF] mb-2">
             Your Basket is Empty
           </h2>
-          <p className="text-xs sm:text-sm text-[#7C776E] mb-6">
+          <p className="text-xs sm:text-sm text-[#A99BC4] mb-6">
             Looks like you haven't added any Balkan or European delicacies yet. Explore our pantry staples, bakery, and cheeses!
           </p>
           <Link
             to="/shop"
-            className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#263620] hover:bg-[#1C2916] text-white text-xs font-semibold tracking-wider uppercase transition-colors"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#D4AF37] hover:bg-[#B8962E] text-[#0B0710] text-xs font-semibold tracking-wider uppercase transition-colors"
           >
             <span>Explore Products</span>
             <ArrowRight size={14} />
@@ -89,32 +89,32 @@ export default function Cart() {
   );
 
   return (
-    <div className="bg-[#FAF7F2] py-10 sm:py-14">
+    <div className="bg-[#0B0710] py-10 sm:py-14">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between pb-6 mb-8 border-b border-[#E8DAC5]">
+        <div className="flex items-center justify-between pb-6 mb-8 border-b border-[#2E2045]">
           <div>
-            <h1 className="font-serif text-3xl font-bold text-[#263620]">
+            <h1 className="font-serif text-3xl font-bold text-[#B57BFF]">
               Your Shopping Cart
             </h1>
-            <p className="text-xs text-[#7C776E] mt-1">
+            <p className="text-xs text-[#A99BC4] mt-1">
               Review items in your basket ({totalItems} item{totalItems === 1 ? '' : 's'})
             </p>
           </div>
           <button
             onClick={clearCart}
-            className="text-xs text-[#8F8A80] hover:text-[#C5221F] underline cursor-pointer"
+            className="text-xs text-[#A99BC4] hover:text-[#F87171] underline cursor-pointer"
           >
             Clear Cart
           </button>
         </div>
 
         {/* Free Shipping Progress Indicator */}
-        <div className="bg-white rounded-2xl p-4 sm:p-5 border border-[#E8DAC5] mb-8">
-          <div className="flex items-center justify-between text-xs font-semibold text-[#263620] mb-2">
+        <div className="bg-[#140C1F] rounded-2xl p-4 sm:p-5 border border-[#2E2045] mb-8">
+          <div className="flex items-center justify-between text-xs font-semibold text-[#F1EAFB] mb-2">
             <span className="flex items-center gap-1.5">
-              <Truck size={15} className="text-[#B88847]" />
+              <Truck size={15} className="text-[#D4AF37]" />
               {isFreeShipping ? (
-                <span className="text-emerald-700 font-bold">
+                <span className="text-emerald-300 font-bold">
                   🎉 Congratulations! You have unlocked FREE shipping.
                 </span>
               ) : (
@@ -123,11 +123,11 @@ export default function Cart() {
                 </span>
               )}
             </span>
-            <span className="text-[#7C776E]">{Math.round(freeShippingProgress)}%</span>
+            <span className="text-[#A99BC4]">{Math.round(freeShippingProgress)}%</span>
           </div>
-          <div className="w-full bg-[#EFE9DF] h-2 rounded-full overflow-hidden">
+          <div className="w-full bg-[#1E1430] h-2 rounded-full overflow-hidden">
             <div
-              className="bg-[#B88847] h-full transition-all duration-500 rounded-full"
+              className="bg-[#D4AF37] h-full transition-all duration-500 rounded-full"
               style={{ width: `${freeShippingProgress}%` }}
             />
           </div>
@@ -137,7 +137,7 @@ export default function Cart() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
           {/* Items List */}
           <div className="lg:col-span-8 space-y-4">
-            <div className="bg-white rounded-3xl border border-[#E8DAC5] divide-y divide-[#F0EAE0] overflow-hidden">
+            <div className="bg-[#140C1F] rounded-3xl border border-[#2E2045] divide-y divide-[#241838] overflow-hidden">
               {items.map((item) => (
                 <div
                   key={item.id}
@@ -148,21 +148,21 @@ export default function Cart() {
                     <img
                       src={item.image}
                       alt={item.name}
-                      className="w-16 h-16 sm:w-20 sm:h-20 object-cover rounded-xl bg-[#FAF7F2] shrink-0"
+                      className="w-16 h-16 sm:w-20 sm:h-20 object-cover rounded-xl bg-[#0B0710] shrink-0"
                     />
                     <div className="text-left min-w-0">
                       <Link
                         to={`/product/${item.slug}`}
-                        className="font-serif text-sm sm:text-base font-semibold text-[#263620] hover:text-[#B88847] transition-colors block line-clamp-1"
+                        className="font-serif text-sm sm:text-base font-semibold text-[#B57BFF] hover:text-[#D4AF37] transition-colors block line-clamp-1"
                       >
                         {item.name}
                       </Link>
                       {item.variantName && (
-                        <p className="text-xs text-[#7C776E] mt-0.5">
+                        <p className="text-xs text-[#A99BC4] mt-0.5">
                           Size: {item.variantName}
                         </p>
                       )}
-                      <p className="text-xs font-bold text-[#263620] mt-1 sm:hidden">
+                      <p className="text-xs font-bold text-[#F1EAFB] mt-1 sm:hidden">
                         {formatCurrency(item.price)} each
                       </p>
                     </div>
@@ -171,25 +171,25 @@ export default function Cart() {
                   {/* Quantity & Actions */}
                   <div className="flex items-center justify-between sm:justify-end gap-6 w-full sm:w-auto">
                     {/* Unit Price (Desktop) */}
-                    <span className="hidden sm:inline text-xs font-bold text-[#263620]">
+                    <span className="hidden sm:inline text-xs font-bold text-[#F1EAFB]">
                       {formatCurrency(item.price)}
                     </span>
 
                     {/* Quantity Selector */}
-                    <div className="flex items-center border border-[#DDD6C8] rounded-full bg-[#FAF7F2] px-2 py-1">
+                    <div className="flex items-center border border-[#34254D] rounded-full bg-[#0B0710] px-2 py-1">
                       <button
                         onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                        className="p-1 text-[#5C5850] hover:text-[#263620] cursor-pointer"
+                        className="p-1 text-[#C9BFDD] hover:text-[#D4AF37] cursor-pointer"
                         aria-label="Decrease quantity"
                       >
                         <Minus size={13} />
                       </button>
-                      <span className="w-8 text-center text-xs font-bold text-[#263620]">
+                      <span className="w-8 text-center text-xs font-bold text-[#F1EAFB]">
                         {item.quantity}
                       </span>
                       <button
                         onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                        className="p-1 text-[#5C5850] hover:text-[#263620] cursor-pointer"
+                        className="p-1 text-[#C9BFDD] hover:text-[#D4AF37] cursor-pointer"
                         aria-label="Increase quantity"
                       >
                         <Plus size={13} />
@@ -197,14 +197,14 @@ export default function Cart() {
                     </div>
 
                     {/* Line Total */}
-                    <span className="font-bold text-sm text-[#263620] w-18 text-right">
+                    <span className="font-bold text-sm text-[#F1EAFB] w-18 text-right">
                       {formatCurrency(item.price * item.quantity)}
                     </span>
 
                     {/* Remove Button */}
                     <button
                       onClick={() => removeFromCart(item.id)}
-                      className="p-2 text-[#9E988D] hover:text-[#C5221F] transition-colors cursor-pointer"
+                      className="p-2 text-[#8D7FA8] hover:text-[#F87171] transition-colors cursor-pointer"
                       title="Remove item"
                       aria-label="Remove item"
                     >
@@ -218,7 +218,7 @@ export default function Cart() {
             <div className="pt-2 flex items-center justify-between">
               <Link
                 to="/shop"
-                className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#5C5850] hover:text-[#263620]"
+                className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#C9BFDD] hover:text-[#D4AF37]"
               >
                 <ArrowLeft size={14} />
                 <span>Continue Shopping</span>
@@ -228,24 +228,24 @@ export default function Cart() {
 
           {/* Cart Summary & Coupon */}
           <div className="lg:col-span-4">
-            <div className="bg-white rounded-3xl p-6 sm:p-7 border border-[#E8DAC5] shadow-xs sticky top-28 text-left">
-              <h3 className="font-serif text-lg font-bold text-[#263620] pb-3 border-b border-[#E8DAC5] mb-5">
+            <div className="bg-[#140C1F] rounded-3xl p-6 sm:p-7 border border-[#2E2045] shadow-xs sticky top-28 text-left">
+              <h3 className="font-serif text-lg font-bold text-[#B57BFF] pb-3 border-b border-[#2E2045] mb-5">
                 Order Summary
               </h3>
 
               {/* Coupon Form */}
               <div className="mb-6">
                 {couponCode ? (
-                  <div className="flex items-center justify-between p-3 rounded-xl bg-emerald-50 border border-emerald-200">
-                    <div className="flex items-center gap-2 text-xs text-emerald-800">
-                      <Tag size={14} className="text-emerald-600" />
+                  <div className="flex items-center justify-between p-3 rounded-xl bg-emerald-950/60 border border-emerald-800">
+                    <div className="flex items-center gap-2 text-xs text-emerald-300">
+                      <Tag size={14} className="text-[#D4AF37]" />
                       <span>
                         Coupon <strong>{couponCode}</strong> ({discountPercent}% off)
                       </span>
                     </div>
                     <button
                       onClick={removeCoupon}
-                      className="text-[11px] text-rose-600 hover:underline cursor-pointer font-medium"
+                      className="text-[11px] text-rose-400 hover:underline cursor-pointer font-medium"
                     >
                       Remove
                     </button>
@@ -257,7 +257,7 @@ export default function Cart() {
                       value={inputCoupon}
                       onChange={(e) => setInputCoupon(e.target.value)}
                       placeholder="Coupon code (e.g. WELCOME10)"
-                      className="flex-1 bg-[#FAF7F2] border border-[#DDD6C8] rounded-xl px-3 py-2 text-xs text-[#263620] focus:outline-none focus:border-[#B88847]"
+                      className="flex-1 bg-[#0B0710] border border-[#34254D] rounded-xl px-3 py-2 text-xs text-[#F1EAFB] focus:outline-none focus:border-[#D4AF37]"
                     />
                     <Button type="submit" variant="dark" size="sm">
                       Apply
@@ -267,14 +267,14 @@ export default function Cart() {
               </div>
 
               {/* Cost Lines */}
-              <div className="space-y-3 text-xs text-[#5C5850] pb-5 border-b border-[#E8DAC5]">
+              <div className="space-y-3 text-xs text-[#C9BFDD] pb-5 border-b border-[#2E2045]">
                 <div className="flex justify-between">
                   <span>Subtotal</span>
-                  <span className="font-semibold text-[#263620]">{formatCurrency(subtotal)}</span>
+                  <span className="font-semibold text-[#F1EAFB]">{formatCurrency(subtotal)}</span>
                 </div>
 
                 {discount > 0 && (
-                  <div className="flex justify-between text-emerald-700 font-semibold">
+                  <div className="flex justify-between text-emerald-300 font-semibold">
                     <span>Discount ({couponCode})</span>
                     <span>-{formatCurrency(discount)}</span>
                   </div>
@@ -284,7 +284,7 @@ export default function Cart() {
                   <span>Estimated Delivery</span>
                   <span>
                     {shipping === 0 ? (
-                      <span className="text-emerald-700 font-semibold uppercase">Free</span>
+                      <span className="text-emerald-300 font-semibold uppercase">Free</span>
                     ) : (
                       formatCurrency(shipping)
                     )}
@@ -299,8 +299,8 @@ export default function Cart() {
 
               {/* Total */}
               <div className="flex justify-between items-baseline pt-4 mb-6">
-                <span className="font-serif text-base font-bold text-[#263620]">Total</span>
-                <span className="font-serif text-2xl font-bold text-[#263620]">
+                <span className="font-serif text-base font-bold text-[#B57BFF]">Total</span>
+                <span className="font-serif text-2xl font-bold text-[#B57BFF]">
                   {formatCurrency(total)}
                 </span>
               </div>
@@ -315,8 +315,8 @@ export default function Cart() {
                 <ArrowRight size={15} />
               </Button>
 
-              <div className="mt-4 flex items-center justify-center gap-1.5 text-[11px] text-[#7C776E]">
-                <ShieldCheck size={14} className="text-[#B88847]" />
+              <div className="mt-4 flex items-center justify-center gap-1.5 text-[11px] text-[#A99BC4]">
+                <ShieldCheck size={14} className="text-[#D4AF37]" />
                 <span>Secure SSL checkout • 100% satisfaction guaranteed</span>
               </div>
             </div>

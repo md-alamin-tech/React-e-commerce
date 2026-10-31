@@ -13,6 +13,7 @@ import { CategoryGrid } from './components/CategoryGrid';
 import { StorySection } from './components/StorySection';
 import { FeaturedProducts } from './components/FeaturedProducts';
 import { CommunitySection } from './components/CommunitySection';
+import { Reveal } from '../../components/effects/Reveal';
 import { useDocumentTitle } from '../../hooks/useDocumentTitle';
 
 export default function Home() {
@@ -21,11 +22,21 @@ export default function Home() {
   return (
     <div className="flex flex-col w-full">
       <HeroSection />
-      <ValuePillars />
-      <CategoryGrid />
-      <StorySection />
-      <FeaturedProducts />
-      <CommunitySection />
+      <Reveal>
+        <ValuePillars />
+      </Reveal>
+      <Reveal>
+        <CategoryGrid />
+      </Reveal>
+      <Reveal>
+        <StorySection />
+      </Reveal>
+      <Reveal>
+        <FeaturedProducts />
+      </Reveal>
+      <Reveal>
+        <CommunitySection />
+      </Reveal>
     </div>
   );
 }

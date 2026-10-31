@@ -29,7 +29,7 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({ images, alt }) => {
               onClick={() => setActiveImage(img)}
               className={`w-16 h-16 sm:w-20 sm:h-20 shrink-0 rounded-xl overflow-hidden border-2 transition-all cursor-pointer ${
                 activeImage === img
-                  ? 'border-[#B88847] shadow-sm'
+                  ? 'border-[#D4AF37] shadow-sm'
                   : 'border-transparent opacity-70 hover:opacity-100'
               }`}
             >
@@ -40,7 +40,7 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({ images, alt }) => {
       )}
 
       {/* Main Image */}
-      <div className="flex-1 rounded-3xl overflow-hidden bg-[#F4EFE6] border border-[#E8DAC5] aspect-square relative shadow-xs">
+      <div className="flex-1 rounded-3xl overflow-hidden bg-[#1B1229] border border-[#2E2045] aspect-square relative shadow-xs">
         <img
           src={activeImage || images[0]}
           alt={alt}

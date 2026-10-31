@@ -40,32 +40,32 @@ export default function ComingSoon() {
 
   const perks = [
     {
-      icon: <Calendar className="w-5 h-5 text-[#B88847]" />,
+      icon: <Calendar className="w-5 h-5 text-[#D4AF37]" />,
       title: 'Grand Opening Updates',
       desc: 'Be the first to step through our doors for the inaugural ribbon cutting.',
     },
     {
-      icon: <Tag className="w-5 h-5 text-[#B88847]" />,
+      icon: <Tag className="w-5 h-5 text-[#D4AF37]" />,
       title: 'Special Offers',
       desc: 'Exclusive discounts and gift baskets reserved for early subscribers.',
     },
     {
-      icon: <Package className="w-5 h-5 text-[#B88847]" />,
+      icon: <Package className="w-5 h-5 text-[#D4AF37]" />,
       title: 'New Products & Arrivals',
       desc: 'Direct shipments of artisan Balkan cheeses, cured meats, and sweets.',
     },
     {
-      icon: <Users className="w-5 h-5 text-[#B88847]" />,
+      icon: <Users className="w-5 h-5 text-[#D4AF37]" />,
       title: 'Community Events',
       desc: 'Culinary tastings, cooking demonstrations, and festive gatherings.',
     },
   ];
 
   return (
-    <div className="bg-[#FAF7F2] pb-16">
+    <div className="bg-[#0B0710] pb-16">
       {/* 1. Hero Card: Something Special Is Coming */}
       <section className="pt-10 sm:pt-14 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
-        <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+        <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-[#2E2045]">
           {/* Background image */}
           <img
             src="/assets/aistudio/418DF6A8-A9E9-410B-B7B8-20AFB3597616_6d2f0595.png"
@@ -74,15 +74,15 @@ export default function ComingSoon() {
           />
 
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6 sm:p-10 bg-black/35 z-10">
-            <span className="text-[11px] font-bold tracking-[0.3em] uppercase text-[#B88847] block mb-2 drop-shadow">
+            <span className="text-[11px] font-bold tracking-[0.3em] uppercase text-[#D4AF37] block mb-2 drop-shadow">
               SOUTHINGTON, CONNECTICUT
             </span>
 
-            <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight mb-4 drop-shadow-md">
+            <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#B57BFF] tracking-tight mb-4 drop-shadow-md">
               Something Special Is Coming
             </h1>
 
-            <p className="text-xs sm:text-sm text-[#F0EAE0] max-w-xl leading-relaxed mb-8 drop-shadow">
+            <p className="text-xs sm:text-sm text-[#241838] max-w-xl leading-relaxed mb-8 drop-shadow">
               We're putting the finishing touches on Belké Market and can't wait to welcome you. Sign up to be the first to know about our grand opening, special events, and exclusive offers.
             </p>
 
@@ -103,11 +103,11 @@ export default function ComingSoon() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Your email address"
                   required
-                  className="w-full bg-white/95 backdrop-blur-sm rounded-full px-5 py-3 text-xs sm:text-sm text-[#263620] placeholder-[#8F8A80] focus:outline-none focus:ring-2 focus:ring-[#B88847] shadow-lg"
+                  className="w-full bg-[#140C1F]/95 backdrop-blur-sm rounded-full px-5 py-3 text-xs sm:text-sm text-[#F1EAFB] placeholder-[#A99BC4] focus:outline-none focus:ring-2 focus:ring-[#D4AF37] shadow-lg"
                 />
                 <button
                   type="submit"
-                  className="w-full sm:w-auto shrink-0 inline-flex items-center justify-center gap-1.5 px-6 py-3 rounded-full bg-[#B88847] hover:bg-[#A37538] text-white text-xs font-semibold tracking-wider uppercase transition-colors shadow-lg cursor-pointer"
+                  className="w-full sm:w-auto shrink-0 inline-flex items-center justify-center gap-1.5 px-6 py-3 rounded-full bg-[#D4AF37] hover:bg-[#E8C547] text-[#0B0710] text-xs font-semibold tracking-wider uppercase transition-colors shadow-lg cursor-pointer"
                 >
                   <span>KEEP ME UPDATED</span>
                   <ArrowRight size={13} />
@@ -124,15 +124,15 @@ export default function ComingSoon() {
           {perks.map((p, i) => (
             <div
               key={i}
-              className="bg-white p-6 rounded-3xl border border-[#E8DAC5] flex flex-col items-center text-center shadow-2xs hover:shadow-sm transition-all"
+              className="bg-[#140C1F] p-6 rounded-3xl border border-[#2E2045] flex flex-col items-center text-center shadow-2xs hover:shadow-sm transition-all"
             >
-              <div className="w-12 h-12 rounded-full bg-[#FAF7F2] border border-[#E8DAC5] flex items-center justify-center mb-4">
+              <div className="w-12 h-12 rounded-full bg-[#0B0710] border border-[#2E2045] flex items-center justify-center mb-4">
                 {p.icon}
               </div>
-              <h3 className="font-serif text-sm font-bold uppercase tracking-wider text-[#263620] mb-2">
+              <h3 className="font-serif text-sm font-bold uppercase tracking-wider text-[#B57BFF] mb-2">
                 {p.title}
               </h3>
-              <p className="text-xs text-[#7C776E] leading-relaxed">
+              <p className="text-xs text-[#A99BC4] leading-relaxed">
                 {p.desc}
               </p>
             </div>
@@ -142,17 +142,17 @@ export default function ComingSoon() {
 
       {/* 3. Bottom Banner: Authentic Flavors. A Stronger Community. */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative rounded-3xl overflow-hidden shadow-xl border border-[#E8DAC5]">
+        <div className="relative rounded-3xl overflow-hidden shadow-xl border border-[#2E2045]">
           <img
             src="/assets/aistudio/EA7AB6BA-A77D-4A0C-868C-F7B2BD7987DF_df31e837.png"
             alt="Culinary feast banner"
             className="w-full h-52 sm:h-60 object-cover object-center filter brightness-[0.6]"
           />
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6 bg-black/20">
-            <h3 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-tight drop-shadow-md">
+            <h3 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-[#B57BFF] tracking-tight drop-shadow-md">
               Authentic Flavors. A Stronger Community.
             </h3>
-            <p className="text-xs sm:text-sm text-[#F0EAE0] mt-2">
+            <p className="text-xs sm:text-sm text-[#241838] mt-2">
               Serving Southington, Connecticut & surrounding towns.
             </p>
           </div>

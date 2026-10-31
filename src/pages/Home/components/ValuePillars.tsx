@@ -11,40 +11,40 @@ import { Leaf, Heart, Users, Award } from 'lucide-react';
 export const ValuePillars: React.FC = () => {
   const pillars = [
     {
-      icon: <Leaf className="w-5 h-5 text-[#B88847]" />,
+      icon: <Leaf className="w-5 h-5 text-[#D4AF37]" />,
       title: 'EUROPEAN SPECIALTY FOODS',
       desc: 'Authentic imported & regional culinary delights',
     },
     {
-      icon: <Heart className="w-5 h-5 text-[#B88847]" />,
+      icon: <Heart className="w-5 h-5 text-[#D4AF37]" />,
       title: 'TRADITIONAL FAVORITES',
       desc: 'Generational recipes from Albania & the Balkans',
     },
     {
-      icon: <Users className="w-5 h-5 text-[#B88847]" />,
+      icon: <Users className="w-5 h-5 text-[#D4AF37]" />,
       title: 'LOCAL COMMUNITY',
       desc: 'Proudly family owned & welcoming everyone',
     },
     {
-      icon: <Award className="w-5 h-5 text-[#B88847]" />,
+      icon: <Award className="w-5 h-5 text-[#D4AF37]" />,
       title: 'QUALITY YOU CAN TRUST',
       desc: 'Strict freshness, artisanal quality & care',
     },
   ];
 
   return (
-    <section className="bg-[#FAF7F2] py-8 border-b border-[#E8DAC5]">
+    <section className="bg-[#120A1D] py-8 border-b border-[#2E2045]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {pillars.map((item, idx) => (
             <div key={idx} className="flex flex-col items-center text-center p-3">
-              <div className="w-12 h-12 rounded-full bg-[#EFE9DF] flex items-center justify-center mb-3">
+              <div className="w-12 h-12 rounded-full bg-[#1E1430] flex items-center justify-center mb-3">
                 {item.icon}
               </div>
-              <h4 className="text-xs sm:text-sm font-bold tracking-wider uppercase text-[#263620] mb-1">
+              <h4 className="text-xs sm:text-sm font-bold tracking-wider uppercase text-[#B57BFF] mb-1">
                 {item.title}
               </h4>
-              <p className="text-[11px] sm:text-xs text-[#7C776E] max-w-[200px]">
+              <p className="text-[11px] sm:text-xs text-[#A99BC4] max-w-[200px]">
                 {item.desc}
               </p>
             </div>

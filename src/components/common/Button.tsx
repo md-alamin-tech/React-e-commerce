@@ -41,18 +41,18 @@ export const Button: React.FC<ButtonProps> = ({
   const variantClasses = {
     // Warm olive gold / cognac bronze used in "VISIT US" and "EXPLORE ALL PRODUCTS ->"
     primary:
-      'bg-[#B88847] hover:bg-[#A37538] text-white shadow-sm hover:shadow-md active:scale-[0.98]',
+      'bg-[#D4AF37] hover:bg-[#E8C547] text-[#0B0710] shadow-sm hover:shadow-md active:scale-[0.98]',
     // Dark deep olive green used in "EXPLORE OUR PRODUCTS ->" and main CTAs
     dark:
-      'bg-[#263620] hover:bg-[#1C2916] text-white shadow-sm hover:shadow-md active:scale-[0.98]',
+      'bg-[#D4AF37] hover:bg-[#B8962E] text-[#0B0710] shadow-sm hover:shadow-md active:scale-[0.98]',
     // Outline bordered button used in "OUR STORY"
     outline:
-      'border border-[#263620] text-[#263620] bg-transparent hover:bg-[#263620]/5 active:scale-[0.98]',
+      'border border-[#D4AF37] text-[#D4AF37] bg-transparent hover:bg-[#D4AF37]/5 active:scale-[0.98]',
     // Light secondary button
     secondary:
-      'bg-[#EFE9DF] hover:bg-[#E5DDCF] text-[#263620] active:scale-[0.98]',
+      'bg-[#1E1430] hover:bg-[#2E2045] text-[#F1EAFB] active:scale-[0.98]',
     ghost:
-      'text-[#263620] hover:bg-black/5 bg-transparent active:scale-[0.98]',
+      'text-[#F1EAFB] hover:bg-black/5 bg-transparent active:scale-[0.98]',
   };
 
   return (

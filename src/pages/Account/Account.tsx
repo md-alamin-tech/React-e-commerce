@@ -65,18 +65,18 @@ export default function Account() {
 
   if (!isAuthenticated || !user) {
     return (
-      <div className="bg-[#FAF7F2] py-20 px-4 text-center">
-        <div className="max-w-md mx-auto bg-white p-8 rounded-3xl border border-[#E8DAC5]">
-          <ShieldAlert size={36} className="text-[#B88847] mx-auto mb-3" />
-          <h2 className="font-serif text-2xl font-bold text-[#263620] mb-2">
+      <div className="bg-[#0B0710] py-20 px-4 text-center">
+        <div className="max-w-md mx-auto bg-[#140C1F] p-8 rounded-3xl border border-[#2E2045]">
+          <ShieldAlert size={36} className="text-[#D4AF37] mx-auto mb-3" />
+          <h2 className="font-serif text-2xl font-bold text-[#B57BFF] mb-2">
             Please Sign In
           </h2>
-          <p className="text-xs text-[#7C776E] mb-6">
+          <p className="text-xs text-[#A99BC4] mb-6">
             You need to be logged in to view your account details and order history.
           </p>
           <Link
             to="/login"
-            className="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-[#263620] text-white text-xs font-semibold tracking-wider uppercase"
+            className="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-[#D4AF37] text-[#0B0710] text-xs font-semibold tracking-wider uppercase"
           >
             Go to Login
           </Link>
@@ -120,21 +120,21 @@ export default function Account() {
   };
 
   return (
-    <div className="bg-[#FAF7F2] py-10 sm:py-14">
+    <div className="bg-[#0B0710] py-10 sm:py-14">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 mb-8 border-b border-[#E8DAC5] gap-4">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 mb-8 border-b border-[#2E2045] gap-4">
           <div>
-            <h1 className="font-serif text-3xl font-bold text-[#263620]">
+            <h1 className="font-serif text-3xl font-bold text-[#B57BFF]">
               My Account
             </h1>
-            <p className="text-xs text-[#7C776E] mt-0.5">
+            <p className="text-xs text-[#A99BC4] mt-0.5">
               Welcome back, <strong>{user.name}</strong> ({user.email})
             </p>
           </div>
 
           <button
             onClick={handleLogout}
-            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-[#DDD6C8] hover:bg-[#F2ECE1] text-xs font-semibold text-[#C5221F] self-start sm:self-auto cursor-pointer"
+            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-[#34254D] hover:bg-[#1E1430] text-xs font-semibold text-[#F87171] self-start sm:self-auto cursor-pointer"
           >
             <LogOut size={14} />
             <span>Sign Out</span>
@@ -148,8 +148,8 @@ export default function Account() {
               onClick={() => setActiveTab('orders')}
               className={`w-full flex items-center justify-between px-4 py-3 rounded-2xl text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
                 activeTab === 'orders'
-                  ? 'bg-[#263620] text-white shadow-xs'
-                  : 'bg-white hover:bg-[#F2ECE1] text-[#5C5850] border border-[#E8DAC5]'
+                  ? 'bg-[#D4AF37] text-[#0B0710] shadow-xs'
+                  : 'bg-[#140C1F] hover:bg-[#1E1430] text-[#C9BFDD] border border-[#2E2045]'
               }`}
             >
               <div className="flex items-center gap-2.5">
@@ -163,8 +163,8 @@ export default function Account() {
               onClick={() => setActiveTab('addresses')}
               className={`w-full flex items-center justify-between px-4 py-3 rounded-2xl text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
                 activeTab === 'addresses'
-                  ? 'bg-[#263620] text-white shadow-xs'
-                  : 'bg-white hover:bg-[#F2ECE1] text-[#5C5850] border border-[#E8DAC5]'
+                  ? 'bg-[#D4AF37] text-[#0B0710] shadow-xs'
+                  : 'bg-[#140C1F] hover:bg-[#1E1430] text-[#C9BFDD] border border-[#2E2045]'
               }`}
             >
               <div className="flex items-center gap-2.5">
@@ -178,8 +178,8 @@ export default function Account() {
               onClick={() => setActiveTab('profile')}
               className={`w-full flex items-center justify-between px-4 py-3 rounded-2xl text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
                 activeTab === 'profile'
-                  ? 'bg-[#263620] text-white shadow-xs'
-                  : 'bg-white hover:bg-[#F2ECE1] text-[#5C5850] border border-[#E8DAC5]'
+                  ? 'bg-[#D4AF37] text-[#0B0710] shadow-xs'
+                  : 'bg-[#140C1F] hover:bg-[#1E1430] text-[#C9BFDD] border border-[#2E2045]'
               }`}
             >
               <div className="flex items-center gap-2.5">
@@ -193,18 +193,18 @@ export default function Account() {
           <div className="lg:col-span-9 text-left">
             {/* ORDERS TAB */}
             {activeTab === 'orders' && (
-              <div className="bg-white p-6 sm:p-8 rounded-3xl border border-[#E8DAC5] shadow-xs">
-                <h2 className="font-serif text-xl font-bold text-[#263620] mb-6 pb-3 border-b border-[#E8DAC5]">
+              <div className="bg-[#140C1F] p-6 sm:p-8 rounded-3xl border border-[#2E2045] shadow-xs">
+                <h2 className="font-serif text-xl font-bold text-[#B57BFF] mb-6 pb-3 border-b border-[#2E2045]">
                   Your Orders ({user.orders.length})
                 </h2>
 
                 {user.orders.length === 0 ? (
                   <div className="text-center py-12">
-                    <Package size={36} className="text-[#DDD6C8] mx-auto mb-2" />
-                    <p className="text-xs text-[#7C776E] mb-4">You have not placed any orders yet.</p>
+                    <Package size={36} className="text-[#D4AF37] mx-auto mb-2" />
+                    <p className="text-xs text-[#A99BC4] mb-4">You have not placed any orders yet.</p>
                     <Link
                       to="/shop"
-                      className="inline-flex items-center gap-1.5 px-5 py-2 rounded-full bg-[#B88847] text-white text-xs font-semibold tracking-wider uppercase"
+                      className="inline-flex items-center gap-1.5 px-5 py-2 rounded-full bg-[#D4AF37] text-[#0B0710] text-xs font-semibold tracking-wider uppercase"
                     >
                       Start Shopping
                     </Link>
@@ -214,60 +214,60 @@ export default function Account() {
                     {user.orders.map((ord) => (
                       <div
                         key={ord.id}
-                        className="p-5 rounded-2xl border border-[#EBE5D8] bg-[#FAF7F2] space-y-4"
+                        className="p-5 rounded-2xl border border-[#2A1D3F] bg-[#0B0710] space-y-4"
                       >
-                        <div className="flex flex-wrap items-center justify-between pb-3 border-b border-[#E8DAC5] gap-3 text-xs">
+                        <div className="flex flex-wrap items-center justify-between pb-3 border-b border-[#2E2045] gap-3 text-xs">
                           <div>
-                            <span className="text-[#8F8A80] block text-[11px]">Order #</span>
-                            <strong className="text-[#263620] text-sm">{ord.id}</strong>
+                            <span className="text-[#A99BC4] block text-[11px]">Order #</span>
+                            <strong className="text-[#F1EAFB] text-sm">{ord.id}</strong>
                           </div>
                           <div>
-                            <span className="text-[#8F8A80] block text-[11px]">Date</span>
-                            <span className="text-[#263620] font-medium">{formatDate(ord.date)}</span>
+                            <span className="text-[#A99BC4] block text-[11px]">Date</span>
+                            <span className="text-[#F1EAFB] font-medium">{formatDate(ord.date)}</span>
                           </div>
                           <div>
-                            <span className="text-[#8F8A80] block text-[11px]">Total</span>
-                            <strong className="text-[#263620] font-serif text-sm">
+                            <span className="text-[#A99BC4] block text-[11px]">Total</span>
+                            <strong className="text-[#B57BFF] font-serif text-sm">
                               {formatCurrency(ord.total)}
                             </strong>
                           </div>
                           <div>
-                            <span className="text-[#8F8A80] block text-[11px]">Status</span>
-                            <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-emerald-100 text-emerald-800">
+                            <span className="text-[#A99BC4] block text-[11px]">Status</span>
+                            <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-emerald-950/60 text-emerald-300">
                               {ord.status}
                             </span>
                           </div>
                         </div>
 
                         {/* Items in this order */}
-                        <div className="divide-y divide-[#EBE5D8]">
+                        <div className="divide-y divide-[#2A1D3F]">
                           {ord.items.map((item, i) => (
                             <div key={i} className="py-2 flex items-center justify-between text-xs">
                               <div className="flex items-center gap-3">
                                 <img
                                   src={item.image}
                                   alt={item.productName}
-                                  className="w-10 h-10 object-cover rounded-md bg-white shrink-0"
+                                  className="w-10 h-10 object-cover rounded-md bg-[#140C1F] shrink-0"
                                 />
                                 <div>
-                                  <p className="font-semibold text-[#263620]">{item.productName}</p>
-                                  <p className="text-[#7C776E] text-[11px]">
+                                  <p className="font-semibold text-[#F1EAFB]">{item.productName}</p>
+                                  <p className="text-[#A99BC4] text-[11px]">
                                     Qty: {item.quantity} {item.variantName ? `(${item.variantName})` : ''}
                                   </p>
                                 </div>
                               </div>
-                              <span className="font-semibold text-[#263620]">
+                              <span className="font-semibold text-[#F1EAFB]">
                                 {formatCurrency(item.price * item.quantity)}
                               </span>
                             </div>
                           ))}
                         </div>
 
-                        <div className="text-[11px] text-[#7C776E] pt-2 border-t border-[#E8DAC5] flex justify-between">
+                        <div className="text-[11px] text-[#A99BC4] pt-2 border-t border-[#2E2045] flex justify-between">
                           <span>
                             Delivering to: {ord.shippingAddress.street}, {ord.shippingAddress.city}
                           </span>
-                          <span className="uppercase font-semibold text-[#263620]">
+                          <span className="uppercase font-semibold text-[#F1EAFB]">
                             {ord.paymentMethod === 'card' ? 'Credit Card' : 'Cash On Delivery'}
                           </span>
                         </div>
@@ -280,9 +280,9 @@ export default function Account() {
 
             {/* SAVED ADDRESSES TAB */}
             {activeTab === 'addresses' && (
-              <div className="bg-white p-6 sm:p-8 rounded-3xl border border-[#E8DAC5] shadow-xs">
-                <div className="flex items-center justify-between mb-6 pb-3 border-b border-[#E8DAC5]">
-                  <h2 className="font-serif text-xl font-bold text-[#263620]">
+              <div className="bg-[#140C1F] p-6 sm:p-8 rounded-3xl border border-[#2E2045] shadow-xs">
+                <div className="flex items-center justify-between mb-6 pb-3 border-b border-[#2E2045]">
+                  <h2 className="font-serif text-xl font-bold text-[#B57BFF]">
                     Saved Delivery Addresses
                   </h2>
                   <Button
@@ -296,7 +296,7 @@ export default function Account() {
                 </div>
 
                 {user.addresses.length === 0 ? (
-                  <p className="text-xs text-[#7C776E] py-6 text-center">
+                  <p className="text-xs text-[#A99BC4] py-6 text-center">
                     No saved addresses. Add an address for rapid checkout.
                   </p>
                 ) : (
@@ -306,36 +306,36 @@ export default function Account() {
                         key={addr.id}
                         className={`p-5 rounded-2xl border transition-all text-xs relative ${
                           addr.isDefault
-                            ? 'border-[#B88847] bg-[#FAF7F2]'
-                            : 'border-[#DDD6C8] bg-white'
+                            ? 'border-[#D4AF37] bg-[#0B0710]'
+                            : 'border-[#34254D] bg-[#140C1F]'
                         }`}
                       >
                         {addr.isDefault && (
-                          <span className="inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider text-[#B88847] bg-[#F7EFE1] px-2 py-0.5 rounded-full mb-2">
+                          <span className="inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider text-[#D4AF37] bg-[#1B1229] px-2 py-0.5 rounded-full mb-2">
                             <CheckCircle2 size={11} /> Default Address
                           </span>
                         )}
-                        <h4 className="font-bold text-sm text-[#263620] mb-1">{addr.name}</h4>
-                        <p className="text-[#5C5850]">
+                        <h4 className="font-bold text-sm text-[#B57BFF] mb-1">{addr.name}</h4>
+                        <p className="text-[#C9BFDD]">
                           {addr.street} {addr.apartment ? `, ${addr.apartment}` : ''}
                         </p>
-                        <p className="text-[#5C5850]">
+                        <p className="text-[#C9BFDD]">
                           {addr.city}, {addr.state} {addr.zipCode}
                         </p>
-                        <p className="text-[#7C776E] mt-1">{addr.phone}</p>
+                        <p className="text-[#A99BC4] mt-1">{addr.phone}</p>
 
-                        <div className="flex items-center gap-3 pt-4 mt-3 border-t border-[#E8DAC5]">
+                        <div className="flex items-center gap-3 pt-4 mt-3 border-t border-[#2E2045]">
                           {!addr.isDefault && (
                             <button
                               onClick={() => setDefaultAddress(addr.id)}
-                              className="text-[11px] font-semibold text-[#B88847] hover:underline cursor-pointer"
+                              className="text-[11px] font-semibold text-[#D4AF37] hover:underline cursor-pointer"
                             >
                               Set as Default
                             </button>
                           )}
                           <button
                             onClick={() => deleteAddress(addr.id)}
-                            className="text-[11px] text-rose-600 hover:underline flex items-center gap-1 ml-auto cursor-pointer"
+                            className="text-[11px] text-rose-400 hover:underline flex items-center gap-1 ml-auto cursor-pointer"
                           >
                             <Trash2 size={12} />
                             <span>Delete</span>
@@ -350,8 +350,8 @@ export default function Account() {
 
             {/* PROFILE TAB */}
             {activeTab === 'profile' && (
-              <div className="bg-white p-6 sm:p-8 rounded-3xl border border-[#E8DAC5] shadow-xs">
-                <h2 className="font-serif text-xl font-bold text-[#263620] mb-6 pb-3 border-b border-[#E8DAC5]">
+              <div className="bg-[#140C1F] p-6 sm:p-8 rounded-3xl border border-[#2E2045] shadow-xs">
+                <h2 className="font-serif text-xl font-bold text-[#B57BFF] mb-6 pb-3 border-b border-[#2E2045]">
                   Personal Profile
                 </h2>
                 <form onSubmit={handleUpdateProfile} className="space-y-4 max-w-lg">
@@ -438,12 +438,12 @@ export default function Account() {
               required
             />
           </div>
-          <label className="flex items-center gap-2 text-xs text-[#5C5850] cursor-pointer">
+          <label className="flex items-center gap-2 text-xs text-[#C9BFDD] cursor-pointer">
             <input
               type="checkbox"
               checked={newAddr.isDefault}
               onChange={(e) => setNewAddr({ ...newAddr, isDefault: e.target.checked })}
-              className="accent-[#B88847] cursor-pointer"
+              className="accent-[#D4AF37] cursor-pointer"
             />
             <span>Set as default shipping address</span>
           </label>

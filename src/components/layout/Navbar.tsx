@@ -45,8 +45,8 @@ export const Navbar: React.FC = () => {
   const transparent = isHome && !scrolled && !mobileMenuOpen;
 
   const iconBtn = transparent
-    ? 'text-white hover:text-[#E3C28D] hover:bg-white/15'
-    : 'text-[#3E3B36] hover:text-[#B88847] hover:bg-[#F2ECE1]';
+    ? 'text-[#D4AF37] hover:text-[#F0D77A] hover:bg-white/15'
+    : 'text-[#D4AF37] hover:text-[#F0D77A] hover:bg-[#1E1430]';
 
   // Live search filtering
   useEffect(() => {
@@ -98,14 +98,14 @@ export const Navbar: React.FC = () => {
           ? 'top-3 bg-transparent border-transparent'
           : transparent
             ? 'top-0 bg-transparent border-transparent translate-y-5'
-            : 'top-0 bg-[#FAF7F2]/95 backdrop-blur-md border-[#E8DAC5]'
+            : 'top-0 bg-[#0B0710]/95 backdrop-blur-md border-[#2E2045]'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center">
         <div
           className={`w-full flex items-center justify-between transition-all duration-300 ${
             scrolled
-              ? 'h-16 px-5 sm:px-6 rounded-2xl bg-[#FAF7F2]/95 backdrop-blur-md shadow-[0_12px_32px_rgba(0,0,0,0.25)]'
+              ? 'h-16 px-5 sm:px-6 rounded-2xl bg-[#0B0710]/95 backdrop-blur-md border border-[#2E2045] shadow-[0_12px_32px_rgba(123,44,191,0.28)]'
               : 'h-20'
           }`}
         >
@@ -114,28 +114,24 @@ export const Navbar: React.FC = () => {
             <div className="flex flex-col items-center">
               {/* Olive leaf decorative SVG emblem */}
               <svg
-                className={`w-8 h-4 group-hover:text-[#B88847] transition-colors ${
-                  transparent ? 'text-white' : 'text-[#263620]'
-                }`}
+                className="w-8 h-4 text-[#D4AF37] group-hover:text-[#F0D77A] transition-colors"
                 viewBox="0 0 100 40"
                 fill="currentColor"
               >
                 <path d="M50 35 C40 25, 20 28, 5 20 C22 15, 38 18, 50 35 Z" opacity="0.9" />
                 <path d="M50 35 C60 25, 80 28, 95 20 C78 15, 62 18, 50 35 Z" opacity="0.9" />
-                <circle cx="50" cy="18" r="4" fill="#B88847" />
-                <path d="M46 22 Q50 15 54 22" stroke="#263620" strokeWidth="2" fill="none" />
+                <circle cx="50" cy="18" r="4" fill="#D4AF37" />
+                <path d="M46 22 Q50 15 54 22" stroke="#D4AF37" strokeWidth="2" fill="none" />
               </svg>
               <div className="flex flex-col items-center leading-none">
                 <span
-                  className={`font-serif text-xl sm:text-2xl font-bold tracking-widest uppercase transition-colors ${
-                    transparent ? 'text-white' : 'text-[#263620]'
-                  }`}
+                  className="font-serif text-xl sm:text-2xl font-bold tracking-widest uppercase text-[#B57BFF]"
                 >
                   BELKÉ
                 </span>
                 <span
                   className={`text-[9px] tracking-[0.35em] uppercase font-semibold mt-0.5 transition-colors ${
-                    transparent ? 'text-white/80' : 'text-[#7C776E]'
+                    transparent ? 'text-white/80' : 'text-[#A99BC4]'
                   }`}
                 >
                   MARKET
@@ -154,11 +150,11 @@ export const Navbar: React.FC = () => {
                   `text-sm font-medium tracking-wide transition-colors relative py-1 ${
                     isActive
                       ? transparent
-                        ? 'text-[#E3C28D] font-semibold after:content-[""] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-[#E3C28D]'
-                        : 'text-[#B88847] font-semibold after:content-[""] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-[#B88847]'
+                        ? 'text-[#F0D77A] font-semibold after:content-[""] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-[#F0D77A]'
+                        : 'text-[#D4AF37] font-semibold after:content-[""] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-[#D4AF37]'
                       : transparent
-                        ? 'text-white/90 hover:text-[#E3C28D]'
-                        : 'text-[#3E3B36] hover:text-[#B88847]'
+                        ? 'text-white/90 hover:text-[#F0D77A]'
+                        : 'text-[#DDD5EC] hover:text-[#D4AF37]'
                   }`
                 }
               >
@@ -185,7 +181,7 @@ export const Navbar: React.FC = () => {
 
               {/* Live Search Modal Popover */}
               {searchOpen && (
-                <div className="absolute right-0 top-12 w-80 sm:w-96 bg-[#FFFFFF] rounded-2xl shadow-xl border border-[#E8DAC5] p-3 z-50 animate-in fade-in slide-in-from-top-2">
+                <div className="absolute right-0 top-12 w-80 sm:w-96 bg-[#140C1F] rounded-2xl shadow-xl border border-[#2E2045] p-3 z-50 animate-in fade-in slide-in-from-top-2">
                   <form onSubmit={handleSearchSubmit} className="relative">
                     <input
                       ref={searchInputRef}
@@ -193,17 +189,17 @@ export const Navbar: React.FC = () => {
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
                       placeholder="Search ajvar, feta, burek, coffee..."
-                      className="w-full bg-[#FAF7F2] border border-[#DDD6C8] rounded-xl pl-9 pr-8 py-2 text-sm text-[#263620] focus:outline-none focus:border-[#B88847]"
+                      className="w-full bg-[#0B0710] border border-[#34254D] rounded-xl pl-9 pr-8 py-2 text-sm text-[#F1EAFB] focus:outline-none focus:border-[#D4AF37]"
                     />
                     <Search
                       size={16}
-                      className="absolute left-3 top-2.5 text-[#8F8A80]"
+                      className="absolute left-3 top-2.5 text-[#A99BC4]"
                     />
                     {searchQuery && (
                       <button
                         type="button"
                         onClick={() => setSearchQuery('')}
-                        className="absolute right-2.5 top-2.5 text-[#8F8A80] hover:text-[#263620]"
+                        className="absolute right-2.5 top-2.5 text-[#A99BC4] hover:text-[#D4AF37]"
                       >
                         <X size={15} />
                       </button>
@@ -212,15 +208,15 @@ export const Navbar: React.FC = () => {
 
                   {/* Suggestions list */}
                   {suggestions.length > 0 && (
-                    <div className="mt-3 divide-y divide-[#F0EAE0]">
-                      <p className="text-[11px] font-semibold text-[#8F8A80] uppercase tracking-wider px-2 py-1">
+                    <div className="mt-3 divide-y divide-[#241838]">
+                      <p className="text-[11px] font-semibold text-[#A99BC4] uppercase tracking-wider px-2 py-1">
                         Matching Products
                       </p>
                       {suggestions.map((prod) => (
                         <div
                           key={prod.id}
                           onClick={() => handleSelectProduct(prod)}
-                          className="flex items-center gap-3 p-2 hover:bg-[#FAF7F2] rounded-lg cursor-pointer transition-colors"
+                          className="flex items-center gap-3 p-2 hover:bg-[#0B0710] rounded-lg cursor-pointer transition-colors"
                         >
                           <img
                             src={prod.images[0]}
@@ -228,21 +224,21 @@ export const Navbar: React.FC = () => {
                             className="w-10 h-10 object-cover rounded-md"
                           />
                           <div className="flex-1 min-w-0 text-left">
-                            <p className="text-xs font-semibold text-[#263620] truncate">
+                            <p className="text-xs font-semibold text-[#F1EAFB] truncate">
                               {prod.name}
                             </p>
-                            <p className="text-[11px] text-[#8F8A80]">
+                            <p className="text-[11px] text-[#A99BC4]">
                               {prod.categoryName} • {formatCurrency(prod.price)}
                             </p>
                           </div>
-                          <ArrowRight size={14} className="text-[#B88847]" />
+                          <ArrowRight size={14} className="text-[#D4AF37]" />
                         </div>
                       ))}
                     </div>
                   )}
 
                   {searchQuery.trim().length > 1 && suggestions.length === 0 && (
-                    <div className="p-4 text-center text-xs text-[#8F8A80]">
+                    <div className="p-4 text-center text-xs text-[#A99BC4]">
                       No items matching "{searchQuery}"
                     </div>
                   )}
@@ -259,7 +255,7 @@ export const Navbar: React.FC = () => {
             >
               <Heart size={19} />
               {wishlistCount > 0 && (
-                <span className="absolute 1 top-0.5 right-0.5 w-4 h-4 rounded-full bg-[#B88847] text-white text-[10px] font-bold flex items-center justify-center">
+                <span className="absolute 1 top-0.5 right-0.5 w-4 h-4 rounded-full bg-[#D4AF37] text-[#0B0710] text-[10px] font-bold flex items-center justify-center">
                   {wishlistCount}
                 </span>
               )}
@@ -274,7 +270,7 @@ export const Navbar: React.FC = () => {
             >
               <ShoppingBag size={19} />
               {totalItems > 0 && (
-                <span className="absolute top-0.5 right-0.5 w-4 h-4 rounded-full bg-[#263620] text-white text-[10px] font-bold flex items-center justify-center animate-pulse">
+                <span className="absolute top-0.5 right-0.5 w-4 h-4 rounded-full bg-[#D4AF37] text-[#0B0710] text-[10px] font-bold flex items-center justify-center animate-pulse">
                   {totalItems}
                 </span>
               )}
@@ -297,7 +293,7 @@ export const Navbar: React.FC = () => {
             {/* "VISIT US" Button - signature element matching the mockup header! */}
             <Link
               to="/contact"
-              className="hidden md:inline-flex items-center justify-center px-5 py-2 rounded-full bg-[#B88847] hover:bg-[#A37538] text-white text-xs font-semibold tracking-wider uppercase transition-all shadow-xs hover:shadow"
+              className="hidden md:inline-flex items-center justify-center px-5 py-2 rounded-full bg-[#D4AF37] hover:bg-[#E8C547] text-[#0B0710] text-xs font-semibold tracking-wider uppercase transition-all shadow-xs hover:shadow"
             >
               VISIT US
             </Link>
@@ -307,8 +303,8 @@ export const Navbar: React.FC = () => {
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className={`lg:hidden p-2 rounded-lg transition-colors cursor-pointer ${
                 transparent
-                  ? 'text-white hover:bg-white/15'
-                  : 'text-[#263620] hover:bg-[#F2ECE1]'
+                  ? 'text-[#D4AF37] hover:bg-white/15'
+                  : 'text-[#D4AF37] hover:bg-[#1E1430]'
               }`}
               aria-label="Toggle Navigation Menu"
             >
@@ -320,7 +316,7 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Menu Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden absolute top-full left-4 right-4 mt-1 rounded-2xl border border-[#E8DAC5] bg-[#FAF7F2] px-6 py-5 shadow-lg">
+        <div className="lg:hidden absolute top-full left-4 right-4 mt-1 rounded-2xl border border-[#2E2045] bg-[#0B0710] px-6 py-5 shadow-lg">
           <nav className="flex flex-col space-y-3.5">
             {navLinks.map((link) => (
               <NavLink
@@ -329,18 +325,18 @@ export const Navbar: React.FC = () => {
                 onClick={() => setMobileMenuOpen(false)}
                 className={({ isActive }) =>
                   `text-base font-medium py-1 ${
-                    isActive ? 'text-[#B88847] font-semibold' : 'text-[#263620]'
+                    isActive ? 'text-[#D4AF37] font-semibold' : 'text-[#F1EAFB]'
                   }`
                 }
               >
                 {link.label}
               </NavLink>
             ))}
-            <div className="pt-3 border-t border-[#E8DAC5] flex flex-col gap-2.5">
+            <div className="pt-3 border-t border-[#2E2045] flex flex-col gap-2.5">
               <Link
                 to={isAuthenticated ? '/account' : '/login'}
                 onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center gap-2 text-sm text-[#263620] py-1 font-medium"
+                className="flex items-center gap-2 text-sm text-[#F1EAFB] py-1 font-medium"
               >
                 <UserIcon size={18} />
                 {isAuthenticated ? `My Account (${user?.name})` : 'Sign In / Register'}
@@ -348,7 +344,7 @@ export const Navbar: React.FC = () => {
               <Link
                 to="/contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full text-center py-2.5 rounded-full bg-[#B88847] text-white text-xs font-semibold tracking-wider uppercase mt-1"
+                className="w-full text-center py-2.5 rounded-full bg-[#D4AF37] text-[#0B0710] text-xs font-semibold tracking-wider uppercase mt-1"
               >
                 VISIT US
               </Link>

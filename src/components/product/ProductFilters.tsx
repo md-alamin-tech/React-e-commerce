@@ -45,7 +45,7 @@ export const ProductFilters: React.FC<ProductFiltersProps> = ({
     <aside className="space-y-7">
       {/* Product Categories (Matching mockup sidebar!) */}
       <div>
-        <h3 className="font-serif text-base font-bold text-[#263620] pb-2 border-b border-[#E8DAC5] mb-3">
+        <h3 className="font-serif text-base font-bold text-[#B57BFF] pb-2 border-b border-[#2E2045] mb-3">
           Product Categories
         </h3>
         <ul className="space-y-1 text-xs">
@@ -54,8 +54,8 @@ export const ProductFilters: React.FC<ProductFiltersProps> = ({
               onClick={() => onSelectCategory('all')}
               className={`w-full text-left py-2 px-3 rounded-lg transition-colors flex items-center justify-between cursor-pointer ${
                 selectedCategory === 'all'
-                  ? 'bg-[#EAE4D7] text-[#263620] font-bold'
-                  : 'text-[#5C5850] hover:bg-[#F2ECE1] hover:text-[#263620]'
+                  ? 'bg-[#2A1D3F] text-[#F1EAFB] font-bold'
+                  : 'text-[#C9BFDD] hover:bg-[#1E1430] hover:text-[#D4AF37]'
               }`}
             >
               <span>All Products</span>
@@ -67,12 +67,12 @@ export const ProductFilters: React.FC<ProductFiltersProps> = ({
                 onClick={() => onSelectCategory(cat.slug)}
                 className={`w-full text-left py-2 px-3 rounded-lg transition-colors flex items-center justify-between cursor-pointer ${
                   selectedCategory === cat.slug
-                    ? 'bg-[#EAE4D7] text-[#263620] font-bold'
-                    : 'text-[#5C5850] hover:bg-[#F2ECE1] hover:text-[#263620]'
+                    ? 'bg-[#2A1D3F] text-[#F1EAFB] font-bold'
+                    : 'text-[#C9BFDD] hover:bg-[#1E1430] hover:text-[#D4AF37]'
                 }`}
               >
                 <span>{cat.name}</span>
-                <span className="text-[11px] text-[#8F8A80]">({cat.itemCount})</span>
+                <span className="text-[11px] text-[#A99BC4]">({cat.itemCount})</span>
               </button>
             </li>
           ))}
@@ -81,7 +81,7 @@ export const ProductFilters: React.FC<ProductFiltersProps> = ({
 
       {/* Price Range Filter */}
       <div>
-        <h3 className="font-serif text-base font-bold text-[#263620] pb-2 border-b border-[#E8DAC5] mb-3">
+        <h3 className="font-serif text-base font-bold text-[#B57BFF] pb-2 border-b border-[#2E2045] mb-3">
           Price Range
         </h3>
         <div className="space-y-2 text-xs">
@@ -93,14 +93,14 @@ export const ProductFilters: React.FC<ProductFiltersProps> = ({
           ].map((opt) => (
             <label
               key={opt.val}
-              className="flex items-center gap-2.5 text-[#5C5850] cursor-pointer hover:text-[#263620]"
+              className="flex items-center gap-2.5 text-[#C9BFDD] cursor-pointer hover:text-[#D4AF37]"
             >
               <input
                 type="radio"
                 name="priceFilter"
                 checked={priceRange === opt.val}
                 onChange={() => onSelectPriceRange(opt.val)}
-                className="accent-[#B88847] cursor-pointer"
+                className="accent-[#D4AF37] cursor-pointer"
               />
               <span>{opt.label}</span>
             </label>
@@ -110,7 +110,7 @@ export const ProductFilters: React.FC<ProductFiltersProps> = ({
 
       {/* Customer Rating Filter */}
       <div>
-        <h3 className="font-serif text-base font-bold text-[#263620] pb-2 border-b border-[#E8DAC5] mb-3">
+        <h3 className="font-serif text-base font-bold text-[#B57BFF] pb-2 border-b border-[#2E2045] mb-3">
           Customer Rating
         </h3>
         <div className="space-y-2 text-xs">
@@ -121,18 +121,18 @@ export const ProductFilters: React.FC<ProductFiltersProps> = ({
           ].map((opt) => (
             <label
               key={opt.stars}
-              className="flex items-center gap-2.5 text-[#5C5850] cursor-pointer hover:text-[#263620]"
+              className="flex items-center gap-2.5 text-[#C9BFDD] cursor-pointer hover:text-[#D4AF37]"
             >
               <input
                 type="radio"
                 name="ratingFilter"
                 checked={minRating === opt.stars}
                 onChange={() => onSelectMinRating(opt.stars)}
-                className="accent-[#B88847] cursor-pointer"
+                className="accent-[#D4AF37] cursor-pointer"
               />
               <span className="flex items-center gap-1">
                 {opt.label}
-                {opt.stars > 0 && <Star size={12} className="fill-[#B88847] text-[#B88847]" />}
+                {opt.stars > 0 && <Star size={12} className="fill-[#D4AF37] text-[#D4AF37]" />}
               </span>
             </label>
           ))}
@@ -141,15 +141,15 @@ export const ProductFilters: React.FC<ProductFiltersProps> = ({
 
       {/* Availability Toggle */}
       <div>
-        <h3 className="font-serif text-base font-bold text-[#263620] pb-2 border-b border-[#E8DAC5] mb-3">
+        <h3 className="font-serif text-base font-bold text-[#B57BFF] pb-2 border-b border-[#2E2045] mb-3">
           Availability
         </h3>
-        <label className="flex items-center gap-2.5 text-xs text-[#5C5850] cursor-pointer hover:text-[#263620]">
+        <label className="flex items-center gap-2.5 text-xs text-[#C9BFDD] cursor-pointer hover:text-[#D4AF37]">
           <input
             type="checkbox"
             checked={inStockOnly}
             onChange={(e) => onToggleInStockOnly(e.target.checked)}
-            className="accent-[#B88847] rounded cursor-pointer"
+            className="accent-[#D4AF37] rounded cursor-pointer"
           />
           <span>In Stock Only</span>
         </label>
@@ -158,7 +158,7 @@ export const ProductFilters: React.FC<ProductFiltersProps> = ({
       {/* Reset Action */}
       <button
         onClick={onReset}
-        className="w-full flex items-center justify-center gap-2 py-2 px-3 rounded-lg border border-[#DDD6C8] hover:bg-[#EAE4D7] text-xs font-semibold text-[#5C5850] hover:text-[#263620] transition-colors cursor-pointer"
+        className="w-full flex items-center justify-center gap-2 py-2 px-3 rounded-lg border border-[#34254D] hover:bg-[#2A1D3F] text-xs font-semibold text-[#C9BFDD] hover:text-[#D4AF37] transition-colors cursor-pointer"
       >
         <RotateCcw size={13} />
         <span>Reset Filters</span>

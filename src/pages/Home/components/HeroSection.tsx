@@ -20,7 +20,7 @@ const VALUE_BADGES = [
 
 export const HeroSection: React.FC = () => {
   return (
-    <section className="p-5 bg-[#FAF7F2]">
+    <section className="p-5 bg-[#0B0710]">
     <div className="relative overflow-hidden isolate rounded-3xl min-h-[620px] lg:min-h-[720px] flex items-center">
       {/* Background image (sits behind the header) */}
       <img
@@ -29,7 +29,7 @@ export const HeroSection: React.FC = () => {
         className="absolute inset-0 -z-20 w-full h-full object-cover object-center"
       />
       {/* Readability overlays: left-to-right for the copy, top-down for the header */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#10180D]/85 via-[#10180D]/55 to-[#10180D]/15 pointer-events-none" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#0B0710]/85 via-[#0B0710]/55 to-[#0B0710]/15 pointer-events-none" />
       <div className="absolute inset-x-0 top-0 h-40 -z-10 bg-gradient-to-b from-black/50 to-transparent pointer-events-none" />
 
       {/* pt-[81px] offsets the floating header so content never hides under it */}
@@ -37,14 +37,14 @@ export const HeroSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-end">
           {/* Hero Copy */}
           <div className="lg:col-span-7 flex flex-col items-start text-left">
-            <span className="text-[11px] sm:text-xs font-bold tracking-[0.25em] uppercase text-[#E3C28D] mb-3">
+            <span className="text-[11px] sm:text-xs font-bold tracking-[0.25em] uppercase text-[#F0D77A] mb-3">
               EUROPEAN GROCERIES • BALKAN FLAVORS • LOCAL COMMUNITY
             </span>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-white tracking-tight leading-[1.15] mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-[#B57BFF] tracking-tight leading-[1.15] mb-6">
               A LITTLE TASTE <br />
               OF HOME, <br />
-              <span className="font-script font-normal text-5xl sm:text-6xl lg:text-7xl text-[#E3C28D] block -mt-2">
+              <span className="font-script font-normal text-5xl sm:text-6xl lg:text-7xl text-[#F0D77A] block -mt-2">
                 close to home.
               </span>
             </h1>
@@ -57,7 +57,7 @@ export const HeroSection: React.FC = () => {
             <div className="flex flex-wrap items-center gap-4">
               <Link
                 to="/shop"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-[#B88847] hover:bg-[#A37538] text-white text-xs sm:text-sm font-semibold tracking-wider uppercase transition-all shadow-sm hover:shadow active:scale-98"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-[#D4AF37] hover:bg-[#E8C547] text-[#0B0710] text-xs sm:text-sm font-semibold tracking-wider uppercase transition-all shadow-sm hover:shadow active:scale-98"
               >
                 <span>EXPLORE OUR PRODUCTS</span>
                 <ArrowRight size={15} />
@@ -78,7 +78,7 @@ export const HeroSection: React.FC = () => {
                   key={label}
                   className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[10px] font-bold tracking-wider uppercase text-white"
                 >
-                  <Icon size={13} className="text-[#E3C28D]" />
+                  <Icon size={13} className="text-[#D4AF37]" />
                   {label}
                 </span>
               ))}
@@ -93,7 +93,7 @@ export const HeroSection: React.FC = () => {
                   key={label}
                   className="flex items-center gap-2.5 text-xs font-bold tracking-wider uppercase text-white"
                 >
-                  <Icon size={16} className="text-[#E3C28D]" />
+                  <Icon size={16} className="text-[#D4AF37]" />
                   <span>{label}</span>
                 </div>
               ))}

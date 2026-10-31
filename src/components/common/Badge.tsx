@@ -29,11 +29,11 @@ export const Badge: React.FC<BadgeProps> = ({
   };
 
   const variantClasses = {
-    default: 'bg-[#EAE4D7] text-[#4A4742]',
-    success: 'bg-[#E6F4EA] text-[#137333]',
-    warning: 'bg-[#FEF7E0] text-[#B06000]',
-    sale: 'bg-[#FCE8E6] text-[#C5221F]',
-    accent: 'bg-[#F6EFE5] text-[#93692E] border border-[#E8DAC5]',
+    default: 'bg-[#2A1D3F] text-[#D6CDE6]',
+    success: 'bg-[#0F2A1A] text-[#6EE7A0]',
+    warning: 'bg-[#2B220D] text-[#FBBF24]',
+    sale: 'bg-[#2E1214] text-[#F87171]',
+    accent: 'bg-[#1B1229] text-[#B8962E] border border-[#2E2045]',
   };
 
   return (

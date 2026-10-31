@@ -35,12 +35,23 @@
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #f1ede4;
+  background: #170F25;
 }
 ::-webkit-scrollbar-thumb {
-  background: #c8bdab;
+  background: #4A3A66;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #a99a83;
+  background: #6B4FA0;
+}
+
+/* Theme: every icon is rich gold unless it sets its own colour or sits on a gold surface */
+@layer base {
+  svg.lucide {
+    color: #D4AF37;
+  }
+  [class~="bg-[#D4AF37]"] svg.lucide,
+  [class*="hover:bg-[#D4AF37]"]:hover svg.lucide {
+    color: currentColor;
+  }
 }

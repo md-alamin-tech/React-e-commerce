@@ -45,7 +45,7 @@ export const QuickViewModal: React.FC<QuickViewModalProps> = ({ product, onClose
     <Modal isOpen={!!product} onClose={onClose} maxWidth="2xl">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Product Image */}
-        <div className="rounded-xl overflow-hidden bg-[#F4EFE6] aspect-square">
+        <div className="rounded-xl overflow-hidden bg-[#1B1229] aspect-square">
           <img
             src={product.images[0]}
             alt={product.name}
@@ -55,33 +55,33 @@ export const QuickViewModal: React.FC<QuickViewModalProps> = ({ product, onClose
 
         {/* Product Details */}
         <div className="flex flex-col text-left">
-          <span className="text-[11px] font-semibold tracking-wider uppercase text-[#B88847] mb-1">
+          <span className="text-[11px] font-semibold tracking-wider uppercase text-[#D4AF37] mb-1">
             {product.categoryName} • {product.origin}
           </span>
 
-          <h2 className="font-serif text-xl font-bold text-[#263620] mb-2 leading-tight">
+          <h2 className="font-serif text-xl font-bold text-[#B57BFF] mb-2 leading-tight">
             {product.name}
           </h2>
 
           <div className="flex items-center gap-3 mb-3">
             <Rating value={product.rating} count={product.reviewCount} />
-            <span className="text-xs text-[#137333] font-medium flex items-center gap-1">
+            <span className="text-xs text-[#6EE7A0] font-medium flex items-center gap-1">
               <Check size={13} /> In Stock ({product.stockCount} available)
             </span>
           </div>
 
-          <p className="font-bold text-xl text-[#263620] mb-3">
+          <p className="font-bold text-xl text-[#F1EAFB] mb-3">
             {formatCurrency(price)}
           </p>
 
-          <p className="text-xs text-[#5C5850] leading-relaxed mb-4">
+          <p className="text-xs text-[#C9BFDD] leading-relaxed mb-4">
             {product.shortDescription}
           </p>
 
           {/* Variants Selector */}
           {product.variants.length > 0 && (
             <div className="mb-4">
-              <label className="block text-xs font-semibold text-[#263620] uppercase tracking-wider mb-1.5">
+              <label className="block text-xs font-semibold text-[#F1EAFB] uppercase tracking-wider mb-1.5">
                 Size / Variant:
               </label>
               <div className="flex flex-wrap gap-2">
@@ -91,8 +91,8 @@ export const QuickViewModal: React.FC<QuickViewModalProps> = ({ product, onClose
                     onClick={() => setSelectedVariantId(v.id)}
                     className={`text-xs px-3 py-1.5 rounded-lg border transition-all cursor-pointer ${
                       selectedVariantId === v.id
-                        ? 'border-[#B88847] bg-[#F8F3EA] text-[#263620] font-semibold'
-                        : 'border-[#DDD6C8] hover:border-[#B88847] text-[#5C5850]'
+                        ? 'border-[#D4AF37] bg-[#170F25] text-[#F1EAFB] font-semibold'
+                        : 'border-[#34254D] hover:border-[#D4AF37] text-[#C9BFDD]'
                     }`}
                   >
                     {v.name} - {formatCurrency(v.price)}
@@ -104,23 +104,23 @@ export const QuickViewModal: React.FC<QuickViewModalProps> = ({ product, onClose
 
           {/* Quantity Controls */}
           <div className="flex items-center gap-4 mb-6">
-            <span className="text-xs font-semibold text-[#263620] uppercase tracking-wider">
+            <span className="text-xs font-semibold text-[#F1EAFB] uppercase tracking-wider">
               Quantity:
             </span>
-            <div className="flex items-center border border-[#DDD6C8] rounded-lg bg-white">
+            <div className="flex items-center border border-[#34254D] rounded-lg bg-[#140C1F]">
               <button
                 onClick={() => setQuantity((q) => Math.max(1, q - 1))}
-                className="p-2 text-[#5C5850] hover:text-[#263620] cursor-pointer"
+                className="p-2 text-[#C9BFDD] hover:text-[#D4AF37] cursor-pointer"
                 aria-label="Decrease quantity"
               >
                 <Minus size={14} />
               </button>
-              <span className="px-3 text-sm font-semibold text-[#263620]">
+              <span className="px-3 text-sm font-semibold text-[#F1EAFB]">
                 {quantity}
               </span>
               <button
                 onClick={() => setQuantity((q) => Math.min(product.stockCount, q + 1))}
-                className="p-2 text-[#5C5850] hover:text-[#263620] cursor-pointer"
+                className="p-2 text-[#C9BFDD] hover:text-[#D4AF37] cursor-pointer"
                 aria-label="Increase quantity"
               >
                 <Plus size={14} />
@@ -136,7 +136,7 @@ export const QuickViewModal: React.FC<QuickViewModalProps> = ({ product, onClose
             <Link
               to={`/product/${product.slug}`}
               onClick={onClose}
-              className="text-center text-xs text-[#5C5850] hover:text-[#263620] underline mt-1 flex items-center justify-center gap-1"
+              className="text-center text-xs text-[#C9BFDD] hover:text-[#D4AF37] underline mt-1 flex items-center justify-center gap-1"
             >
               <span>View full product details & reviews</span>
               <ArrowRight size={12} />

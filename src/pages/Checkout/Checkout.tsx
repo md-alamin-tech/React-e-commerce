@@ -125,18 +125,18 @@ export default function Checkout() {
   };
 
   return (
-    <div className="bg-[#FAF7F2] py-10 sm:py-14">
+    <div className="bg-[#0B0710] py-10 sm:py-14">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb */}
-        <nav className="flex items-center gap-2 text-xs text-[#7C776E] mb-8">
-          <Link to="/cart" className="hover:text-[#263620]">
+        <nav className="flex items-center gap-2 text-xs text-[#A99BC4] mb-8">
+          <Link to="/cart" className="hover:text-[#D4AF37]">
             Cart
           </Link>
           <ChevronRight size={13} />
-          <span className="text-[#263620] font-semibold">Checkout</span>
+          <span className="text-[#F1EAFB] font-semibold">Checkout</span>
         </nav>
 
-        <h1 className="font-serif text-3xl font-bold text-[#263620] mb-8 text-left">
+        <h1 className="font-serif text-3xl font-bold text-[#B57BFF] mb-8 text-left">
           Checkout & Delivery
         </h1>
 
@@ -145,12 +145,12 @@ export default function Checkout() {
             {/* Left Column: Delivery & Payment Details */}
             <div className="lg:col-span-7 space-y-8 text-left">
               {/* Shipping Address Card */}
-              <div className="bg-white p-6 sm:p-8 rounded-3xl border border-[#E8DAC5] shadow-xs">
-                <div className="flex items-center justify-between pb-4 border-b border-[#E8DAC5] mb-6">
-                  <h2 className="font-serif text-xl font-bold text-[#263620]">
+              <div className="bg-[#140C1F] p-6 sm:p-8 rounded-3xl border border-[#2E2045] shadow-xs">
+                <div className="flex items-center justify-between pb-4 border-b border-[#2E2045] mb-6">
+                  <h2 className="font-serif text-xl font-bold text-[#B57BFF]">
                     1. Shipping Address
                   </h2>
-                  <span className="text-xs text-[#7C776E]">Standard Delivery</span>
+                  <span className="text-xs text-[#A99BC4]">Standard Delivery</span>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -235,12 +235,12 @@ export default function Checkout() {
               </div>
 
               {/* Payment Method Card */}
-              <div className="bg-white p-6 sm:p-8 rounded-3xl border border-[#E8DAC5] shadow-xs">
-                <div className="flex items-center justify-between pb-4 border-b border-[#E8DAC5] mb-6">
-                  <h2 className="font-serif text-xl font-bold text-[#263620]">
+              <div className="bg-[#140C1F] p-6 sm:p-8 rounded-3xl border border-[#2E2045] shadow-xs">
+                <div className="flex items-center justify-between pb-4 border-b border-[#2E2045] mb-6">
+                  <h2 className="font-serif text-xl font-bold text-[#B57BFF]">
                     2. Payment Method
                   </h2>
-                  <div className="flex items-center gap-1 text-xs text-emerald-700 font-semibold">
+                  <div className="flex items-center gap-1 text-xs text-emerald-300 font-semibold">
                     <Lock size={12} />
                     <span>256-bit Encrypted</span>
                   </div>
@@ -251,8 +251,8 @@ export default function Checkout() {
                   <label
                     className={`flex items-start gap-3.5 p-4 rounded-2xl border transition-all cursor-pointer ${
                       paymentMethod === 'card'
-                        ? 'border-[#B88847] bg-[#F9F5EC]'
-                        : 'border-[#DDD6C8] hover:border-[#B88847]'
+                        ? 'border-[#D4AF37] bg-[#170F25]'
+                        : 'border-[#34254D] hover:border-[#D4AF37]'
                     }`}
                   >
                     <input
@@ -260,23 +260,23 @@ export default function Checkout() {
                       name="payment"
                       checked={paymentMethod === 'card'}
                       onChange={() => setPaymentMethod('card')}
-                      className="accent-[#B88847] mt-1 cursor-pointer"
+                      className="accent-[#D4AF37] mt-1 cursor-pointer"
                     />
                     <div className="flex-1">
                       <div className="flex items-center justify-between">
-                        <span className="text-sm font-bold text-[#263620] flex items-center gap-2">
-                          <CreditCard size={17} className="text-[#B88847]" />
+                        <span className="text-sm font-bold text-[#F1EAFB] flex items-center gap-2">
+                          <CreditCard size={17} className="text-[#D4AF37]" />
                           Credit / Debit Card
                         </span>
-                        <span className="text-[11px] text-[#7C776E]">Visa, MC, Amex</span>
+                        <span className="text-[11px] text-[#A99BC4]">Visa, MC, Amex</span>
                       </div>
-                      <p className="text-xs text-[#7C776E] mt-1">
+                      <p className="text-xs text-[#A99BC4] mt-1">
                         Pay securely with your credit or debit card.
                       </p>
 
                       {/* Card Details Inputs (mock interactive) */}
                       {paymentMethod === 'card' && (
-                        <div className="mt-4 pt-4 border-t border-[#E8DAC5] space-y-3">
+                        <div className="mt-4 pt-4 border-t border-[#2E2045] space-y-3">
                           <Input
                             label="Card Number"
                             value={cardData.number}
@@ -309,8 +309,8 @@ export default function Checkout() {
                   <label
                     className={`flex items-start gap-3.5 p-4 rounded-2xl border transition-all cursor-pointer ${
                       paymentMethod === 'cod'
-                        ? 'border-[#B88847] bg-[#F9F5EC]'
-                        : 'border-[#DDD6C8] hover:border-[#B88847]'
+                        ? 'border-[#D4AF37] bg-[#170F25]'
+                        : 'border-[#34254D] hover:border-[#D4AF37]'
                     }`}
                   >
                     <input
@@ -318,16 +318,16 @@ export default function Checkout() {
                       name="payment"
                       checked={paymentMethod === 'cod'}
                       onChange={() => setPaymentMethod('cod')}
-                      className="accent-[#B88847] mt-1 cursor-pointer"
+                      className="accent-[#D4AF37] mt-1 cursor-pointer"
                     />
                     <div className="flex-1">
                       <div className="flex items-center justify-between">
-                        <span className="text-sm font-bold text-[#263620] flex items-center gap-2">
-                          <Banknote size={17} className="text-[#B88847]" />
+                        <span className="text-sm font-bold text-[#F1EAFB] flex items-center gap-2">
+                          <Banknote size={17} className="text-[#D4AF37]" />
                           Cash on Delivery / In-Store Pickup
                         </span>
                       </div>
-                      <p className="text-xs text-[#7C776E] mt-1">
+                      <p className="text-xs text-[#A99BC4] mt-1">
                         Pay when your package arrives or when you pick up at our Southington location.
                       </p>
                     </div>
@@ -338,29 +338,29 @@ export default function Checkout() {
 
             {/* Right Column: Order Summary */}
             <div className="lg:col-span-5">
-              <div className="bg-white p-6 sm:p-7 rounded-3xl border border-[#E8DAC5] shadow-xs sticky top-28 text-left">
-                <h3 className="font-serif text-lg font-bold text-[#263620] pb-3 border-b border-[#E8DAC5] mb-4">
+              <div className="bg-[#140C1F] p-6 sm:p-7 rounded-3xl border border-[#2E2045] shadow-xs sticky top-28 text-left">
+                <h3 className="font-serif text-lg font-bold text-[#B57BFF] pb-3 border-b border-[#2E2045] mb-4">
                   Order Review ({items.length} items)
                 </h3>
 
                 {/* Items preview list */}
-                <div className="max-h-60 overflow-y-auto divide-y divide-[#F0EAE0] mb-5 pr-1">
+                <div className="max-h-60 overflow-y-auto divide-y divide-[#241838] mb-5 pr-1">
                   {items.map((item) => (
                     <div key={item.id} className="py-2.5 flex items-center gap-3">
                       <img
                         src={item.image}
                         alt={item.name}
-                        className="w-12 h-12 object-cover rounded-lg bg-[#FAF7F2] shrink-0"
+                        className="w-12 h-12 object-cover rounded-lg bg-[#0B0710] shrink-0"
                       />
                       <div className="flex-1 min-w-0">
-                        <p className="text-xs font-semibold text-[#263620] truncate">
+                        <p className="text-xs font-semibold text-[#F1EAFB] truncate">
                           {item.name}
                         </p>
-                        <p className="text-[11px] text-[#7C776E]">
+                        <p className="text-[11px] text-[#A99BC4]">
                           Qty: {item.quantity} {item.variantName ? `• ${item.variantName}` : ''}
                         </p>
                       </div>
-                      <span className="text-xs font-bold text-[#263620]">
+                      <span className="text-xs font-bold text-[#F1EAFB]">
                         {formatCurrency(item.price * item.quantity)}
                       </span>
                     </div>
@@ -368,15 +368,15 @@ export default function Checkout() {
                 </div>
 
                 {/* Cost Summary */}
-                <div className="space-y-2.5 text-xs text-[#5C5850] py-4 border-y border-[#E8DAC5] mb-5">
+                <div className="space-y-2.5 text-xs text-[#C9BFDD] py-4 border-y border-[#2E2045] mb-5">
                   <div className="flex justify-between">
                     <span>Subtotal</span>
-                    <span className="font-semibold text-[#263620]">
+                    <span className="font-semibold text-[#F1EAFB]">
                       {formatCurrency(subtotal)}
                     </span>
                   </div>
                   {discount > 0 && (
-                    <div className="flex justify-between text-emerald-700 font-semibold">
+                    <div className="flex justify-between text-emerald-300 font-semibold">
                       <span>Discount ({couponCode})</span>
                       <span>-{formatCurrency(discount)}</span>
                     </div>
@@ -385,7 +385,7 @@ export default function Checkout() {
                     <span>Shipping</span>
                     <span>
                       {shipping === 0 ? (
-                        <span className="text-emerald-700 font-semibold">FREE</span>
+                        <span className="text-emerald-300 font-semibold">FREE</span>
                       ) : (
                         formatCurrency(shipping)
                       )}
@@ -398,8 +398,8 @@ export default function Checkout() {
                 </div>
 
                 <div className="flex justify-between items-baseline mb-6">
-                  <span className="font-serif text-base font-bold text-[#263620]">Total</span>
-                  <span className="font-serif text-2xl font-bold text-[#263620]">
+                  <span className="font-serif text-base font-bold text-[#B57BFF]">Total</span>
+                  <span className="font-serif text-2xl font-bold text-[#B57BFF]">
                     {formatCurrency(total)}
                   </span>
                 </div>
@@ -414,7 +414,7 @@ export default function Checkout() {
                   <ArrowRight size={16} />
                 </Button>
 
-                <p className="text-center text-[11px] text-[#8F8A80] mt-3">
+                <p className="text-center text-[11px] text-[#A99BC4] mt-3">
                   By clicking Place Order, you agree to Belké Market's Terms & Conditions.
                 </p>
               </div>

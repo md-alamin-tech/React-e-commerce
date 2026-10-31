@@ -19,22 +19,22 @@ export const FeaturedProducts: React.FC = () => {
   const featured = PRODUCTS.filter((p) => p.featured).slice(0, 6);
 
   return (
-    <section className="bg-[#FAF7F2] py-16 lg:py-20 border-b border-[#E8DAC5]">
+    <section className="bg-[#0B0710] py-16 lg:py-20 border-b border-[#2E2045]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row items-center justify-between mb-10 gap-4">
           <div className="text-center sm:text-left">
-            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#263620] uppercase tracking-wide">
+            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#B57BFF] uppercase tracking-wide">
               FEATURED PRODUCTS
             </h2>
-            <p className="text-xs text-[#7C776E] mt-1">
+            <p className="text-xs text-[#A99BC4] mt-1">
               Hand-picked favorites loved by our patrons and families.
             </p>
           </div>
 
           <Link
             to="/shop"
-            className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#B88847] hover:text-[#93692E] transition-colors"
+            className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#D4AF37] hover:text-[#B8962E] transition-colors"
           >
             <span>View All Products</span>
             <ArrowRight size={14} />
