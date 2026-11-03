@@ -1,11 +1,32 @@
 @import "tailwindcss";
 
+/* Brand tokens: bg-brand, text-leaf, bg-sun, bg-cream, text-ink, font-hand ... */
+@theme {
+  --color-brand: #D12525;
+  --color-brand-dark: #B01E1E;
+  --color-leaf: #0B8A3F;
+  --color-leaf-dark: #08702F;
+  --color-sun: #FFB936;
+  --color-cream: #F4F1EA;
+  --color-ink: #222222;
+  --font-hand: 'Yellowtail', cursive;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 @layer base {
   :root {
-    --font-serif: 'Raleway', system-ui, sans-serif;
-    --font-script: 'Raleway', system-ui, sans-serif;
-    --font-cormorant: 'Raleway', system-ui, sans-serif;
-    --font-sans: 'Poppins', system-ui, sans-serif;
+    --font-serif: 'Oswald', system-ui, sans-serif;
+    --font-script: 'Oswald', system-ui, sans-serif;
+    --font-cormorant: 'Oswald', system-ui, sans-serif;
+    --font-sans: 'Roboto', system-ui, sans-serif;
   }
 
   body {

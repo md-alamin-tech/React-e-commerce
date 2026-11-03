@@ -1,160 +1,163 @@
 /**
  * Footer
- * Site footer matching the exact Belké Market mockup structure:
- * brand logo, quick links, contact info, cursive script slogan, and legal links.
+ * Light footer: brand blurb, quick links, account links, address, app badges,
+ * and a green copyright bar with payment methods.
  *
  * Used in: Layout wrapper
  */
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, Mail, Instagram, Facebook, Music2 } from 'lucide-react';
+import { MapPin, Mail, Phone, Instagram, Facebook, Music2 } from 'lucide-react';
 import { APP_CONFIG } from '../../utils/constants';
 
+const QUICK_LINKS = [
+  { label: 'Home', path: '/' },
+  { label: 'About Us', path: '/about' },
+  { label: 'Shop', path: '/shop' },
+  { label: 'Recipes', path: '/recipes' },
+  { label: 'Coming Soon', path: '/coming-soon' },
+  { label: 'Contact', path: '/contact' },
+];
+
+const ACCOUNT_LINKS = [
+  { label: 'My Profile', path: '/account' },
+  { label: 'Order History', path: '/account' },
+  { label: 'My Wishlist', path: '/wishlist' },
+  { label: 'My Cart', path: '/cart' },
+  { label: 'Sign In', path: '/login' },
+];
+
+const PAYMENTS = ['VISA', 'MasterCard', 'AMEX', 'PayPal', 'COD'];
+
 export const Footer: React.FC = () => {
+  const headingCls = 'font-serif text-xl font-semibold text-ink mb-5';
+  const linkCls = 'text-ink/70 hover:text-brand transition-colors';
+
   return (
-    <footer className="bg-[#07040C] pt-14 pb-8 text-[#E6DFCF]">
-      <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12">
-          {/* Column 1: Brand & Emblem */}
-          <div className="flex flex-col items-start space-y-4">
-            <Link to="/" className="flex flex-col items-start group">
-              <svg
-                className="w-10 h-5 text-[#F5ECD7]"
-                viewBox="0 0 100 40"
-                fill="currentColor"
-              >
-                <path d="M50 35 C40 25, 20 28, 5 20 C22 15, 38 18, 50 35 Z" opacity="0.9" />
-                <path d="M50 35 C60 25, 80 28, 95 20 C78 15, 62 18, 50 35 Z" opacity="0.9" />
-                <circle cx="50" cy="18" r="4" fill="#D4AF37" />
-              </svg>
-              <span className="font-serif text-2xl font-bold tracking-widest text-[#F5ECD7] uppercase mt-1">
+    <footer className="bg-cream text-ink">
+      <div className="max-w-[1320px] mx-auto px-4 sm:px-6 pt-16 pb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
+          {/* Brand */}
+          <div className="lg:col-span-1">
+            <Link to="/" className="flex flex-col items-start leading-none mb-4">
+              <span className="font-serif text-3xl font-bold tracking-wider uppercase text-ink">
                 BELKÉ
               </span>
-              <span className="text-[10px] tracking-[0.35em] text-[#B0A99C] uppercase font-semibold">
+              <span className="text-[10px] tracking-[0.35em] uppercase font-semibold text-leaf mt-1">
                 MARKET
               </span>
             </Link>
-            <p className="text-xs text-[#B0A99C] leading-relaxed max-w-xs">
-              Specialty grocery store bringing the warmest flavors and traditions of Albania and Europe to our local community.
+            <p className="text-sm text-ink/70 leading-relaxed mb-5">
+              Specialty grocery store bringing the warmest flavors and traditions of Albania and
+              Europe to our local community.
             </p>
+            <a
+              href={`mailto:${APP_CONFIG.email}`}
+              className="text-sm text-brand font-medium hover:underline"
+            >
+              {APP_CONFIG.email}
+            </a>
+            <div className="flex items-center gap-3 mt-5">
+              {[
+                { href: APP_CONFIG.socials.facebook, label: 'Facebook', icon: <Facebook size={15} className="text-current" /> },
+                { href: APP_CONFIG.socials.instagram, label: 'Instagram', icon: <Instagram size={15} className="text-current" /> },
+                { href: APP_CONFIG.socials.tiktok, label: 'TikTok', icon: <Music2 size={15} className="text-current" /> },
+              ].map((s) => (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={s.label}
+                  className="w-9 h-9 rounded-full bg-white text-ink hover:bg-brand hover:text-white flex items-center justify-center transition-colors"
+                >
+                  {s.icon}
+                </a>
+              ))}
+            </div>
           </div>
 
-          {/* Column 2: Quick Links */}
+          {/* Quick Links */}
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-widest text-[#F5ECD7] mb-4">
-              Quick Links
-            </h4>
-            <ul className="space-y-2.5 text-xs text-[#D0C9BA]">
-              <li>
-                <Link to="/" className="hover:text-[#D4AF37] transition-colors">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link to="/shop" className="hover:text-[#D4AF37] transition-colors">
-                  Our Products
-                </Link>
-              </li>
-              <li>
-                <Link to="/about" className="hover:text-[#D4AF37] transition-colors">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link to="/recipes" className="hover:text-[#D4AF37] transition-colors">
-                  Recipes
-                </Link>
-              </li>
-              <li>
-                <Link to="/coming-soon" className="hover:text-[#D4AF37] transition-colors">
-                  Coming Soon
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" className="hover:text-[#D4AF37] transition-colors">
-                  Contact
-                </Link>
-              </li>
+            <h4 className={headingCls}>Quick Links</h4>
+            <ul className="space-y-3 text-sm">
+              {QUICK_LINKS.map((l) => (
+                <li key={l.label}>
+                  <Link to={l.path} className={linkCls}>
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Column 3: Contact */}
+          {/* My Account */}
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-widest text-[#F5ECD7] mb-4">
-              Contact
-            </h4>
-            <ul className="space-y-3 text-xs text-[#D0C9BA]">
-              <li className="flex items-start gap-2">
-                <MapPin size={15} className="text-[#D4AF37] shrink-0 mt-0.5" />
+            <h4 className={headingCls}>My Account</h4>
+            <ul className="space-y-3 text-sm">
+              {ACCOUNT_LINKS.map((l) => (
+                <li key={l.label}>
+                  <Link to={l.path} className={linkCls}>
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Address */}
+          <div>
+            <h4 className={headingCls}>Address</h4>
+            <ul className="space-y-4 text-sm text-ink/70">
+              <li className="flex items-start gap-3">
+                <MapPin size={17} className="text-brand shrink-0 mt-0.5" />
                 <span>{APP_CONFIG.address}</span>
               </li>
-              <li className="flex items-center gap-2">
-                <Mail size={15} className="text-[#D4AF37] shrink-0" />
-                <a
-                  href={`mailto:${APP_CONFIG.email}`}
-                  className="hover:text-[#D4AF37] transition-colors"
-                >
+              <li className="flex items-start gap-3">
+                <Phone size={17} className="text-brand shrink-0 mt-0.5" />
+                <span>{APP_CONFIG.phone}</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Mail size={17} className="text-brand shrink-0 mt-0.5" />
+                <a href={`mailto:${APP_CONFIG.email}`} className="hover:text-brand transition-colors">
                   {APP_CONFIG.email}
                 </a>
               </li>
             </ul>
-
-            <div className="flex items-center gap-3.5 mt-4 text-[#F5ECD7]">
-              <a
-                href={APP_CONFIG.socials.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full bg-[#1E1430] hover:bg-[#D4AF37] hover:text-[#0B0710] flex items-center justify-center transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram size={15} />
-              </a>
-              <a
-                href={APP_CONFIG.socials.facebook}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full bg-[#1E1430] hover:bg-[#D4AF37] hover:text-[#0B0710] flex items-center justify-center transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook size={15} />
-              </a>
-              <a
-                href={APP_CONFIG.socials.tiktok}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full bg-[#1E1430] hover:bg-[#D4AF37] hover:text-[#0B0710] flex items-center justify-center transition-colors"
-                aria-label="TikTok"
-              >
-                <Music2 size={15} />
-              </a>
-            </div>
           </div>
 
-          {/* Column 4: Script Slogan */}
-          <div className="flex flex-col justify-center items-start md:items-end">
-            <div className="text-left md:text-right">
-              <span className="font-serif text-lg text-[#F5ECD7] block">
-                A little taste of home,
+          {/* Install App */}
+          <div>
+            <h4 className={headingCls}>Install App</h4>
+            <p className="text-sm text-ink/70 mb-4">Free on App Store &amp; Google Play</p>
+            <div className="flex flex-wrap gap-2.5">
+              <span className="inline-flex items-center h-11 px-5 rounded-lg bg-ink text-white text-sm font-medium">
+                App Store
               </span>
-              <span className="font-script text-3xl sm:text-4xl text-[#D4AF37] block mt-1">
-                close to home.
+              <span className="inline-flex items-center h-11 px-5 rounded-lg bg-ink text-white text-sm font-medium">
+                Google Play
               </span>
             </div>
+            <p className="font-serif text-xl font-semibold text-brand mt-6">{APP_CONFIG.phone}</p>
+            <p className="text-xs text-ink/60">Call us any time</p>
           </div>
         </div>
+      </div>
 
-        {/* Bottom copyright line */}
-        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#B0A99C] gap-3">
-          <p>© 2026 Belké Market. All rights reserved.</p>
-          <div className="flex items-center gap-4">
-            <Link to="/about" className="hover:text-[#D4AF37] transition-colors">
-              Privacy Policy
-            </Link>
-            <span>|</span>
-            <Link to="/about" className="hover:text-[#D4AF37] transition-colors">
-              Terms of Service
-            </Link>
+      {/* Copyright bar */}
+      <div className="bg-leaf text-white">
+        <div className="max-w-[1320px] mx-auto px-4 sm:px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm">
+          <p>© 2026 Belké Market. All Rights Reserved.</p>
+          <div className="flex flex-wrap items-center justify-center gap-2">
+            {PAYMENTS.map((p) => (
+              <span
+                key={p}
+                className="px-2.5 py-1 rounded bg-white/95 text-ink text-[11px] font-bold tracking-wide"
+              >
+                {p}
+              </span>
+            ))}
           </div>
         </div>
       </div>

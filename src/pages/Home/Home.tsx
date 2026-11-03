@@ -1,47 +1,48 @@
 /**
  * Home
- * Main landing page strictly implementing the Belké Market layout:
- * HeroSection, ValuePillars, CategoryGrid, StorySection, FeaturedProducts, CommunitySection.
- * Featured Products is pinned while the next section slides over it.
+ * Landing page, top to bottom: hero slider, popular food items, promo banners,
+ * sponsors, today's offer band, popular fast foods, combo offer, dishes marquee,
+ * quality features, special cards, countdown offer, testimonial, delivery banner, gallery.
  *
  * Used in: / route
  */
 
-import React, { useRef } from 'react';
-import { HeroSection } from './components/HeroSection';
-import { ValuePillars } from './components/ValuePillars';
-import { CategoryGrid } from './components/CategoryGrid';
-import { StorySection } from './components/StorySection';
-import { FeaturedProducts } from './components/FeaturedProducts';
-import { CommunitySection } from './components/CommunitySection';
+import React from 'react';
+import { HeroSlider } from './components/HeroSlider';
+import { PopularFoodItems } from './components/PopularFoodItems';
+import { PromoBanners } from './components/PromoBanners';
+import { SponsorsRow } from './components/SponsorsRow';
+import { DayOfferBand } from './components/DayOfferBand';
+import { PopularFastFoods } from './components/PopularFastFoods';
+import { ComboOffer } from './components/ComboOffer';
+import { DishesMarquee } from './components/DishesMarquee';
+import { QualityFeatures } from './components/QualityFeatures';
+import { SpecialCards } from './components/SpecialCards';
+import { HotWingCountdown } from './components/HotWingCountdown';
+import { Testimonial } from './components/Testimonial';
+import { DeliveryChallenge } from './components/DeliveryChallenge';
+import { FoodGallery } from './components/FoodGallery';
 import { useDocumentTitle } from '../../hooks/useDocumentTitle';
-import { useStackedSections } from '../../hooks/useStackedSections';
 
 export default function Home() {
   useDocumentTitle('Home - Authentic European & Balkan Groceries');
-  const sectionsRef = useRef<HTMLDivElement>(null);
-  useStackedSections(sectionsRef);
 
   return (
-    <div id="sections" ref={sectionsRef} className="flex flex-col w-full">
-      <div className="page-section bg-[#0B0710]">
-        <HeroSection />
-      </div>
-      <div className="page-section">
-        <ValuePillars />
-      </div>
-      <div className="page-section">
-        <CategoryGrid />
-      </div>
-      <div className="page-section">
-        <StorySection />
-      </div>
-      <div className="page-section" data-stack>
-        <FeaturedProducts />
-      </div>
-      <div className="page-section">
-        <CommunitySection />
-      </div>
+    <div className="bg-cream text-ink font-sans overflow-x-clip">
+      <HeroSlider />
+      <PopularFoodItems />
+      <PromoBanners />
+      <SponsorsRow />
+      <DayOfferBand />
+      <PopularFastFoods />
+      <ComboOffer />
+      <DishesMarquee />
+      <QualityFeatures />
+      <SpecialCards />
+      <HotWingCountdown />
+      <Testimonial />
+      <DeliveryChallenge />
+      <FoodGallery />
     </div>
   );
 }

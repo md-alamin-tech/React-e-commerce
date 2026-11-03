@@ -50,7 +50,7 @@ export const PageBanner: React.FC<PageBannerProps> = ({
         />
         <div className="absolute inset-x-0 top-0 h-40 -z-10 bg-gradient-to-b from-black/50 to-transparent pointer-events-none" />
 
-        <div className="w-full max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 pt-[97px] pb-14 lg:pb-16">
+        <div className="w-full max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-14 lg:pb-16">
           <div
             className={
               center
