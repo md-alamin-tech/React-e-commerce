@@ -31,7 +31,7 @@ const NAV_LINKS = [
   { label: 'Home', path: '/' },
   { label: 'About Us', path: '/about' },
   { label: 'Shop', path: '/shop' },
-  { label: 'Recipes', path: '/recipes' },
+  { label: 'Menu', path: '/menu' },
   { label: 'Contact', path: '/contact' },
 ];
 

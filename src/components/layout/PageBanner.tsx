@@ -10,7 +10,7 @@
  * @param {'left' | 'center'} align - content alignment
  * @param {React.ReactNode} children - extra content under the subtitle
  *
- * Used in: Shop, Recipes, About, Contact
+ * Used in: Shop, Menu, About, Contact
  */
 
 import React from 'react';

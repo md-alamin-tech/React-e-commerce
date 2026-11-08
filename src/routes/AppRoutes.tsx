@@ -7,7 +7,7 @@
  */
 
 import React, { useEffect } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { Layout } from '../components/layout/Layout';
 
 // Page components
@@ -22,7 +22,7 @@ import Wishlist from '../pages/Wishlist/Wishlist';
 import Login from '../pages/Login/Login';
 import Register from '../pages/Register/Register';
 import About from '../pages/About/About';
-import Recipes from '../pages/Recipes/Recipes';
+import Menu from '../pages/Menu/Menu';
 import Contact from '../pages/Contact/Contact';
 import NotFound from '../pages/NotFound/NotFound';
 
@@ -53,7 +53,8 @@ export const AppRoutes: React.FC = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/about" element={<About />} />
-        <Route path="/recipes" element={<Recipes />} />
+        <Route path="/menu" element={<Menu />} />
+        <Route path="/recipes" element={<Navigate to="/menu" replace />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

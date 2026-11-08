@@ -1,9 +1,8 @@
 /**
- * Recipes
- * Recipe and culinary inspiration hub strictly implementing Section 4 of the mockup:
- * Hero banner, Featured Recipes grid with 6 signature Balkan dishes, and full recipe modal.
+ * Menu
+ * Menu page: banner, signature dishes grid and a detail modal with ingredients and steps.
  *
- * Used in: /recipes route
+ * Used in: /menu route
  */
 
 import React, { useState } from 'react';
@@ -23,8 +22,8 @@ import {
   CheckCircle2,
 } from 'lucide-react';
 
-export default function Recipes() {
-  useDocumentTitle('Recipes & Inspiration - Balkan Traditions');
+export default function Menu() {
+  useDocumentTitle('Our Menu - Signature Dishes');
   const { addToCart } = useCart();
   const [activeRecipe, setActiveRecipe] = useState<Recipe | null>(null);
 
@@ -41,29 +40,29 @@ export default function Recipes() {
     <div className="bg-cream pb-16">
       {/* 1. Hero Banner */}
       <PageBanner
-        title="Recipes & Inspiration"
-        subtitle="Explore traditional recipes, cooking tips, and food inspiration from our European and Balkan heritage."
+        title="Our Menu"
+        subtitle="Fresh, fiery and made to order. Explore our signature dishes."
         image="/assets/aistudio/EA7AB6BA-A77D-4A0C-868C-F7B2BD7987DF_df31e837.png"
         align="center"
       />
 
-      {/* 2. Featured Recipes Grid */}
+      {/* 2. Signature dishes grid */}
       <section className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 pt-12">
         <div className="flex items-center justify-between pb-4 mb-8">
           <div>
             <h2 className="font-serif text-2xl font-bold text-ink">
-              Featured Recipes
+              Signature Dishes
             </h2>
             <p className="text-xs text-ink/60 mt-0.5">
-              Generational dishes crafted with pantry staples found right here at EMBER.
+              Crafted fresh every day, right here at EMBER.
             </p>
           </div>
           <span className="text-xs font-semibold uppercase tracking-wider text-brand hidden sm:inline">
-            6 Traditional Classics
+            6 Best Sellers
           </span>
         </div>
 
-        {/* 6 Recipes Cards Grid */}
+        {/* Dish cards grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {RECIPES.map((recipe) => (
             <div
@@ -105,12 +104,12 @@ export default function Recipes() {
                     </span>
                   </div>
 
-                  {/* Button: "VIEW RECIPE ->" matching mockup! */}
+                  {/* View dish button */}
                   <button
                     onClick={() => setActiveRecipe(recipe)}
                     className="w-full inline-flex items-center justify-center gap-2 bg-brand hover:bg-brand-dark text-white font-medium tracking-wide uppercase transition-colors cursor-pointer h-12 px-8 rounded-full font-serif text-sm"
                   >
-                    <span>VIEW RECIPE</span>
+                    <span>VIEW DISH</span>
                     <ArrowRight size={13} />
                   </button>
                 </div>
@@ -120,7 +119,7 @@ export default function Recipes() {
         </div>
       </section>
 
-      {/* Recipe Detail Modal */}
+      {/* Dish detail modal */}
       {activeRecipe && (
         <Modal
           isOpen={!!activeRecipe}
