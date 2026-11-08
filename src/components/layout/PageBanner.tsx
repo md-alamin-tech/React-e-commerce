@@ -4,18 +4,20 @@
  * overlay, white condensed heading and optional content (buttons, forms) below.
  *
  * @param {string} title - h1 text
+ * @param {string} label - optional small yellow line above the title (like the home hero)
  * @param {string} subtitle - optional supporting paragraph
  * @param {string} image - background image path
  * @param {'left' | 'center'} align - content alignment
  * @param {React.ReactNode} children - extra content under the subtitle
  *
- * Used in: Shop, Recipes, About, Contact, ComingSoon
+ * Used in: Shop, Recipes, About, Contact
  */
 
 import React from 'react';
 
 interface PageBannerProps {
   title: string;
+  label?: string;
   subtitle?: string;
   image: string;
   imageAlt?: string;
@@ -25,6 +27,7 @@ interface PageBannerProps {
 
 export const PageBanner: React.FC<PageBannerProps> = ({
   title,
+  label,
   subtitle,
   image,
   imageAlt = '',
@@ -57,6 +60,9 @@ export const PageBanner: React.FC<PageBannerProps> = ({
               : 'max-w-2xl text-left flex flex-col items-start'
           }
         >
+          {label && (
+            <p className="font-serif text-base sm:text-lg font-semibold text-sun tracking-wide mb-2">{label}</p>
+          )}
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold uppercase text-white leading-[1.1] mb-4">
             {title}
           </h1>

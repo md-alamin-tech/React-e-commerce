@@ -16,7 +16,6 @@ const QUICK_LINKS = [
   { label: 'About Us', path: '/about' },
   { label: 'Shop', path: '/shop' },
   { label: 'Recipes', path: '/recipes' },
-  { label: 'Coming Soon', path: '/coming-soon' },
   { label: 'Contact', path: '/contact' },
 ];
 

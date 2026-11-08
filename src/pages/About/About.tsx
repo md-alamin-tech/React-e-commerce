@@ -1,16 +1,41 @@
 /**
  * About
- * Brand heritage and mission page strictly implementing Section 3 of the mockup:
- * Our Story hero with script typography, About Belké Market story block with store photo,
- * 4 core value pillars, and "Good Food Brings People Together" banner.
+ * Brand story page in the same style as the home page: photo banner, story block with
+ * section title, dark four-up values strip and a photo call-to-action.
  *
  * Used in: /about route
  */
 
 import React, { useRef } from 'react';
+import { Link } from 'react-router-dom';
+import { Sparkles, HeartHandshake, Users, Award } from 'lucide-react';
 import { PageBanner } from '../../components/layout/PageBanner';
+import { SectionTitle } from '../Home/components/SectionTitle';
+import { BTN_GREEN, BTN_RED, BG } from '../Home/homeData';
 import { useDocumentTitle } from '../../hooks/useDocumentTitle';
-import { ArrowRight, Sparkles, HeartHandshake, Users, Award } from 'lucide-react';
+
+const VALUES = [
+  {
+    icon: Sparkles,
+    title: 'Authentic Products',
+    desc: 'Sourced directly from heritage Balkan and European producers who preserve traditional recipes.',
+  },
+  {
+    icon: HeartHandshake,
+    title: 'Family Focused',
+    desc: 'Rooted in generational love, welcoming every family to gather around a warm, home-cooked meal.',
+  },
+  {
+    icon: Users,
+    title: 'Community Driven',
+    desc: 'Proudly serving Southington and Connecticut, fostering cultural connection and neighborly hospitality.',
+  },
+  {
+    icon: Award,
+    title: 'European Tradition',
+    desc: 'Honoring time-tested methods, from natural barrel-curing to slow fire-roasting.',
+  },
+];
 
 export default function About() {
   useDocumentTitle('About Us - Belké Market Story & Values');
@@ -20,67 +45,34 @@ export default function About() {
     valuesRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const values = [
-    {
-      icon: <Sparkles className="w-6 h-6 text-brand" />,
-      title: 'AUTHENTIC PRODUCTS',
-      desc: 'Sourced directly from heritage Balkan and European producers who preserve traditional recipes.',
-    },
-    {
-      icon: <HeartHandshake className="w-6 h-6 text-brand" />,
-      title: 'FAMILY FOCUSED',
-      desc: 'Rooted in generational love, welcoming every family to gather around a warm, home-cooked meal.',
-    },
-    {
-      icon: <Users className="w-6 h-6 text-brand" />,
-      title: 'COMMUNITY DRIVEN',
-      desc: 'Proudly serving Southington and Connecticut, fostering cultural connection and neighborly hospitality.',
-    },
-    {
-      icon: <Award className="w-6 h-6 text-brand" />,
-      title: 'EUROPEAN TRADITION',
-      desc: 'Honoring time-tested methods—from natural barrel-curing to slow fire-roasting.',
-    },
-  ];
-
   return (
-    <div className="bg-cream pb-16">
-      {/* 1. Hero: Our Story */}
+    <div className="bg-cream">
+      {/* 1. Banner */}
       <PageBanner
+        label="More than groceries..."
         title="Our Story"
-        image="/assets/aistudio/418DF6A8-A9E9-410B-B7B8-20AFB3597616_6d2f0595.png"
-        imageAlt="Historic European mountain town and bridge"
+        subtitle="It's our culture, our traditions, our memories."
+        image="/assets/aistudio/about-banner.jpg"
+        imageAlt="Burgers, tomatoes and fries on a dark table"
         align="left"
-      >
-        <p className="font-script text-3xl sm:text-4xl lg:text-5xl text-sun leading-snug">
-          More than groceries... <br />
-          It's our culture, <br />
-          our traditions, <br />
-          our memories.
-        </p>
-      </PageBanner>
+      />
 
-      {/* 2. Section: About Belké Market */}
+      {/* 2. About Belké Market */}
       <section className="py-16 lg:py-24">
-        <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-            {/* Left Shop Photo */}
-            <div className="lg:col-span-6">
-              <div className="rounded-2xl overflow-hidden shadow-xl border-4 border-black/10 aspect-4/3 sm:aspect-16/11">
-                <img
-                  src="/assets/aistudio/64702B2B-DAFA-4039-A870-C1923AC2C266_3aa407e6.png"
-                  alt="Belké Market warm artisan grocery shop interior"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+        <div className="max-w-[1320px] mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div className="rounded-3xl overflow-hidden aspect-[4/3] shadow-[0_24px_60px_rgba(0,0,0,0.18)]">
+              <img
+                src={BG.shop}
+                alt="Belké Market warm artisan grocery shop interior"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
             </div>
 
-            {/* Right Story Description */}
-            <div className="lg:col-span-6 text-left">
-              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-ink mb-6">
-                About Belké Market
-              </h2>
-              <div className="space-y-4 text-sm sm:text-base text-ink/75 leading-relaxed mb-8">
+            <div className="text-left">
+              <SectionTitle label="About Belké Market" center={false} title="Where Tradition Meets Your Table" />
+              <div className="space-y-4 text-ink/70 leading-relaxed mt-5 mb-8">
                 <p>
                   Belké Market was created with a simple mission: to bring authentic European and Balkan foods closer to home. We believe food connects generations, preserves culture, and brings communities together.
                 </p>
@@ -92,58 +84,58 @@ export default function About() {
                 </p>
               </div>
 
-              <button
-                onClick={scrollToValues}
-                className="inline-flex items-center gap-2 bg-brand hover:bg-brand-dark text-white font-medium tracking-wide uppercase transition-colors shadow-xs hover:shadow cursor-pointer h-12 px-8 rounded-full font-serif text-sm justify-center"
-              >
-                <span>OUR VALUES</span>
-                <ArrowRight size={14} />
+              <button type="button" onClick={scrollToValues} className={BTN_GREEN}>
+                <span>Our Values</span>
               </button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 3. Four Core Values Grid */}
-      <section ref={valuesRef} className="py-16 lg:py-20">
-        <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((val, idx) => (
-              <div
-                key={idx}
-                className="bg-white p-7 rounded-2xl border border-black/10 flex flex-col items-center text-center shadow-2xs hover:shadow-sm transition-all"
-              >
-                <div className="w-14 h-14 rounded-full bg-cream border border-black/10 flex items-center justify-center mb-4">
-                  {val.icon}
+      {/* 3. Values strip */}
+      <section ref={valuesRef} className="pb-16 lg:pb-24 scroll-mt-24">
+        <div className="max-w-[1320px] mx-auto px-4 sm:px-6">
+          <div className="rounded-2xl bg-[#1b1b1b] px-6 sm:px-10 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {VALUES.map(({ icon: Icon, title, desc }) => (
+              <div key={title} className="flex items-start gap-4">
+                <span className="w-12 h-12 rounded-full bg-sun flex items-center justify-center shrink-0">
+                  <Icon size={22} className="text-ink" />
+                </span>
+                <div>
+                  <h3 className="font-serif text-lg font-semibold text-white">{title}</h3>
+                  <p className="text-sm text-white/60 mt-1 leading-snug">{desc}</p>
                 </div>
-                <h3 className="font-serif text-sm font-bold tracking-wider uppercase text-ink mb-2">
-                  {val.title}
-                </h3>
-                <p className="text-xs text-ink/60 leading-relaxed">
-                  {val.desc}
-                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* 4. Bottom Photographic Quote Banner: "Good Food Brings People Together." */}
-      <section className="pt-14 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-[1320px] mx-auto">
-          <div className="relative rounded-2xl overflow-hidden shadow-xl border border-black/10">
+      {/* 4. Call to action */}
+      <section className="pb-16 lg:pb-20">
+        <div className="max-w-[1320px] mx-auto px-4 sm:px-6">
+          <div className="relative isolate overflow-hidden rounded-3xl min-h-[380px] flex items-center">
             <img
-              src="/assets/aistudio/EA7AB6BA-A77D-4A0C-868C-F7B2BD7987DF_df31e837.png"
-              alt="Mediterranean spread with olive branches"
-              className="no-fx w-full h-64 sm:h-80 object-cover object-center filter brightness-[0.65]"
+              src="/assets/aistudio/about-cta.jpg"
+              alt="Double cheeseburger with chili peppers"
+              className="absolute inset-0 -z-20 w-full h-full object-cover object-right"
+              loading="lazy"
             />
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6 bg-black/25">
-              <h3 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold uppercase text-white tracking-tight drop-shadow-md">
+            <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black/85 via-black/50 to-transparent" />
+
+            <div className="px-8 sm:px-14 py-12 max-w-xl">
+              <p className="font-serif text-lg font-semibold text-sun tracking-wide">
+                Visit us in Southington, CT
+              </p>
+              <h2 className="font-serif text-4xl sm:text-5xl font-bold uppercase text-white leading-[1.1] mt-2">
                 Good Food Brings People Together.
-              </h3>
-              <p className="text-xs sm:text-sm text-white mt-3 font-medium">
+              </h2>
+              <p className="text-white/80 leading-relaxed mt-4">
                 Visit our store in Southington, CT or order online today.
               </p>
+              <Link to="/shop" className={`${BTN_RED} mt-8`}>
+                <span>Order Now</span>
+              </Link>
             </div>
           </div>
         </div>

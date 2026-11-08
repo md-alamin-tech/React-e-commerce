@@ -7,7 +7,7 @@ export const APP_CONFIG = {
   storeName: 'Belké Market',
   tagline: 'European Groceries • Balkan Flavors • Local Community',
   topBanner: 'A LITTLE TASTE OF HOME, CLOSE TO HOME.',
-  address: 'Southington, CT (Coming Soon)',
+  address: 'Southington, CT',
   phone: '(860) 555-0192',
   email: 'hello@belkemarket.com',
   socials: {

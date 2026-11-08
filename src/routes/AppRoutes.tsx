@@ -23,7 +23,6 @@ import Login from '../pages/Login/Login';
 import Register from '../pages/Register/Register';
 import About from '../pages/About/About';
 import Recipes from '../pages/Recipes/Recipes';
-import ComingSoon from '../pages/ComingSoon/ComingSoon';
 import Contact from '../pages/Contact/Contact';
 import NotFound from '../pages/NotFound/NotFound';
 
@@ -55,7 +54,6 @@ export const AppRoutes: React.FC = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/about" element={<About />} />
         <Route path="/recipes" element={<Recipes />} />
-        <Route path="/coming-soon" element={<ComingSoon />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
