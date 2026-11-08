@@ -12,7 +12,7 @@ import { Button } from '../../components/common/Button';
 import { Compass, ArrowRight } from 'lucide-react';
 
 export default function NotFound() {
-  useDocumentTitle('Page Not Found - Belké Market');
+  useDocumentTitle('Page Not Found - EMBER');
 
   return (
     <div className="bg-cream py-24 px-4 text-center">

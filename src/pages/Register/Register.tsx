@@ -15,7 +15,7 @@ import { useDocumentTitle } from '../../hooks/useDocumentTitle';
 import { User, Mail, Lock, ArrowRight } from 'lucide-react';
 
 export default function Register() {
-  useDocumentTitle('Create Account - Belké Market');
+  useDocumentTitle('Create Account - EMBER');
   const navigate = useNavigate();
   const { register } = useAuth();
   const { showToast } = useToast();
@@ -41,7 +41,7 @@ export default function Register() {
     setTimeout(() => {
       register(name, email, password);
       setLoading(false);
-      showToast(`Welcome to the Belké Market family, ${name}!`, 'success');
+      showToast(`Welcome to the EMBER family, ${name}!`, 'success');
       navigate('/account');
     }, 600);
   };

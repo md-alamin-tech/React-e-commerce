@@ -25,7 +25,7 @@ import {
 } from 'lucide-react';
 
 export default function Checkout() {
-  useDocumentTitle('Checkout - Belké Market');
+  useDocumentTitle('Checkout - EMBER');
   const navigate = useNavigate();
   const { showToast } = useToast();
   const { user, createOrder } = useAuth();
@@ -415,7 +415,7 @@ export default function Checkout() {
                 </Button>
 
                 <p className="text-center text-[11px] text-ink/60 mt-3">
-                  By clicking Place Order, you agree to Belké Market's Terms & Conditions.
+                  By clicking Place Order, you agree to EMBER's Terms & Conditions.
                 </p>
               </div>
             </div>

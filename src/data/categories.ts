@@ -1,6 +1,6 @@
 /**
  * Category Data
- * Contains the 8 core product categories matching the Belké Market layout.
+ * Contains the 8 core product categories matching the EMBER layout.
  */
 
 export interface Category {

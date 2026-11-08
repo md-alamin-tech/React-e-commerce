@@ -4,16 +4,16 @@
  */
 
 export const APP_CONFIG = {
-  storeName: 'Belké Market',
-  tagline: 'European Groceries • Balkan Flavors • Local Community',
+  storeName: 'EMBER',
+  tagline: 'Fresh • Fiery • Fast',
   topBanner: 'A LITTLE TASTE OF HOME, CLOSE TO HOME.',
   address: 'Southington, CT',
   phone: '(860) 555-0192',
-  email: 'hello@belkemarket.com',
+  email: 'hello@emberfood.com',
   socials: {
-    instagram: 'https://instagram.com/belkemarket',
-    facebook: 'https://facebook.com/belkemarket',
-    tiktok: 'https://tiktok.com/@belkemarket',
+    instagram: 'https://instagram.com/emberfood',
+    facebook: 'https://facebook.com/emberfood',
+    tiktok: 'https://tiktok.com/@emberfood',
   },
   shipping: {
     standardRate: 5.99,
@@ -25,7 +25,7 @@ export const APP_CONFIG = {
 
 export const COUPONS: Record<string, { code: string; discountPercent: number; description: string }> = {
   WELCOME10: { code: 'WELCOME10', discountPercent: 10, description: '10% off your first Balkan feast' },
-  BELKE15: { code: 'BELKE15', discountPercent: 15, description: '15% grand opening celebration discount' },
+  EMBER15: { code: 'EMBER15', discountPercent: 15, description: '15% grand opening celebration discount' },
   BALKAN20: { code: 'BALKAN20', discountPercent: 20, description: '20% off on orders over $60' },
 };
 

@@ -10,7 +10,7 @@ import { useEffect } from 'react';
 
 export function useDocumentTitle(title: string, description?: string): void {
   useEffect(() => {
-    const fullTitle = `${title} | Belké Market`;
+    const fullTitle = `${title} | EMBER`;
     document.title = fullTitle;
 
     if (description) {

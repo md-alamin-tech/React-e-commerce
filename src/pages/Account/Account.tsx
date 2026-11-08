@@ -29,7 +29,7 @@ import {
 } from 'lucide-react';
 
 export default function Account() {
-  useDocumentTitle('My Account - Belké Market');
+  useDocumentTitle('My Account - EMBER');
   const navigate = useNavigate();
   const { showToast } = useToast();
   const {

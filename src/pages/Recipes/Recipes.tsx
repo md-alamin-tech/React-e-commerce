@@ -55,7 +55,7 @@ export default function Recipes() {
               Featured Recipes
             </h2>
             <p className="text-xs text-ink/60 mt-0.5">
-              Generational dishes crafted with pantry staples found right here at Belké Market.
+              Generational dishes crafted with pantry staples found right here at EMBER.
             </p>
           </div>
           <span className="text-xs font-semibold uppercase tracking-wider text-brand hidden sm:inline">

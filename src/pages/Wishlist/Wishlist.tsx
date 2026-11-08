@@ -15,7 +15,7 @@ import { useDocumentTitle } from '../../hooks/useDocumentTitle';
 import { Heart, ArrowRight, Trash2 } from 'lucide-react';
 
 export default function Wishlist() {
-  useDocumentTitle('My Wishlist - Belké Market');
+  useDocumentTitle('My Wishlist - EMBER');
   const { wishlist, clearWishlist } = useWishlist();
   const { addToCart } = useCart();
 

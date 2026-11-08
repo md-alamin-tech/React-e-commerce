@@ -153,7 +153,7 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
       showToast(`Coupon "${upper}" applied (${COUPONS[upper].discountPercent}% off)!`, 'success');
       return true;
     } else {
-      showToast(`Invalid coupon code "${code}". Try WELCOME10 or BELKE15`, 'error');
+      showToast(`Invalid coupon code "${code}". Try WELCOME10 or EMBER15`, 'error');
       return false;
     }
   };

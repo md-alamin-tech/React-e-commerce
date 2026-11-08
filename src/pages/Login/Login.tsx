@@ -15,7 +15,7 @@ import { useDocumentTitle } from '../../hooks/useDocumentTitle';
 import { Lock, Mail, ArrowRight } from 'lucide-react';
 
 export default function Login() {
-  useDocumentTitle('Sign In - Belké Market');
+  useDocumentTitle('Sign In - EMBER');
   const navigate = useNavigate();
   const location = useLocation();
   const { login } = useAuth();
@@ -53,7 +53,7 @@ export default function Login() {
       <div className="max-w-md w-full bg-white rounded-2xl p-8 sm:p-10 border border-black/10 shadow-xs text-left">
         <div className="text-center mb-8">
           <h1 className="font-serif text-3xl font-bold text-ink">
-            Sign in to Belké Market
+            Sign in to EMBER
           </h1>
           <p className="text-xs text-ink/60 mt-1">
             Access your order history, delivery addresses, and saved favorites.

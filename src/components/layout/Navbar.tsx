@@ -131,21 +131,8 @@ export const Navbar: React.FC = () => {
       <header className="sticky top-0 z-40 bg-white shadow-[0_6px_24px_rgba(0,0,0,0.06)]">
         <div className="max-w-[1320px] mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2.5 group">
-            <svg className="w-9 h-9 text-leaf" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">
-              <circle cx="50" cy="50" r="48" opacity="0.12" />
-              <path d="M50 78 C38 66, 22 66, 14 54 C28 48, 42 54, 50 78 Z" />
-              <path d="M50 78 C62 66, 78 66, 86 54 C72 48, 58 54, 50 78 Z" />
-              <circle cx="50" cy="38" r="9" className="text-brand" fill="currentColor" />
-            </svg>
-            <span className="flex flex-col leading-none">
-              <span className="font-serif text-2xl font-bold tracking-wider uppercase text-ink group-hover:text-brand transition-colors">
-                BELKÉ
-              </span>
-              <span className="text-[9px] tracking-[0.35em] uppercase font-semibold text-leaf mt-0.5">
-                MARKET
-              </span>
-            </span>
+          <Link to="/" className="flex items-center" aria-label="EMBER home">
+            <img src="/assets/brand/ember-logo.png" alt="EMBER" className="no-fx h-12 w-auto" />
           </Link>
 
           {/* Desktop links */}

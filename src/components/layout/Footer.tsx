@@ -39,17 +39,11 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <Link to="/" className="flex flex-col items-start leading-none mb-4">
-              <span className="font-serif text-3xl font-bold tracking-wider uppercase text-ink">
-                BELKÉ
-              </span>
-              <span className="text-[10px] tracking-[0.35em] uppercase font-semibold text-leaf mt-1">
-                MARKET
-              </span>
+            <Link to="/" className="inline-block mb-4" aria-label="EMBER home">
+              <img src="/assets/brand/ember-logo.png" alt="EMBER" className="no-fx h-14 w-auto" />
             </Link>
             <p className="text-sm text-ink/70 leading-relaxed mb-5">
-              Specialty grocery store bringing the warmest flavors and traditions of Albania and
-              Europe to our local community.
+              Fresh, fiery fast food made to order. Burgers, wings, pizza and more for every craving.
             </p>
             <a
               href={`mailto:${APP_CONFIG.email}`}
@@ -147,7 +141,7 @@ export const Footer: React.FC = () => {
       {/* Copyright bar */}
       <div className="bg-leaf text-white">
         <div className="max-w-[1320px] mx-auto px-4 sm:px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm">
-          <p>© 2026 Belké Market. All Rights Reserved.</p>
+          <p>© 2026 EMBER. All Rights Reserved.</p>
           <div className="flex flex-wrap items-center justify-center gap-2">
             {PAYMENTS.map((p) => (
               <span

@@ -26,7 +26,7 @@ import {
 } from 'lucide-react';
 
 export default function Cart() {
-  useDocumentTitle('Shopping Cart - Belké Market');
+  useDocumentTitle('Shopping Cart - EMBER');
   const navigate = useNavigate();
 
   const {

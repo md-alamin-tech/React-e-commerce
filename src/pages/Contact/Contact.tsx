@@ -25,7 +25,7 @@ import {
 } from 'lucide-react';
 
 export default function Contact() {
-  useDocumentTitle('Contact Us - Belké Market Southington');
+  useDocumentTitle('Contact Us - EMBER Southington');
   const { showToast } = useToast();
 
   const [name, setName] = useState('');
@@ -122,7 +122,7 @@ export default function Contact() {
               <h4 className="font-serif text-sm font-bold text-ink mb-1">
                 Follow Us
               </h4>
-              <p className="text-xs text-ink/60 mb-3">@belkemarket</p>
+              <p className="text-xs text-ink/60 mb-3">@emberfood</p>
               <div className="flex items-center gap-3">
                 <a
                   href={APP_CONFIG.socials.instagram}
@@ -161,7 +161,7 @@ export default function Contact() {
               Send Us a Message
             </h3>
             <p className="text-xs text-ink/60 mb-6">
-              Have a special product request or want to partner with Belké Market?
+              Have a special product request or want to partner with EMBER?
             </p>
 
             {submitted ? (
@@ -250,7 +250,7 @@ export default function Contact() {
                 <MapPin size={24} />
               </div>
               <div className="bg-brand text-white px-4 py-1.5 rounded-full text-xs font-bold shadow-md mt-2">
-                Belké Market • Southington, CT
+                EMBER • Southington, CT
               </div>
             </div>
           </div>

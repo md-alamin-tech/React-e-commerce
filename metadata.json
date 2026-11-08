@@ -1,5 +1,5 @@
 {
-  "name": "Belké Market",
+  "name": "EMBER",
   "description": "Authentic European & Balkan specialty grocery store bringing traditional flavors, artisan bakery, cheeses, and pantry staples close to home.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]

@@ -25,7 +25,7 @@ import { FoodGallery } from '../Home/components/FoodGallery';
 import { useDocumentTitle } from '../../hooks/useDocumentTitle';
 
 export default function About() {
-  useDocumentTitle('About Us - Belké Market Story & Values');
+  useDocumentTitle('About Us - EMBER Story & Values');
   return (
     <div className="bg-cream">
       {/* 1. Banner */}

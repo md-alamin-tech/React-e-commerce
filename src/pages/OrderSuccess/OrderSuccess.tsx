@@ -14,7 +14,7 @@ import { formatCurrency, formatDate } from '../../utils/constants';
 import { CheckCircle2, PackageCheck, ShoppingBag, ArrowRight, MapPin } from 'lucide-react';
 
 export default function OrderSuccess() {
-  useDocumentTitle('Order Confirmed - Belké Market');
+  useDocumentTitle('Order Confirmed - EMBER');
   const location = useLocation();
   const order: Order | undefined = location.state?.order;
 

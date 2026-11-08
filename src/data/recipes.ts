@@ -63,7 +63,7 @@ export const RECIPES: Recipe[] = [
     description: 'Flaky golden phyllo spiral stuffed with rich crumbled feta, kajmak, and farm eggs.',
     ingredients: [
       '1 pack rustic phyllo sheets (yufka or thick phyllo)',
-      '400g Belké traditional Feta cheese, crumbled',
+      '400g EMBER traditional Feta cheese, crumbled',
       '200g artisan Kaymak cream or cottage curd',
       '3 large pasture eggs',
       '100ml sparkling mineral water',
