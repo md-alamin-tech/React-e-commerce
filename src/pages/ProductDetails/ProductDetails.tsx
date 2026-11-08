@@ -66,26 +66,26 @@ export default function ProductDetails() {
   };
 
   return (
-    <div className="bg-[#0B0710] py-8 sm:py-12">
-      <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="bg-cream py-8 sm:py-12">
+      <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb Navigation */}
-        <nav className="flex items-center gap-2 text-xs text-[#B0A99C] mb-8 overflow-x-auto whitespace-nowrap">
-          <Link to="/" className="hover:text-[#D4AF37] transition-colors">
+        <nav className="flex items-center gap-2 text-xs text-ink/60 mb-8 overflow-x-auto whitespace-nowrap">
+          <Link to="/" className="hover:text-brand transition-colors">
             Home
           </Link>
           <ChevronRight size={13} />
-          <Link to="/shop" className="hover:text-[#D4AF37] transition-colors">
+          <Link to="/shop" className="hover:text-brand transition-colors">
             Our Products
           </Link>
           <ChevronRight size={13} />
           <Link
             to={`/shop?category=${product.category}`}
-            className="hover:text-[#D4AF37] transition-colors"
+            className="hover:text-brand transition-colors"
           >
             {product.categoryName}
           </Link>
           <ChevronRight size={13} />
-          <span className="text-[#F5ECD7] font-semibold truncate max-w-[200px]">
+          <span className="text-ink font-semibold truncate max-w-[200px]">
             {product.name}
           </span>
         </nav>
@@ -93,7 +93,7 @@ export default function ProductDetails() {
         {/* Back Button for mobile */}
         <button
           onClick={() => navigate(-1)}
-          className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#D0C9BA] hover:text-[#D4AF37] mb-6 cursor-pointer"
+          className="inline-flex items-center gap-1.5 text-xs font-semibold text-ink/75 hover:text-brand mb-6 cursor-pointer"
         >
           <ArrowLeft size={14} />
           <span>Back to catalog</span>
@@ -109,20 +109,20 @@ export default function ProductDetails() {
           {/* Right Column: Info & Purchase Controls */}
           <div className="lg:col-span-6 flex flex-col text-left">
             <div className="flex items-center justify-between mb-2">
-              <div className="flex items-center gap-1.5 text-xs text-[#D0C9BA]">
-                <Globe2 size={14} className="text-[#D4AF37]" />
+              <div className="flex items-center gap-1.5 text-xs text-ink/75">
+                <Globe2 size={14} className="text-brand" />
                 <span>Origin: {product.origin}</span>
               </div>
             </div>
 
-            <h1 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-[#F5ECD7] leading-tight mb-3">
+            <h1 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-ink leading-tight mb-3">
               {product.name}
             </h1>
 
             {/* Ratings & Stock */}
-            <div className="flex flex-wrap items-center gap-4 mb-4 pb-4 border-b border-[#2E2045]">
+            <div className="flex flex-wrap items-center gap-4 mb-4 pb-4 border-b border-black/10">
               <Rating value={product.rating} count={reviews.length} size="md" />
-              <div className="h-4 w-[1px] bg-[#34254D]" />
+              <div className="h-4 w-[1px] bg-[#EFEBE2]" />
               <Badge variant="success">
                 <span className="flex items-center gap-1">
                   <Check size={12} /> In Stock ({product.stockCount} left)
@@ -132,25 +132,25 @@ export default function ProductDetails() {
 
             {/* Price display */}
             <div className="flex items-baseline gap-3 mb-4">
-              <span className="text-3xl font-bold text-[#F5ECD7]">
+              <span className="text-3xl font-bold text-ink">
                 {formatCurrency(price)}
               </span>
               {product.originalPrice && product.originalPrice > price && (
-                <span className="text-base text-[#B0A99C] line-through">
+                <span className="text-base text-ink/60 line-through">
                   {formatCurrency(product.originalPrice)}
                 </span>
               )}
-              <span className="text-xs text-[#B0A99C]">/ {product.weight}</span>
+              <span className="text-xs text-ink/60">/ {product.weight}</span>
             </div>
 
-            <p className="text-sm text-[#D0C9BA] leading-relaxed mb-6">
+            <p className="text-sm text-ink/75 leading-relaxed mb-6">
               {product.description}
             </p>
 
             {/* Variants Selector */}
             {product.variants.length > 0 && (
               <div className="mb-6">
-                <label className="block text-xs font-bold uppercase tracking-wider text-[#F5ECD7] mb-2">
+                <label className="block text-xs font-bold uppercase tracking-wider text-ink mb-2">
                   Select Size / Packaging:
                 </label>
                 <div className="flex flex-wrap gap-2.5">
@@ -159,10 +159,10 @@ export default function ProductDetails() {
                       key={v.id}
                       type="button"
                       onClick={() => setSelectedVariantId(v.id)}
-                      className={`text-xs px-4 py-2 rounded-[10px] border transition-all cursor-pointer ${
+                      className={`text-xs px-4 py-2 rounded-2xl border transition-all cursor-pointer ${
                         selectedVariantId === v.id
-                          ? 'border-[#D4AF37] bg-[#1B1229] text-[#F5ECD7] font-bold shadow-xs'
-                          : 'border-[#34254D] hover:border-[#D4AF37] bg-[#140C1F] text-[#D0C9BA]'
+                          ? 'border-brand bg-[#EFEBE2] text-ink font-bold shadow-xs'
+                          : 'border-black/10 hover:border-brand bg-white text-ink/75'
                       }`}
                     >
                       {v.name} • {formatCurrency(v.price)}
@@ -174,22 +174,22 @@ export default function ProductDetails() {
 
             {/* Quantity Selector & Action Buttons */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2 mb-8">
-              <div className="flex items-center border border-[#34254D] rounded-full bg-[#140C1F] px-3 py-1.5 self-start">
+              <div className="flex items-center border border-black/10 rounded-full bg-white px-3 py-1.5 self-start">
                 <button
                   type="button"
                   onClick={() => setQuantity((q) => Math.max(1, q - 1))}
-                  className="p-1.5 text-[#D0C9BA] hover:text-[#D4AF37] cursor-pointer"
+                  className="p-1.5 text-ink/75 hover:text-brand cursor-pointer"
                   aria-label="Decrease quantity"
                 >
                   <Minus size={15} />
                 </button>
-                <span className="w-10 text-center font-bold text-sm text-[#F5ECD7]">
+                <span className="w-10 text-center font-bold text-sm text-ink">
                   {quantity}
                 </span>
                 <button
                   type="button"
                   onClick={() => setQuantity((q) => Math.min(product.stockCount, q + 1))}
-                  className="p-1.5 text-[#D0C9BA] hover:text-[#D4AF37] cursor-pointer"
+                  className="p-1.5 text-ink/75 hover:text-brand cursor-pointer"
                   aria-label="Increase quantity"
                 >
                   <Plus size={15} />
@@ -211,23 +211,23 @@ export default function ProductDetails() {
                 onClick={() => toggleWishlist(product)}
                 className={`p-3.5 rounded-full border transition-colors cursor-pointer flex items-center justify-center shrink-0 ${
                   isWishlisted
-                    ? 'border-rose-800 bg-rose-950/60 text-rose-400'
-                    : 'border-[#34254D] bg-[#140C1F] text-[#F5ECD7] hover:border-[#D4AF37]'
+                    ? 'border-brand/30 bg-brand/10 text-brand'
+                    : 'border-black/10 bg-white text-ink hover:border-brand'
                 }`}
                 title={isWishlisted ? 'Remove from wishlist' : 'Save to wishlist'}
               >
-                <Heart size={18} className={isWishlisted ? 'fill-[#D4AF37]' : ''} />
+                <Heart size={18} className={isWishlisted ? 'fill-brand' : ''} />
               </button>
             </div>
 
             {/* Quality & Delivery Highlights */}
-            <div className="grid grid-cols-2 gap-3 pt-6 border-t border-[#2E2045] text-xs text-[#D0C9BA]">
+            <div className="grid grid-cols-2 gap-3 pt-6 border-t border-black/10 text-xs text-ink/75">
               <div className="flex items-center gap-2">
-                <Package size={16} className="text-[#D4AF37]" />
+                <Package size={16} className="text-brand" />
                 <span>Free shipping on orders over $50</span>
               </div>
               <div className="flex items-center gap-2">
-                <ShieldCheck size={16} className="text-[#D4AF37]" />
+                <ShieldCheck size={16} className="text-brand" />
                 <span>100% Authentic Balkan Import</span>
               </div>
             </div>
@@ -236,15 +236,15 @@ export default function ProductDetails() {
 
         {/* Ingredients & Origin Section */}
         {product.ingredients && product.ingredients.length > 0 && (
-          <div className="bg-[#140C1F] rounded-[10px] p-8 border border-[#2E2045] mb-16 text-left">
-            <h3 className="font-serif text-xl font-bold text-[#F5ECD7] mb-4">
+          <div className="bg-white rounded-2xl p-8 border border-black/10 mb-16 text-left">
+            <h3 className="font-serif text-xl font-bold text-ink mb-4">
               Ingredients & Authenticity
             </h3>
             <div className="flex flex-wrap gap-2">
               {product.ingredients.map((ing, idx) => (
                 <span
                   key={idx}
-                  className="px-3.5 py-1.5 rounded-full bg-[#0B0710] border border-[#2E2045] text-xs text-[#F5ECD7] font-medium"
+                  className="px-3.5 py-1.5 rounded-full bg-cream border border-black/10 text-xs text-ink font-medium"
                 >
                   {ing}
                 </span>
@@ -261,7 +261,7 @@ export default function ProductDetails() {
         {/* Related Products Recommendation */}
         {relatedProducts.length > 0 && (
           <div>
-            <h3 className="font-serif text-2xl font-bold text-[#F5ECD7] mb-6 text-left">
+            <h3 className="font-serif text-2xl font-bold text-ink mb-6 text-left">
               You May Also Enjoy
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">

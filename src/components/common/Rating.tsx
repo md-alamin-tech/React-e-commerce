@@ -43,7 +43,7 @@ export const Rating: React.FC<RatingProps> = ({
 
   return (
     <div className={`inline-flex items-center gap-1.5 ${className}`}>
-      <div className="flex items-center text-[#D4AF37]">
+      <div className="flex items-center text-brand">
         {[1, 2, 3, 4, 5].map((star) => {
           const filled = star <= activeRating;
           return (
@@ -62,8 +62,8 @@ export const Rating: React.FC<RatingProps> = ({
                 size={starSize}
                 className={
                   filled
-                    ? 'fill-[#D4AF37] text-[#D4AF37]'
-                    : 'text-[#4A3A66] fill-transparent'
+                    ? 'fill-brand text-brand'
+                    : 'text-[#C9C3B6] fill-transparent'
                 }
               />
             </button>
@@ -71,7 +71,7 @@ export const Rating: React.FC<RatingProps> = ({
         })}
       </div>
       {typeof count === 'number' && (
-        <span className="text-xs text-[#B0A99C] font-medium">({count})</span>
+        <span className="text-xs text-ink/60 font-medium">({count})</span>
       )}
     </div>
   );

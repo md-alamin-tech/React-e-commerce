@@ -57,23 +57,23 @@
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #170F25;
+  background: #F4F1EA;
 }
 ::-webkit-scrollbar-thumb {
-  background: #4A3A66;
+  background: #C9C3B6;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #6B4FA0;
+  background: #D12525;
 }
 
-/* Theme: every icon is rich gold unless it sets its own colour or sits on a gold surface */
+/* Theme: icons are brand red unless they set their own colour or sit on a brand surface */
 @layer base {
   svg.lucide {
-    color: #D4AF37;
+    color: var(--color-brand);
   }
-  [class~="bg-[#D4AF37]"] svg.lucide,
-  [class*="hover:bg-[#D4AF37]"]:hover svg.lucide {
+  [class~="bg-brand"] svg.lucide,
+  [class*="hover:bg-brand"]:hover svg.lucide {
     color: currentColor;
   }
 }

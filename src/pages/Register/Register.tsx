@@ -47,13 +47,13 @@ export default function Register() {
   };
 
   return (
-    <div className="bg-[#0B0710] py-16 sm:py-24 px-4 flex items-center justify-center">
-      <div className="max-w-md w-full bg-[#140C1F] rounded-[10px] p-8 sm:p-10 border border-[#2E2045] shadow-xs text-left">
+    <div className="bg-cream py-16 sm:py-24 px-4 flex items-center justify-center">
+      <div className="max-w-md w-full bg-white rounded-2xl p-8 sm:p-10 border border-black/10 shadow-xs text-left">
         <div className="text-center mb-8">
-          <h1 className="font-serif text-3xl font-bold text-[#F5ECD7]">
+          <h1 className="font-serif text-3xl font-bold text-ink">
             Create an Account
           </h1>
-          <p className="text-xs text-[#B0A99C] mt-1">
+          <p className="text-xs text-ink/60 mt-1">
             Enjoy faster checkout, saved addresses, and exclusive member treats.
           </p>
         </div>
@@ -112,9 +112,9 @@ export default function Register() {
           </div>
         </form>
 
-        <p className="text-center text-xs text-[#B0A99C] mt-6">
+        <p className="text-center text-xs text-ink/60 mt-6">
           Already have an account?{' '}
-          <Link to="/login" className="font-bold text-[#D4AF37] hover:underline">
+          <Link to="/login" className="font-bold text-brand hover:underline">
             Sign in
           </Link>
         </p>

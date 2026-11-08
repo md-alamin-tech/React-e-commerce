@@ -53,13 +53,13 @@ export const ReviewSection: React.FC<ReviewSectionProps> = ({ reviews, onAddRevi
   };
 
   return (
-    <div className="pt-10 border-t border-[#2E2045]">
+    <div className="pt-10 border-t border-black/10">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
         <div>
-          <h3 className="font-serif text-2xl font-bold text-[#F5ECD7]">
+          <h3 className="font-serif text-2xl font-bold text-ink">
             Customer Reviews ({reviews.length})
           </h3>
-          <p className="text-xs text-[#B0A99C] mt-0.5">
+          <p className="text-xs text-ink/60 mt-0.5">
             Real feedback from our patrons and home cooks.
           </p>
         </div>
@@ -81,21 +81,21 @@ export const ReviewSection: React.FC<ReviewSectionProps> = ({ reviews, onAddRevi
       {formOpen && (
         <form
           onSubmit={handleSubmit}
-          className="bg-[#140C1F] p-6 rounded-[10px] border border-[#2E2045] mb-8 shadow-xs"
+          className="bg-white p-6 rounded-2xl border border-black/10 mb-8 shadow-xs"
         >
-          <h4 className="font-serif text-base font-bold text-[#F5ECD7] mb-4">
+          <h4 className="font-serif text-base font-bold text-ink mb-4">
             Share Your Experience
           </h4>
           <div className="space-y-4">
             <div>
-              <label className="block text-xs font-semibold uppercase tracking-wider text-[#DCD5C6] mb-1.5">
+              <label className="block text-xs font-semibold uppercase tracking-wider text-ink/75 mb-1.5">
                 Rating
               </label>
               <Rating value={rating} interactive onChange={(val) => setRating(val)} size="md" />
             </div>
 
             <div>
-              <label className="block text-xs font-semibold uppercase tracking-wider text-[#DCD5C6] mb-1.5">
+              <label className="block text-xs font-semibold uppercase tracking-wider text-ink/75 mb-1.5">
                 Your Name
               </label>
               <input
@@ -104,12 +104,12 @@ export const ReviewSection: React.FC<ReviewSectionProps> = ({ reviews, onAddRevi
                 onChange={(e) => setAuthor(e.target.value)}
                 placeholder="e.g. Besnik M."
                 required
-                className="w-full bg-[#0B0710] border border-[#34254D] rounded-[10px] px-3.5 py-2 text-sm text-[#F5ECD7] focus:outline-none focus:border-[#D4AF37]"
+                className="w-full bg-cream border border-black/10 rounded-2xl px-3.5 py-2 text-sm text-ink focus:outline-none focus:border-brand"
               />
             </div>
 
             <div>
-              <label className="block text-xs font-semibold uppercase tracking-wider text-[#DCD5C6] mb-1.5">
+              <label className="block text-xs font-semibold uppercase tracking-wider text-ink/75 mb-1.5">
                 Review Comments
               </label>
               <textarea
@@ -118,7 +118,7 @@ export const ReviewSection: React.FC<ReviewSectionProps> = ({ reviews, onAddRevi
                 rows={3}
                 placeholder="What did you think of the flavor, texture, and authenticity?"
                 required
-                className="w-full bg-[#0B0710] border border-[#34254D] rounded-[10px] px-3.5 py-2 text-sm text-[#F5ECD7] focus:outline-none focus:border-[#D4AF37]"
+                className="w-full bg-cream border border-black/10 rounded-2xl px-3.5 py-2 text-sm text-ink focus:outline-none focus:border-brand"
               />
             </div>
 
@@ -141,7 +141,7 @@ export const ReviewSection: React.FC<ReviewSectionProps> = ({ reviews, onAddRevi
 
       {/* Reviews List */}
       {reviews.length === 0 ? (
-        <p className="text-xs text-[#B0A99C] py-4 ">
+        <p className="text-xs text-ink/60 py-4 ">
           No reviews yet. Be the first to taste and share your review!
         </p>
       ) : (
@@ -149,25 +149,25 @@ export const ReviewSection: React.FC<ReviewSectionProps> = ({ reviews, onAddRevi
           {reviews.map((rev) => (
             <div
               key={rev.id}
-              className="bg-[#140C1F] p-5 rounded-[10px] border border-[#2A1D3F] text-left"
+              className="bg-white p-5 rounded-2xl border border-black/10 text-left"
             >
               <div className="flex items-center justify-between mb-2">
                 <div className="flex items-center gap-2">
-                  <span className="font-semibold text-xs text-[#F5ECD7]">
+                  <span className="font-semibold text-xs text-ink">
                     {rev.author}
                   </span>
                   {rev.verified && (
-                    <span className="inline-flex items-center gap-0.5 text-[10px] text-emerald-300 font-semibold bg-emerald-950/60 px-2 py-0.5 rounded-full">
+                    <span className="inline-flex items-center gap-0.5 text-[10px] text-leaf font-semibold bg-leaf/10 px-2 py-0.5 rounded-full">
                       <CheckCircle2 size={11} /> Verified Buyer
                     </span>
                   )}
                 </div>
-                <span className="text-[11px] text-[#B0A99C]">
+                <span className="text-[11px] text-ink/60">
                   {formatDate(rev.date)}
                 </span>
               </div>
               <Rating value={rev.rating} size="sm" className="mb-2" />
-              <p className="text-xs text-[#D0C9BA] leading-relaxed">
+              <p className="text-xs text-ink/75 leading-relaxed">
                 {rev.comment}
               </p>
             </div>

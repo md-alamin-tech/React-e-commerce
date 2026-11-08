@@ -24,9 +24,9 @@ export const Loader: React.FC<LoaderProps> = ({
   if (type === 'skeleton') {
     return (
       <div className={`animate-pulse space-y-4 ${className}`}>
-        <div className="h-48 bg-[#241838] rounded-[10px] w-full" />
-        <div className="h-4 bg-[#241838] rounded w-3/4" />
-        <div className="h-4 bg-[#241838] rounded w-1/2" />
+        <div className="h-48 bg-[#EFEBE2] rounded-2xl w-full" />
+        <div className="h-4 bg-[#EFEBE2] rounded w-3/4" />
+        <div className="h-4 bg-[#EFEBE2] rounded w-1/2" />
       </div>
     );
   }
@@ -34,12 +34,12 @@ export const Loader: React.FC<LoaderProps> = ({
   return (
     <div className={`flex flex-col items-center justify-center p-12 text-center ${className}`}>
       <div className="relative w-12 h-12 mb-4">
-        <div className="w-12 h-12 rounded-full border-2 border-[#34254D] border-t-[#D4AF37] animate-spin" />
+        <div className="w-12 h-12 rounded-full border-2 border-black/10 border-t-brand animate-spin" />
         <div className="absolute inset-0 flex items-center justify-center">
-          <span className="w-2 h-2 rounded-full bg-[#D4AF37]" />
+          <span className="w-2 h-2 rounded-full bg-brand" />
         </div>
       </div>
-      {text && <p className="text-sm font-medium text-[#B0A99C]">{text}</p>}
+      {text && <p className="text-sm font-medium text-ink/60">{text}</p>}
     </div>
   );
 };

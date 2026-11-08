@@ -117,10 +117,10 @@ export default function Shop() {
     : 'All European Specialties';
 
   return (
-    <div className="bg-[#0B0710] pb-16">
+    <div className="bg-cream pb-16">
       <ShopBanner />
 
-      <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 pt-10">
+      <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 pt-10">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           {/* Desktop Left Sidebar Filters */}
           <div className="hidden lg:block lg:col-span-1">
@@ -151,10 +151,10 @@ export default function Shop() {
             {/* Header with Title, Count, Sort, and Mobile Filter Toggle */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 mb-6 gap-4">
               <div>
-                <h2 className="font-serif text-2xl font-bold text-[#F5ECD7]">
+                <h2 className="font-serif text-2xl font-bold text-ink">
                   {headingTitle}
                 </h2>
-                <p className="text-xs text-[#B0A99C] mt-0.5">
+                <p className="text-xs text-ink/60 mt-0.5">
                   Showing {filteredProducts.length} items
                   {searchParam && (
                     <button
@@ -162,7 +162,7 @@ export default function Shop() {
                         searchParams.delete('search');
                         setSearchParams(searchParams);
                       }}
-                      className="ml-2 text-[#F87171] hover:underline text-[11px]"
+                      className="ml-2 text-brand hover:underline text-[11px]"
                     >
                       Clear search
                     </button>
@@ -174,7 +174,7 @@ export default function Shop() {
                 {/* Mobile Filter Button */}
                 <button
                   onClick={() => setMobileFilterOpen(true)}
-                  className="lg:hidden flex items-center gap-2 px-3.5 py-2 rounded-[10px] border border-[#34254D] bg-[#140C1F] text-xs font-semibold text-[#F5ECD7]"
+                  className="lg:hidden flex items-center gap-2 px-3.5 py-2 rounded-2xl border border-black/10 bg-white text-xs font-semibold text-ink"
                 >
                   <SlidersHorizontal size={14} />
                   <span>Filters</span>
@@ -182,11 +182,11 @@ export default function Shop() {
 
                 {/* Sort Selector */}
                 <div className="flex items-center gap-2 text-xs">
-                  <span className="text-[#B0A99C] hidden sm:inline">Sort by:</span>
+                  <span className="text-ink/60 hidden sm:inline">Sort by:</span>
                   <select
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value)}
-                    className="bg-[#140C1F] border border-[#34254D] rounded-[10px] px-3 py-2 text-xs font-medium text-[#F5ECD7] focus:outline-none focus:border-[#D4AF37] cursor-pointer"
+                    className="bg-white border border-black/10 rounded-2xl px-3 py-2 text-xs font-medium text-ink focus:outline-none focus:border-brand cursor-pointer"
                   >
                     <option value="featured">Featured / Best Sellers</option>
                     <option value="price-low">Price: Low to High</option>
@@ -210,7 +210,7 @@ export default function Shop() {
                 <button
                   onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
                   disabled={currentPage === 1}
-                  className="p-2 rounded-[10px] border border-[#34254D] bg-[#140C1F] text-[#F5ECD7] disabled:opacity-40 disabled:cursor-not-allowed hover:bg-[#1E1430] transition-colors"
+                  className="p-2 rounded-2xl border border-black/10 bg-white text-ink disabled:opacity-40 disabled:cursor-not-allowed hover:bg-[#EFEBE2] transition-colors"
                   aria-label="Previous page"
                 >
                   <ChevronLeft size={16} />
@@ -220,10 +220,10 @@ export default function Shop() {
                   <button
                     key={pageNum}
                     onClick={() => setCurrentPage(pageNum)}
-                    className={`w-9 h-9 rounded-[10px] text-xs font-semibold transition-colors cursor-pointer ${
+                    className={`w-9 h-9 rounded-2xl text-xs font-semibold transition-colors cursor-pointer ${
                       currentPage === pageNum
-                        ? 'bg-[#D4AF37] text-[#0B0710]'
-                        : 'bg-[#140C1F] border border-[#34254D] text-[#D0C9BA] hover:bg-[#1E1430]'
+                        ? 'bg-brand text-white'
+                        : 'bg-white border border-black/10 text-ink/75 hover:bg-[#EFEBE2]'
                     }`}
                   >
                     {pageNum}
@@ -233,7 +233,7 @@ export default function Shop() {
                 <button
                   onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
                   disabled={currentPage === totalPages}
-                  className="p-2 rounded-[10px] border border-[#34254D] bg-[#140C1F] text-[#F5ECD7] disabled:opacity-40 disabled:cursor-not-allowed hover:bg-[#1E1430] transition-colors"
+                  className="p-2 rounded-2xl border border-black/10 bg-white text-ink disabled:opacity-40 disabled:cursor-not-allowed hover:bg-[#EFEBE2] transition-colors"
                   aria-label="Next page"
                 >
                   <ChevronRight size={16} />
@@ -254,12 +254,12 @@ export default function Shop() {
             className="fixed inset-0 bg-black/50"
             onClick={() => setMobileFilterOpen(false)}
           />
-          <div className="relative ml-auto w-full max-w-xs bg-[#0B0710] h-full p-6 shadow-2xl overflow-y-auto flex flex-col z-10">
-            <div className="flex items-center justify-between pb-4 border-b border-[#2E2045] mb-4">
-              <h3 className="font-serif text-lg font-bold text-[#F5ECD7]">Filters</h3>
+          <div className="relative ml-auto w-full max-w-xs bg-cream h-full p-6 shadow-2xl overflow-y-auto flex flex-col z-10">
+            <div className="flex items-center justify-between pb-4 border-b border-black/10 mb-4">
+              <h3 className="font-serif text-lg font-bold text-ink">Filters</h3>
               <button
                 onClick={() => setMobileFilterOpen(false)}
-                className="p-1 rounded-full text-[#B0A99C] hover:text-[#D4AF37]"
+                className="p-1 rounded-full text-ink/60 hover:text-brand"
               >
                 <X size={20} />
               </button>

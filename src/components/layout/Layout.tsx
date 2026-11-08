@@ -20,7 +20,7 @@ interface LayoutProps {
 
 export const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div className="min-h-screen flex flex-col bg-[#0B0710] text-[#F5ECD7]">
+    <div className="min-h-screen flex flex-col bg-cream text-ink">
       <SmoothScroll />
       <Navbar />
       <main className="flex-1">{children}</main>

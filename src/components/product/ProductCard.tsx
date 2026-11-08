@@ -34,9 +34,9 @@ export const ProductCard: React.FC<ProductCardProps> = ({
   const isWishlisted = isInWishlist(product.id);
 
   return (
-    <div className="group flex flex-col bg-[#140C1F] rounded-[10px] border border-[#2A1D3F] overflow-hidden shadow-xs hover:shadow-md transition-all duration-300">
+    <div className="group flex flex-col bg-white rounded-2xl border border-black/10 overflow-hidden shadow-xs hover:shadow-md transition-all duration-300">
       {/* Image Container with Badges & Hover Actions */}
-      <div className="relative aspect-4/3 w-full bg-[#1B1229] overflow-hidden">
+      <div className="relative aspect-4/3 w-full bg-[#EFEBE2] overflow-hidden">
         <Link to={`/product/${product.slug}`} className="block w-full h-full">
           <img
             src={product.images[0]}
@@ -52,12 +52,12 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           onClick={() => toggleWishlist(product)}
           className={`absolute top-2.5 right-2.5 p-2 rounded-full transition-all shadow-xs cursor-pointer ${
             isWishlisted
-              ? 'bg-rose-950/60 text-rose-400'
-              : 'bg-[#140C1F]/90 text-[#E6DFCF] hover:text-[#D4AF37] hover:bg-[#1E1430]'
+              ? 'bg-brand/10 text-brand'
+              : 'bg-white/90 text-ink hover:text-brand hover:bg-[#EFEBE2]'
           }`}
           aria-label={isWishlisted ? 'Remove from wishlist' : 'Add to wishlist'}
         >
-          <Heart size={16} className={isWishlisted ? 'fill-[#D4AF37]' : ''} />
+          <Heart size={16} className={isWishlisted ? 'fill-brand' : ''} />
         </button>
 
         {/* Quick View trigger on hover */}
@@ -65,7 +65,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           <button
             type="button"
             onClick={() => onQuickView(product)}
-            className="hidden sm:flex absolute bottom-2.5 left-2.5 items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#140C1F]/95 text-[#F5ECD7] text-xs font-medium shadow-xs hover:bg-[#1E1430] opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer"
+            className="hidden sm:flex absolute bottom-2.5 left-2.5 items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 text-ink text-xs font-medium shadow-xs hover:bg-[#EFEBE2] opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer"
           >
             <Eye size={13} />
             Quick View
@@ -74,11 +74,11 @@ export const ProductCard: React.FC<ProductCardProps> = ({
 
         {/* Discount or Origin Tag */}
         {product.originalPrice && product.originalPrice > product.price ? (
-          <span className="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-full bg-[#F87171] text-white text-[10px] font-bold tracking-wider uppercase">
+          <span className="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-full bg-brand text-white text-[10px] font-bold tracking-wider uppercase">
             Sale
           </span>
         ) : product.isBestSeller ? (
-          <span className="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-full bg-[#D4AF37] text-[#0B0710] text-[10px] font-bold tracking-wider uppercase">
+          <span className="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-full bg-brand text-white text-[10px] font-bold tracking-wider uppercase">
             Popular
           </span>
         ) : null}
@@ -87,27 +87,27 @@ export const ProductCard: React.FC<ProductCardProps> = ({
       {/* Content details */}
       <div className="flex-1 flex flex-col p-4 text-center">
 
-        <h3 className="font-serif text-base font-semibold text-[#F5ECD7] hover:text-[#D4AF37] transition-colors line-clamp-1">
+        <h3 className="font-serif text-base font-semibold text-ink hover:text-brand transition-colors line-clamp-1">
           <Link to={`/product/${product.slug}`}>{product.name}</Link>
         </h3>
 
         <div className="flex items-center justify-center gap-2 mt-1.5 mb-3">
-          <span className="font-bold text-sm text-[#F5ECD7]">
+          <span className="font-bold text-sm text-ink">
             {formatCurrency(product.price)}
           </span>
           {product.originalPrice && product.originalPrice > product.price && (
-            <span className="text-xs text-[#B0A99C] line-through">
+            <span className="text-xs text-ink/60 line-through">
               {formatCurrency(product.originalPrice)}
             </span>
           )}
-          <span className="text-[11px] text-[#B0A99C]">/ {product.weight}</span>
+          <span className="text-[11px] text-ink/60">/ {product.weight}</span>
         </div>
 
         {/* Button: "VIEW PRODUCT ->" matching mockup! */}
         <div className="mt-auto pt-1 flex items-center gap-2">
           <Link
             to={`/product/${product.slug}`}
-            className="flex-1 inline-flex items-center justify-center gap-1.5 bg-[#D4AF37] hover:bg-[#B8962E] text-[#0B0710] font-semibold tracking-wider uppercase transition-colors h-12 px-4 rounded-full text-xs"
+            className="flex-1 inline-flex items-center justify-center gap-1.5 bg-brand hover:bg-brand-dark text-white font-semibold tracking-wider uppercase transition-colors h-12 px-4 rounded-full text-xs"
           >
             <span>VIEW PRODUCT</span>
             <ArrowRight size={13} />
@@ -116,7 +116,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           <button
             type="button"
             onClick={() => addToCart(product, 1)}
-            className="p-2 rounded-full bg-[#0B0710] hover:bg-[#D4AF37] text-[#F5ECD7] hover:text-[#0B0710] border border-[#2E2045] transition-colors cursor-pointer"
+            className="p-2 rounded-full bg-cream hover:bg-brand text-ink hover:text-white border border-black/10 transition-colors cursor-pointer"
             title="Quick add to cart"
             aria-label="Add to cart"
           >

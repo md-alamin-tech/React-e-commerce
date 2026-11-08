@@ -18,38 +18,38 @@ export const ToastContainer: React.FC = () => {
     <div className="fixed bottom-5 right-5 z-50 flex flex-col gap-2.5 max-w-sm w-full pointer-events-none">
       {toasts.map((toast) => {
         const icons = {
-          success: <CheckCircle2 className="w-5 h-5 text-[#D4AF37] shrink-0" />,
-          error: <AlertCircle className="w-5 h-5 text-[#D4AF37] shrink-0" />,
-          warning: <AlertTriangle className="w-5 h-5 text-[#D4AF37] shrink-0" />,
-          info: <Info className="w-5 h-5 text-[#D4AF37] shrink-0" />,
+          success: <CheckCircle2 className="w-5 h-5 text-brand shrink-0" />,
+          error: <AlertCircle className="w-5 h-5 text-brand shrink-0" />,
+          warning: <AlertTriangle className="w-5 h-5 text-brand shrink-0" />,
+          info: <Info className="w-5 h-5 text-brand shrink-0" />,
         };
 
         const borders = {
-          success: 'border-emerald-800 bg-[#0F2A1A]',
-          error: 'border-rose-800 bg-[#2E1214]',
-          warning: 'border-amber-800 bg-[#170F25]',
-          info: 'border-[#2E2045] bg-[#0B0710]',
+          success: 'border-leaf/30 bg-white',
+          error: 'border-brand/30 bg-white',
+          warning: 'border-sun bg-white',
+          info: 'border-black/10 bg-cream',
         };
 
         return (
           <div
             key={toast.id}
-            className={`pointer-events-auto flex items-start gap-3 p-4 rounded-[10px] border shadow-lg transition-all transform animate-in fade-in slide-in-from-bottom-2 ${
+            className={`pointer-events-auto flex items-start gap-3 p-4 rounded-2xl border shadow-lg transition-all transform animate-in fade-in slide-in-from-bottom-2 ${
               borders[toast.type]
             }`}
           >
             {icons[toast.type]}
             <div className="flex-1 min-w-0">
               {toast.title && (
-                <p className="text-xs font-bold uppercase tracking-wider text-[#F5ECD7] mb-0.5">
+                <p className="text-xs font-bold uppercase tracking-wider text-ink mb-0.5">
                   {toast.title}
                 </p>
               )}
-              <p className="text-sm text-[#F5ECD7] leading-snug">{toast.message}</p>
+              <p className="text-sm text-ink leading-snug">{toast.message}</p>
             </div>
             <button
               onClick={() => removeToast(toast.id)}
-              className="text-[#8A847A] hover:text-[#D4AF37] p-1 cursor-pointer"
+              className="text-ink/60 hover:text-brand p-1 cursor-pointer"
               aria-label="Close notification"
             >
               <X size={16} />

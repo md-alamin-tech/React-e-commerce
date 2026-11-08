@@ -49,26 +49,26 @@ export default function Login() {
   };
 
   return (
-    <div className="bg-[#0B0710] py-16 sm:py-24 px-4 flex items-center justify-center">
-      <div className="max-w-md w-full bg-[#140C1F] rounded-[10px] p-8 sm:p-10 border border-[#2E2045] shadow-xs text-left">
+    <div className="bg-cream py-16 sm:py-24 px-4 flex items-center justify-center">
+      <div className="max-w-md w-full bg-white rounded-2xl p-8 sm:p-10 border border-black/10 shadow-xs text-left">
         <div className="text-center mb-8">
-          <h1 className="font-serif text-3xl font-bold text-[#F5ECD7]">
+          <h1 className="font-serif text-3xl font-bold text-ink">
             Sign in to Belké Market
           </h1>
-          <p className="text-xs text-[#B0A99C] mt-1">
+          <p className="text-xs text-ink/60 mt-1">
             Access your order history, delivery addresses, and saved favorites.
           </p>
         </div>
 
         {/* Demo Fast Login Banner */}
-        <div className="bg-[#1B1229] border border-[#2E2045] rounded-[10px] p-4 mb-6 text-center">
-          <p className="text-xs text-[#F5ECD7] font-semibold mb-2">
+        <div className="bg-[#EFEBE2] border border-black/10 rounded-2xl p-4 mb-6 text-center">
+          <p className="text-xs text-ink font-semibold mb-2">
             Testing the app?
           </p>
           <button
             type="button"
             onClick={handleQuickDemo}
-            className="w-full bg-[#D4AF37] hover:bg-[#E8C547] text-[#0B0710] font-semibold tracking-wider uppercase transition-colors cursor-pointer inline-flex h-12 px-8 rounded-full text-xs items-center justify-center"
+            className="w-full bg-brand hover:bg-brand-dark text-white font-medium tracking-wide uppercase transition-colors cursor-pointer inline-flex h-12 px-8 rounded-full font-serif text-sm items-center justify-center"
           >
             One-Click Demo Account Login
           </button>
@@ -96,11 +96,11 @@ export default function Login() {
           />
 
           <div className="flex items-center justify-between text-xs pt-1">
-            <label className="flex items-center gap-2 text-[#D0C9BA] cursor-pointer">
-              <input type="checkbox" defaultChecked className="accent-[#D4AF37]" />
+            <label className="flex items-center gap-2 text-ink/75 cursor-pointer">
+              <input type="checkbox" defaultChecked className="accent-brand" />
               <span>Remember me</span>
             </label>
-            <span className="text-[#D4AF37] hover:underline cursor-pointer">
+            <span className="text-brand hover:underline cursor-pointer">
               Forgot password?
             </span>
           </div>
@@ -116,9 +116,9 @@ export default function Login() {
           </Button>
         </form>
 
-        <p className="text-center text-xs text-[#B0A99C] mt-6">
+        <p className="text-center text-xs text-ink/60 mt-6">
           Don't have an account yet?{' '}
-          <Link to="/register" className="font-bold text-[#D4AF37] hover:underline">
+          <Link to="/register" className="font-bold text-brand hover:underline">
             Register here
           </Link>
         </p>
