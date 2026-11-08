@@ -50,7 +50,7 @@ export default function About() {
       <FoodGallery />
 
       {/* 4. Call to action */}
-      <section className="pb-16 lg:pb-20">
+      <section className="pt-16 lg:pt-20 pb-16 lg:pb-20">
         <div className="max-w-[1320px] mx-auto px-4 sm:px-6">
           <div className="relative isolate overflow-hidden rounded-3xl min-h-[380px] flex items-center">
             <img
